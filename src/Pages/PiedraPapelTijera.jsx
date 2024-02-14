@@ -104,7 +104,18 @@ function PiedraPapelTijera() {
 
   
   function ReiniciarJuego(){
-    window.location.reload();
+    setVidasEnemigos(3);
+    setImgVidasEnemigos(Vidas3);
+    setVidasPlayer(3);
+    setImgVidasPlayer(Vidas3);
+    divImagenIzq.classList.add("ocultar");
+    divImagenDer.classList.add("ocultar");
+    divAlertaGanar.classList.add("ocultar");
+    divAlertaPerder.classList.add("ocultar");
+    neutro.classList.remove("ocultar");
+    piedra1.classList.add("ocultar");
+    papel1.classList.add("ocultar");
+    tijera1.classList.add("ocultar");
   }
 
 
