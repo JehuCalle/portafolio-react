@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import BarraNav from './Componentes/BarraNav.jsx';
-import Inicio from "./Pages/Inicio";
-import SobreMi from "./Pages/SobreMi";
-import Contacto from "./Pages/Contacto";
+import BarraNav from './Componentes/BarraNav.js';
+import Inicio from "./Pages/Inicio.jsx";
+import SobreMi from "./Pages/SobreMi.jsx";
+import Contacto from "./Pages/Contacto.jsx";
 
 import ProyectosRND from './Pages/ProyectosRND.jsx';
 import TarjetaRND from './Pages/TarjetaRND.jsx';
