@@ -1,0 +1,11 @@
+.contenedor-imagen-API {
+  margin: 5px;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(0, 197, 197); 
+}
+
+.tamaño-imagen {
+  width: 200px;
+  height: 200px;
+}

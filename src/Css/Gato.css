@@ -1,0 +1,70 @@
+.contenedor-gato {
+    height: 200px;
+    width: 750px;
+    margin: 0px 0px 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(25, 70, 70);
+    border: 5px solid aqua;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+  }
+
+.contenedor-ImagenGato {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(33, 122, 122);
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+.imagenGato {
+  height: 150px;
+  width: 150px;
+  border: 7px solid  rgb(4, 39, 39);
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+.contenedor-DatosTextoGato {
+  height: 130px;
+  width: 70px;
+  padding: 0px 0px 0px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgb(51, 151, 151);
+}
+
+.contenedor-DatosGato {
+  height: 130px;
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgb(52, 78, 78);
+}
+
+.contenedor-VidaHabilidadesGato {
+  height: 160px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(22, 48, 48);
+}

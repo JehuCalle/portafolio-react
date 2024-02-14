@@ -1,0 +1,25 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Cascadia Code;
+}
+
+body {
+  color: wheat;
+  background-color: rgb(0, 10, 15);
+}
+
+.contenedor-cuerpo {
+  width: 100%;
+  min-height: 500px;
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(0, 33, 49);
+}
+
+.footer-app {
+  padding: 10px;
+  color: rgb(0, 160, 160);
+  background-color: rgb(198, 255, 255);
+}

@@ -1,0 +1,86 @@
+/*---------------------- CARA O SELLO CON HISTORIAL ----------------------*/
+.cara-o-sello {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 300px;
+  background-color: rgb(83, 133, 133);
+}
+
+
+.contenedor-respuestas {
+  height: 100%;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  padding: 3px 6px 3px 6px;
+  color: rgb(141, 255, 255);
+  background-color: rgb(0, 19, 27);
+  border: 3px solid rgb(141, 255, 255);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.contenedor-botones {
+  width: 100%;
+  padding: 5px 5px 5px 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+button {
+  margin: 6px 4px 6px 4px;
+  padding: 3px 6px 3px 6px;
+  color: rgb(141, 255, 255);
+  background-color: rgb(0, 19, 27);
+  border: 3px solid rgb(141, 255, 255);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  cursor: pointer;
+}
+
+
+.contenedor-resultados {
+  height: 100%;
+  width: 590px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+.contenedor-historial {
+  height: 220px;
+  width: 159px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.historial-resultados {
+  padding: 4px 6px 4px 6px;
+  max-width: 150px;
+  height: 195px;
+  color: rgb(141, 255, 255);
+  background-color: rgb(0, 19, 27);
+  border: 4px solid rgb(141, 255, 255);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  font-weight: 300;
+  overflow-y: scroll;
+  word-wrap: break-word;
+}
+/*---------------------- CARA O SELLO CON HISTORIAL ----------------------*/
