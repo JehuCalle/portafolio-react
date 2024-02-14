@@ -16,11 +16,10 @@ import { Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-      testeo
       <div className='contenedor-cuerpo'>
         <Routes>
-          <Route path = "/" element = {<BarraNav />} >
-            <Route path="/" element={<Inicio />} />
+          <Route path ="/portafolio-react" element = {<BarraNav />} >
+            <Route path="/portafolio-react" element={<Inicio />} />
             <Route path="Pages/SobreMi" element={<SobreMi />} />
             <Route path="Pages/Contacto" element={<Contacto/>} />
             <Route path="Pages/ProyectosRND" element={<ProyectosRND/>} />
@@ -30,7 +29,6 @@ function App() {
           </Route>
         </Routes>
       </div>
-      <Inicio></Inicio>
       <footer className='footer-app'>
         <label>paralelo-footer</label>
       </footer>

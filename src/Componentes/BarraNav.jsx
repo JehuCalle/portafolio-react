@@ -15,7 +15,7 @@ function BarraNav(){
           alt = 'Logo barra nav' />
         <Link
           className='BotonCambioPag'
-          to= "/">Inicio
+          to= "/portafolio-react">Inicio
         </Link>
         <Link
           className='BotonCambioPag'
@@ -27,11 +27,11 @@ function BarraNav(){
         </Link>
         <Link
           className='BotonCambioPag'
-          to="/" >Ejemplo 4
+          to="/portafolio-react" >Ejemplo 4
         </Link>
         <Link
           className='BotonCambioPag'
-          to="/" >Ejemplo 5
+          to="/portafolio-react" >Ejemplo 5
         </Link>
       </div>
       <div>
