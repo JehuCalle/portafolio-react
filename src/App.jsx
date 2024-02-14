@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import BarraNav from './Componentes/BarraNav.js';
+import BarraNav from './Componentes/BarraNav.jsx';
 import Inicio from "./Pages/Inicio.jsx";
 import SobreMi from "./Pages/SobreMi.jsx";
 import Contacto from "./Pages/Contacto.jsx";
