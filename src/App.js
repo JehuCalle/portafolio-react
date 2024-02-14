@@ -29,6 +29,7 @@ function App() {
             <Route path="Pages/PiedraPapelTijeraConCSS" element={<PiedraPapelTijeraConCSS/>} />
           </Route>
         </Routes>
+        <Inicio></Inicio>
       </div>
       <footer className='footer-app'>
         <label>paralelo-footer</label>
