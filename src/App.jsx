@@ -30,6 +30,7 @@ function App() {
           </Route>
         </Routes>
       </div>
+      <Inicio></Inicio>
       <footer className='footer-app'>
         <label>paralelo-footer</label>
       </footer>
