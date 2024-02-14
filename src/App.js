@@ -16,6 +16,7 @@ import { Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
+      testeo
       <div className='contenedor-cuerpo'>
         <Routes>
           <Route path = "/" element = {<BarraNav />} >
