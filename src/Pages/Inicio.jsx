@@ -22,7 +22,7 @@ import '../Css/Inicio.css';
 function Inicio(){
   return(
     <div className="contenedorDivs">
-      <div className="quienSoyCont">
+      <div className="quienSoyCont col-11 col-sm-9 col-md-9 col-lg-8 col-xl-7 col-xxl-6">
         <h1>Quien soy</h1>
         <label className="textoSeparado">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae qui facere distinctio autem rerum fugit iure molestias praesentium, amet eius, commodi ipsam quia optio neque itaque vel labore suscipit dolorum!
@@ -31,39 +31,39 @@ function Inicio(){
 
       <div className="contenedorHabilidades">
         <h1>Habilidades en</h1>
-        <div className="contenedorImagenesHab">
-          <img
-            className="logoBootstrap"
-            src={LogoBootstrap}
-            alt="Bootstrap logo" />
-          <img
-            className="logoHTML"
-            src={LogoHTML}
-            alt="HTML logo" />
-          <img
-            className="logoJS"
-            src={LogoJS}
-            alt="JavaScript logo" />
-          <img
-            className="logoCSS"
-            src={LogoCSS}
-            alt="CSS logo" />
-          <img
-            className="logoReact"
-            src={LogoReact}
-            alt="React logo" />
-          <img
-            className="logoC"
-            src={LogoC}
-            alt="C# logo" />
-          <img
-            className="logoJava"
-            src={LogoJava}
-            alt="Java logo" />
+        <div className="contenedorImagenesHab col-11 col-sm-9 col-md-9 col-lg-9 col-xl-8 col-xxl-7">
+        <img
+          className="logoBootstrap"
+          src={LogoBootstrap}
+          alt="Bootstrap logo" />
+        <img
+          className="logoHTML"
+          src={LogoHTML}
+          alt="HTML logo" />
+        <img
+          className="logoJS"
+          src={LogoJS}
+          alt="JavaScript logo" />
+        <img
+          className="logoCSS"
+          src={LogoCSS}
+          alt="CSS logo" />
+        <img
+          className="logoReact"
+          src={LogoReact}
+          alt="React logo" />
+        <img
+          className="logoC"
+          src={LogoC}
+          alt="C# logo" />
+        <img
+          className="logoJava"
+          src={LogoJava}
+          alt="Java logo" />
         </div>
       </div>  
 
-      <div className="">
+      <div className="col-12">
         <img
           className="gifRandom"
           src={GifRandom}

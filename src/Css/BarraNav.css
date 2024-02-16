@@ -1,10 +1,14 @@
-.contenedor-nav {
-  min-height: 60px;
+.contImgBarra {
   display: flex;
-  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   background-color: rgb(0, 19, 27);
+}
+
+.contenedor-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .imagenBarra {

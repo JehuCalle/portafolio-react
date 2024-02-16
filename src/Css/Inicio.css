@@ -2,7 +2,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
+}
+
+.quienSoyCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .textoSeparado {
@@ -12,12 +20,7 @@
   line-height: 3.5rem;
 }
 
-.quienSoyCont {
-  padding: 15px 500px 15px 500px;
-}
-
 .contenedorHabilidades{
-  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,31 +29,33 @@
 
 .contenedorImagenesHab {
   display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(0, 160, 160);
 }
 .logoBootstrap {
   padding: 10px 10px 10px 10px;
-  height: 130px;
+  width: 50%;
 }
 .logoHTML{
-  height: 130px;
+  width: 50%;
 }
 .logoJS {
-  height: 130px;
+  width: 50%;
 }
 .logoCSS {
-  height: 130px;
+  width: 50%;
 }
 .logoReact {
   padding: 10px 10px 10px 10px;
-  height: 130px;
+  width: 50%;
 }
 .logoC {
-  height: 130px;
+  width: 50%;
   background-color: rgb(77, 77, 77);
 }
 .logoJava {
-  height: 130px;
+  width: 50%;
   background-color: rgb(77, 77, 77);
 }
 
