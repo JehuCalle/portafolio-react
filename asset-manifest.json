@@ -1,12 +1,7 @@
 {
   "files": {
-    "main.css": "/portafolio-react/static/css/main.91e65d5b.css",
-    "main.js": "/portafolio-react/static/js/main.b60f98a7.js",
-    "static/media/2.png": "/portafolio-react/static/media/2.869d9b163c92aed2db92.png",
-    "static/media/4.png": "/portafolio-react/static/media/4.bf3a3399e719fa195c7e.png",
-    "static/media/1.png": "/portafolio-react/static/media/1.deb1cdab347a78451d76.png",
-    "static/media/5.png": "/portafolio-react/static/media/5.53a8034ee573068a191e.png",
-    "static/media/3.png": "/portafolio-react/static/media/3.697fc1c3f4c2ec7afc6f.png",
+    "main.css": "/portafolio-react/static/css/main.265e0654.css",
+    "main.js": "/portafolio-react/static/js/main.f3dc9268.js",
     "static/media/animacion.gif": "/portafolio-react/static/media/animacion.bf4baf8b4b2a856943c3.gif",
     "static/media/PaB.png": "/portafolio-react/static/media/PaB.138c5a54032180074923.png",
     "static/media/PaP.png": "/portafolio-react/static/media/PaP.3fd160775e41701b966e.png",
@@ -41,11 +36,11 @@
     "static/media/githubDesktopLogo.svg": "/portafolio-react/static/media/githubDesktopLogo.d30db9505398fbd32db50aefb2a4f92f.svg",
     "index.html": "/portafolio-react/index.html",
     "static/media/bootstrap-5Logo.svg": "/portafolio-react/static/media/bootstrap-5Logo.98585727bcfe0b1555649ec9bbab236c.svg",
-    "main.91e65d5b.css.map": "/portafolio-react/static/css/main.91e65d5b.css.map",
-    "main.b60f98a7.js.map": "/portafolio-react/static/js/main.b60f98a7.js.map"
+    "main.265e0654.css.map": "/portafolio-react/static/css/main.265e0654.css.map",
+    "main.f3dc9268.js.map": "/portafolio-react/static/js/main.f3dc9268.js.map"
   },
   "entrypoints": [
-    "static/css/main.91e65d5b.css",
-    "static/js/main.b60f98a7.js"
+    "static/css/main.265e0654.css",
+    "static/js/main.f3dc9268.js"
   ]
 }
