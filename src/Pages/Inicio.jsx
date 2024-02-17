@@ -22,8 +22,9 @@ import '../Css/Inicio.css';
 function Inicio(){
   return(
     <div className="contenedorDivs">
+      <h1 className="testTitulo">Quien soy</h1>
       <div className="quienSoyCont col-11 col-sm-9 col-md-9 col-lg-8 col-xl-7 col-xxl-6">
-        <h1>Quien soy</h1>
+        
         <label className="textoSeparado">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae qui facere distinctio autem rerum fugit iure molestias praesentium, amet eius, commodi ipsam quia optio neque itaque vel labore suscipit dolorum!
         </label>
@@ -32,34 +33,34 @@ function Inicio(){
       <div className="contenedorHabilidades">
         <h1>Habilidades en</h1>
         <div className="contenedorImagenesHab col-11 col-sm-9 col-md-9 col-lg-9 col-xl-8 col-xxl-7">
-        <img
-          className="logoBootstrap"
-          src={LogoBootstrap}
-          alt="Bootstrap logo" />
-        <img
-          className="logoHTML"
-          src={LogoHTML}
-          alt="HTML logo" />
-        <img
-          className="logoJS"
-          src={LogoJS}
-          alt="JavaScript logo" />
-        <img
-          className="logoCSS"
-          src={LogoCSS}
-          alt="CSS logo" />
-        <img
-          className="logoReact"
-          src={LogoReact}
-          alt="React logo" />
-        <img
-          className="logoC"
-          src={LogoC}
-          alt="C# logo" />
-        <img
-          className="logoJava"
-          src={LogoJava}
-          alt="Java logo" />
+          <img
+            className="logoBootstrap"
+            src={LogoBootstrap}
+            alt="Bootstrap logo" />
+          <img
+            className="logoHTML"
+            src={LogoHTML}
+            alt="HTML logo" />
+          <img
+            className="logoJS"
+            src={LogoJS}
+            alt="JavaScript logo" />
+          <img
+            className="logoCSS"
+            src={LogoCSS}
+            alt="CSS logo" />
+          <img
+            className="logoReact"
+            src={LogoReact}
+            alt="React logo" />
+          <img
+            className="logoC"
+            src={LogoC}
+            alt="C# logo" />
+          <img
+            className="logoJava"
+            src={LogoJava}
+            alt="Java logo" />
         </div>
       </div>  
 
@@ -70,9 +71,9 @@ function Inicio(){
           alt="Gif Random" />
       </div>
 
-      <div className="contenedorProtectos">
+      <div className="contenedorProtectos col-12">
         <h1>MIS PROYECTOS</h1>
-          <div className="contenedorImagenesProy">
+          <div className="contenedorImagenesProy col-8 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
             <Link
               className="proyecto1 dividirPartesIguales"
               to= "Pages/ProyectosRND">Proyecto N°1
@@ -86,7 +87,7 @@ function Inicio(){
               to= "Pages/PiedraPapelTijera">Proyecto N°3
             </Link>
           </div>
-          <div className="contenedorImagenesProy">
+          <div className="contenedorImagenesProy col-8 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
             <Link 
               className="proyecto4 dividirPartesIguales"
               to= "Pages/PiedraPapelTijeraConCSS">Proyecto N°4
@@ -96,9 +97,9 @@ function Inicio(){
           </div>
       </div>
 
-      <div className="contenedorHerramientas">
+      <div className="contenedorHerramientas col-12">
         <h1>Herramientas que utilizo</h1>
-        <div className="contenedorImagenesHerr">
+        <div className="contenedorImagenesHerr col-8 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-5">
           <img
             className="logoVisualCode"
             src={LogoVisualCode}

@@ -5,6 +5,10 @@
   background-color: rgb(0, 19, 27);
 }
 
+.col-ImgBarraNav {
+  width: 4.33333333%;
+}
+
 .contenedor-nav {
   display: flex;
   flex-direction: row;

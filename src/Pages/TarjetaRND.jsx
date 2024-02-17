@@ -1,12 +1,15 @@
 import React from "react";
 
 import Logo from '../Img/NoHaceNadaChiquito.png';
-
+/*
 import PrimeraIMG from '../Img/1.png';
 import SegundaIMG from '../Img/2.png';
 import TerceraIMG from '../Img/3.png';
 import CuartaIMG from '../Img/4.png';
 import QuintaIMG from '../Img/5.png';
+*/
+
+import NoHaceNadaHD from '../Img/PiedraPapelTijera/NoHaceNadaHD.png'
 
 import '../Css/TarjetaRND.css';
 
@@ -76,14 +79,14 @@ function TarjetaRND(){
         <div className="imagenes">
           <img
             className="tamañoIMG primerDiv"
-            src={CuartaIMG}
+            src={NoHaceNadaHD}
             alt="CuartaIMG">
           </img>
         </div>
         <div className="imagenes">
           <img
             className="tamañoIMG tercerDiv pagina1"
-            src={QuintaIMG}
+            src={NoHaceNadaHD}
             alt="QuintaIMG">
           </img>
         </div>
@@ -91,14 +94,14 @@ function TarjetaRND(){
         <div className="imagenes">
           <img
             className="tamañoIMG segundoDiv pagina2"
-            src={SegundaIMG}
+            src={NoHaceNadaHD}
             alt="SegundaIMG">
           </img>
         </div>
         <div className="imagenes">
           <img
             className="tamañoIMG segundoDiv pagina3"
-            src={TerceraIMG }
+            src={NoHaceNadaHD }
             alt="TerceraIMG">
           </img>
         </div>
@@ -106,7 +109,7 @@ function TarjetaRND(){
         <div className="imagenes">
           <img
             className="tamañoIMG tercerDiv pagina4"
-            src={PrimeraIMG}
+            src={NoHaceNadaHD}
             alt="PrimeraIMG">
           </img>
         </div>

@@ -9,7 +9,7 @@ function BarraNav(){
   return(
     <div>
       <div className = "contImgBarra">
-        <div className="col-1">
+        <div className="col-ImgBarraNav">
           <img
             className = 'imagenBarra'
             src = {logoBarra}
