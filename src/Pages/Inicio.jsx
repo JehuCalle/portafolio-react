@@ -20,6 +20,7 @@ import LogoUnity from '../Img/unityLogo.png';
 import '../Css/Inicio.css';
 
 function Inicio(){
+  console.log("INICIO.JSX");
   return(
     <div className="contenedorDivs">
       <h1 className="testTitulo">Quien soy</h1>

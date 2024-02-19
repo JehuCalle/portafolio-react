@@ -12,10 +12,10 @@ import PiedraPapelTijeraConCSS from './Pages/PiedraPapelTijeraConCSS.jsx';
 
 
 
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 
 function App() {
-
+  console.log("APP.JSX");
   return (
     <div className="App">
       <div className='contenedor-cuerpo'>

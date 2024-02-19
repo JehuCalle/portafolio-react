@@ -7,7 +7,7 @@ import '../Css/BarraNav.css';
 
 function BarraNav(){
 
-
+  console.log("BARRANAV.JSX");
 
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
