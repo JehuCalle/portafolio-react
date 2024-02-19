@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import LogoBootstrap from '../Img/bootstrap-5Logo.svg';
 import LogoHTML from '../Img/html5Logo.png';
 import LogoJS from '../Img/javaScriptLogo.png';
@@ -21,6 +21,37 @@ import '../Css/Inicio.css';
 
 function Inicio(){
   console.log("INICIO.JSX");
+
+
+
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+
+    // Agrega un event listener para el evento 'resize' cuando el componente se monta
+    window.addEventListener('resize', handleResize);
+
+    // Limpia el event listener cuando el componente se desmonta
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      console.log(windowSize.width);
+      console.log(windowSize.height);
+      console.log("desdeInicio");
+    };
+  }, []); // El segundo argumento vacío asegura que el efecto solo se ejecute una vez al montar el componente
+
+
+
   return(
     <div className="contenedorDivs">
       <h1 className="testTitulo">Quien soy</h1>
