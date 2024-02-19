@@ -11,23 +11,27 @@ import PiedraPapelTijera from './Pages/PiedraPapelTijera.jsx';
 import PiedraPapelTijeraConCSS from './Pages/PiedraPapelTijeraConCSS.jsx';
 
 
-import { Routes, Route } from 'react-router-dom';
+
+import { Routes, Route, Link } from 'react-router-dom';
 
 function App() {
+
   return (
     <div className="App">
       <div className='contenedor-cuerpo'>
-        <Routes>
-          <Route path ="/portafolio-react" element = {<BarraNav />} >
-            <Route path="/portafolio-react" element={<Inicio />} />
-            <Route path="Pages/SobreMi" element={<SobreMi />} />
-            <Route path="Pages/Contacto" element={<Contacto/>} />
-            <Route path="Pages/ProyectosRND" element={<ProyectosRND/>} />
-            <Route path="Pages/TarjetaRND" element={<TarjetaRND/>} />
-            <Route path="Pages/PiedraPapelTijera" element={<PiedraPapelTijera/>} />
-            <Route path="Pages/PiedraPapelTijeraConCSS" element={<PiedraPapelTijeraConCSS/>} />
-          </Route>
-        </Routes>
+        <div className=''>
+          <Routes>
+            <Route path ="/portafolio-react" element = {<BarraNav />} >
+              <Route path="/portafolio-react" element={<Inicio />} />
+              <Route path="Pages/SobreMi" element={<SobreMi />} />
+              <Route path="Pages/Contacto" element={<Contacto/>} />
+              <Route path="Pages/ProyectosRND" element={<ProyectosRND/>} />
+              <Route path="Pages/TarjetaRND" element={<TarjetaRND/>} />
+              <Route path="Pages/PiedraPapelTijera" element={<PiedraPapelTijera/>} />
+              <Route path="Pages/PiedraPapelTijeraConCSS" element={<PiedraPapelTijeraConCSS/>} />
+            </Route>
+          </Routes>
+        </div>
       </div>
       <footer className='footer-app'>
         <label>paralelo-footer</label>

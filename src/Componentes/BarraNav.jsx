@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import logoBarra from '../Img/gato-normal.jpg';
 import { Outlet, Link } from "react-router-dom";
 
@@ -6,8 +6,84 @@ import '../Css/BarraNav.css';
 
 
 function BarraNav(){
+
+
+
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+
+    // Agrega un event listener para el evento 'resize' cuando el componente se monta
+    window.addEventListener('resize', handleResize);
+
+    // Limpia el event listener cuando el componente se desmonta
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      console.log(windowSize.width);
+      console.log(windowSize.height);
+      
+      const barraNavPC = document.querySelector(".contImgBarra");
+      const barraNavMobil = document.querySelector(".contBarraMovil");
+
+      if( windowSize.width <= 640){
+        barraNavPC.classList.add("ocultar");
+        barraNavMobil.classList.remove("ocultar");
+        console.log("MENOR A 640");
+      } else if ( windowSize.width > 640 ) {
+        barraNavPC.classList.remove("ocultar");
+        barraNavMobil.classList.add("ocultar");
+        console.log("MAYOR A 640");
+      };
+    };
+  }, []); // El segundo argumento vacío asegura que el efecto solo se ejecute una vez al montar el componente
+
+
   return(
     <div>
+
+        <div className='col-12 contBarraMovil'>
+          <div className="col-ImgBarDesplegable col-1">
+            <img
+              className = 'imagenBarra'
+              src = {logoBarra}
+              alt = 'Logo barra nav' />
+          </div>
+          <div className='contBotonesDesplegables col-11'>
+            <div className="dropdown">
+              <button className="botonDrop btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Menu
+              </button>
+              <ul className="contBotonesFix dropdown-menu padding0">
+              <Link
+                className='botonDesplegable margin0 text-center'
+                to= "/portafolio-react">Inicio
+              </Link>
+              <Link
+                className='botonDesplegable margin0'
+                to="Pages/SobreMi">Sobre Mi
+              </Link>
+              <Link
+                className='botonDesplegable margin0'
+                to="Pages/Contacto">Contacto
+              </Link>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+
+
       <div className = "contImgBarra">
         <div className="col-ImgBarraNav">
           <img
