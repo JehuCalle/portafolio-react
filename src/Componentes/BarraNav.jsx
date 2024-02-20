@@ -12,47 +12,21 @@ function BarraNav(){
   console.log(window.innerHeight);
 
 
-  /* 
-  const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
-
-  
-
   useEffect(() => {
-    const handleResize = () => {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    };
+    const barraNavPC = document.querySelector(".contImgBarra");
+    const barraNavMobil = document.querySelector(".contBarraMovil");
 
-
-    // Agrega un event listener para el evento 'resize' cuando el componente se monta
-    window.addEventListener('resize', handleResize);
-
-    // Limpia el event listener cuando el componente se desmonta
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      console.log(windowSize.width);
-      console.log(windowSize.height);
-      
-      const barraNavPC = document.querySelector(".contImgBarra");
-      const barraNavMobil = document.querySelector(".contBarraMovil");
-
-      if( windowSize.width <= 640){
-        barraNavPC.classList.add("ocultar");
-        barraNavMobil.classList.remove("ocultar");
-        console.log("MENOR A 640");
-      } else if ( windowSize.width > 640 ) {
-        barraNavPC.classList.remove("ocultar");
-        barraNavMobil.classList.add("ocultar");
-        console.log("MAYOR A 640");
-      };
+    if( window.innerWidth <= 640){
+      barraNavPC.classList.add("ocultar");
+      barraNavMobil.classList.remove("ocultar");
+      console.log("MENOR A 640");
+    } else if ( window.innerWidth > 640 ) {
+      barraNavPC.classList.remove("ocultar");
+      barraNavMobil.classList.add("ocultar");
+      console.log("MAYOR A 640");
     };
   }, []); // El segundo argumento vacío asegura que el efecto solo se ejecute una vez al montar el componente
-  */
+  
 
   return(
     <div>
