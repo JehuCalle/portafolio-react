@@ -8,12 +8,17 @@ import '../Css/BarraNav.css';
 function BarraNav(){
 
   console.log("BARRANAV.JSX");
-  console.log(window.width)
+  console.log(window.innerWidth);
+  console.log(window.innerHeight);
 
+
+  /* 
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
   });
+
+  
 
   useEffect(() => {
     const handleResize = () => {
@@ -47,7 +52,7 @@ function BarraNav(){
       };
     };
   }, []); // El segundo argumento vacío asegura que el efecto solo se ejecute una vez al montar el componente
-
+  */
 
   return(
     <div>
