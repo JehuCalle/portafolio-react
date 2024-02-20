@@ -4,9 +4,9 @@ import '../Css/TextoColRND.css';
 
 function TextoColRND({texto, color, colorRND}) {
   return(
-    <div className="texto-color-random">
+    <div className="texto-color-random col-12 col-lg-6">
       <label
-        className="texto"
+        className="texto col-11"
         style={color}>{texto}</label>
       <button
         className="btnColorRND"

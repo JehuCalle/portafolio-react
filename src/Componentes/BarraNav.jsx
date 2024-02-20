@@ -32,13 +32,13 @@ function BarraNav(){
     <div>
 
         <div className='col-12 contBarraMovil'>
-          <div className="col-ImgBarDesplegable col-1">
+          <div className="col-ImgBarDesplegable col-3 col-sm-2">
             <img
               className = 'imagenBarra'
               src = {logoBarra}
               alt = 'Logo barra nav' />
           </div>
-          <div className='contBotonesDesplegables col-11'>
+          <div className='contBotonesDesplegables col-9 col-sm-10'>
             <div className="dropdown">
               <button className="botonDrop btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Menu

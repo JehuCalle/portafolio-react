@@ -1,8 +1,7 @@
 .contenedor-gato {
-    height: 200px;
-    width: 750px;
     margin: 0px 0px 10px 0px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background-color: rgb(25, 70, 70);
@@ -15,8 +14,6 @@
   }
 
 .contenedor-ImagenGato {
-  height: 150px;
-  width: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,8 +25,7 @@
   -o-border-radius: 30px;
 }
 .imagenGato {
-  height: 150px;
-  width: 150px;
+  width: 100%;
   border: 7px solid  rgb(4, 39, 39);
   border-radius: 30px;
   -webkit-border-radius: 30px;
@@ -40,7 +36,6 @@
 
 .contenedor-DatosTextoGato {
   height: 130px;
-  width: 70px;
   padding: 0px 0px 0px 5px;
   display: flex;
   flex-direction: column;
@@ -51,7 +46,6 @@
 
 .contenedor-DatosGato {
   height: 130px;
-  width: 170px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,8 +54,7 @@
 }
 
 .contenedor-VidaHabilidadesGato {
-  height: 160px;
-  width: 320px;
+  height: 160px;  
   display: flex;
   flex-direction: column;
   justify-content: center;

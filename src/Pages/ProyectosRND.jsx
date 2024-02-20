@@ -115,7 +115,7 @@ function ProyectosRND(){
 
   return(
     <div>
-      <div className='contenedor-experimentos'>
+      <div className='contenedor-experimentos col-12'>
         <TextoColRND
           texto = "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem"
           color = {colorRND}
@@ -128,8 +128,10 @@ function ProyectosRND(){
           resultadoCalculo={`${calculoResultado}`}
           historial={`${historial}`} />
         <ListaDeGatos/>
+        {/*
         <ListaGatoAPI/>
         <ListaChat/>
+        */}
       </div>
     </div>
   );

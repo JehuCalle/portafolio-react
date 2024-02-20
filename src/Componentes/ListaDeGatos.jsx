@@ -31,7 +31,7 @@ function ListaDeGatos(props, ref){
       gato.clase = gato.clase.trim();
       gato.arma = gato.arma.trim();
       setMountedT(true);
-      const gatosActualizados = [gato, ...gatos];
+      const gatosActualizados = [...gatos, gato];
       setGatos(gatosActualizados);
       console.log(gatosActualizados);
     };
@@ -119,34 +119,35 @@ function ListaDeGatos(props, ref){
       }
   };
   return(
-    <div className="gato-rpg">
-      <div className="contenedor-caracteristicas">
+    <div className="gato-rpg col-12">
+      <div
+        className="contenedor-caracteristicas col-12 col-lg-6 col-xl-6 col-xxl-6">
         <GatoFormulario
           onSubmit={agregarGato}/>
       </div>
       <div
-      className="contenedor-lista"
-      ref={referencia}>
-        {
-          gatos.map((gato) => 
-            <Gato
-              key={gato.id}
-              id={gato.id}
-              nombre={gato.nombre}
-              edad={gato.edad}
-              clase={gato.clase}
-              arma={gato.arma}
-              imagen={gato.imagen}
-              vida={gato.vida}
-              mana={gato.mana}
-              verID1={Habilidad1}
-              verID2={Habilidad2}
-              verID3={Habilidad3}
-              verID4={Habilidad4}  />
-          )
-        }
+        className="contenedor-lista col-12 col-lg-6 col-xl-6 col-xxl-6"
+        ref={referencia}>
+          {
+            gatos.map((gato) => 
+              <Gato
+                key={gato.id}
+                id={gato.id}
+                nombre={gato.nombre}
+                edad={gato.edad}
+                clase={gato.clase}
+                arma={gato.arma}
+                imagen={gato.imagen}
+                vida={gato.vida}
+                mana={gato.mana}
+                verID1={Habilidad1}
+                verID2={Habilidad2}
+                verID3={Habilidad3}
+                verID4={Habilidad4}  />
+              )
+            }
       </div>
-  </div>
+    </div>
   );
 };
 

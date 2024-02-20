@@ -4,13 +4,11 @@
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  width: 50%;
   height: 300px;
   background-color: rgb(110, 160, 160);
 }
 
 .texto {
-  width: 800px;
   height: 100px;
   display: flex;
   justify-content: center;
@@ -23,8 +21,6 @@
 }
 
 .btnColorRND {
-  width: 200px;
-  height: 30px;
   background-color: rgb(0, 19, 27);
   color: rgb(141, 255, 255);
   border: 3px solid rgb(141, 255, 255);
