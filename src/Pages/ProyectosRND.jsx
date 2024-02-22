@@ -128,10 +128,8 @@ function ProyectosRND(){
           resultadoCalculo={`${calculoResultado}`}
           historial={`${historial}`} />
         <ListaDeGatos/>
-        {/*
         <ListaGatoAPI/>
         <ListaChat/>
-        */}
       </div>
     </div>
   );

@@ -32,9 +32,9 @@ function ListaGatoAPI(){
   };
 
   return(
-    <div className="imagen-random-gatoAPI">
+    <div className="imagen-random-gatoAPI col-12">
       <div
-        className="contenedor-imagenes"
+        className="contenedor-imagenes col-10 col-sm-10 col-md-11 col-lg-11 col-xl-11 col-xxl-12"
         ref={referenciaListaGatoAPI}  >
         {
           gatosAPI.map((gatoAPI) => 

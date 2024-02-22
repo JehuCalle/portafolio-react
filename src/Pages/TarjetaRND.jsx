@@ -66,16 +66,16 @@ const btnIzquierda = (e) => {
 function TarjetaRND(){
   return(
     <div>
-      <div className="contenedortitulo">
-        <div className="imgTitulo">
+      <div className="contenedortitulo col-12">
+        <div className="imgTitulo col-3 col-sm-2 col-md-2 col-lg-1 col-xl-1 col-xxl-1">
           <img className="imgLogo"
             src={Logo}
             alt="LogoNoHaceNada">
           </img>
         </div>
-        <div className="titulo"></div>
+        <div className="titulo col-9 col-sm-10 col-md-10 col-lg-11 col-xl-11 col-xxl-11">TITULO TITULO</div>
       </div>
-      <div className="contenedorCuerpo">
+      <div className="contenedorCuerpo"> {/* Desde Aquí */}
         <div className="imagenes">
           <img
             className="tamañoIMG primerDiv"

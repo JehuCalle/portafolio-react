@@ -55,13 +55,13 @@ function ListaChat() {
   return(
     <div
     className='Chat'>
-      <div className="ContenedorChats">
+      <div className="ContenedorChats col-12 col-md-5 col-lg-4 col-xl-4 col-xxl-3">
         <FormularioPrimerChat
           onSubmit = {agregarPrimerMSG}/>
         <FormularioSegundoChat
           onSubmit= {agregarSegundoMSG}/>
       </div>
-      <div className="RegistroChat">
+      <div className="RegistroChat col-12 col-md-5 col-lg-4 col-xl-3 col-xxl-3">
         <div
           className="contenedorHistorial"
           ref={referencia}>

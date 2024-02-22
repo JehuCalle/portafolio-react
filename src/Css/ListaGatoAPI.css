@@ -1,22 +1,20 @@
 /*----------------- AGREGAR IMAGEN RANDOM DE GATO API --------------------*/
 .imagen-random-gatoAPI {
-  width: 100%;
   height: 550px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(38, 78, 78);
+  background-color: rgb(5, 24, 24);
 }
 
 .contenedor-imagenes {
   padding: 10px;
-  width: 1700px;
   height: 500px;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  background-color: rgb(0, 104, 104); 
+  background-color: rgb(33, 139, 139); 
   overflow-y: scroll;
 }
 /*----------------- AGREGAR IMAGEN RANDOM DE GATO API --------------------*/
