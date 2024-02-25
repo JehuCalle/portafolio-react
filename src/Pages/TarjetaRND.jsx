@@ -64,6 +64,11 @@ const btnIzquierda = (e) => {
 } 
 
 function TarjetaRND(){
+
+  const tamañomini = valor => {
+    return (valor < 768);
+  }
+
   return(
     <div>
       <div className="contenedortitulo col-12">
@@ -75,57 +80,61 @@ function TarjetaRND(){
         </div>
         <div className="titulo col-9 col-sm-10 col-md-10 col-lg-11 col-xl-11 col-xxl-11">TITULO TITULO</div>
       </div>
-      <div className="contenedorCuerpo"> {/* Desde Aquí */}
-        <div className="imagenes">
-          <img
-            className="tamañoIMG primerDiv"
-            src={NoHaceNadaHD}
-            alt="CuartaIMG">
-          </img>
-        </div>
-        <div className="imagenes">
-          <img
-            className="tamañoIMG tercerDiv pagina1"
-            src={NoHaceNadaHD}
-            alt="QuintaIMG">
-          </img>
-        </div>
+      <div className={`contenedorCuerpo d-flex flex-column tamañoGrandeContCuerpo ${tamañomini(window.innerWidth) ? 'tamañoChicoContCuerpo' : ''}`}>
+        <div className={ `contenedorTarjeta   tamañoGrandeContTarjeta ${tamañomini(window.innerWidth) ? 'tañamoChicoContTarjeta' : ''}   col-12 col-sm-10 col-md-12 col-lg-11 col-xl-9 col-xxl-9` }>
+          <div className="imagenes col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+            <img
+              className="tamañoTarjetaIMG primerDiv"
+              src={NoHaceNadaHD}
+              alt="CuartaIMG">
+            </img>
+          </div>
+          <div className="imagenes col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+            <img
+              className="tamañoTarjetaIMG tercerDiv pagina1"
+              src={NoHaceNadaHD}
+              alt="QuintaIMG">
+            </img>
+          </div>
 
-        <div className="imagenes">
-          <img
-            className="tamañoIMG segundoDiv pagina2"
-            src={NoHaceNadaHD}
-            alt="SegundaIMG">
-          </img>
-        </div>
-        <div className="imagenes">
-          <img
-            className="tamañoIMG segundoDiv pagina3"
-            src={NoHaceNadaHD }
-            alt="TerceraIMG">
-          </img>
-        </div>
+          <div className="imagenes col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+            <img
+              className="tamañoTarjetaIMG segundoDiv pagina2"
+              src={NoHaceNadaHD}
+              alt="SegundaIMG">
+            </img>
+          </div>
+          <div className="imagenes col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+            <img
+              className="tamañoTarjetaIMG segundoDiv pagina3"
+              src={NoHaceNadaHD }
+              alt="TerceraIMG">
+            </img>
+          </div>
 
-        <div className="imagenes">
-          <img
-            className="tamañoIMG tercerDiv pagina4"
-            src={NoHaceNadaHD}
-            alt="PrimeraIMG">
-          </img>
+          <div className="imagenes col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+            <img
+              className="tamañoTarjetaIMG tercerDiv pagina4"
+              src={NoHaceNadaHD}
+              alt="PrimeraIMG">
+            </img>
+          </div>
+          
+        </div>
+          <div className="contenedorBotones">
+          <button
+            className="estiloBotones"
+            onClick={btnIzquierda}>
+              Primero
+          </button>
+          <button
+            className="estiloBotones"
+            onClick={btnDerecha}>
+              Segundo
+          </button>
         </div>
       </div>
-      <div className="contenedorBotones">
-        <button
-          className="estiloBotones"
-          onClick={btnIzquierda}>
-            Primero
-        </button>
-        <button
-          className="estiloBotones"
-          onClick={btnDerecha}>
-            Segundo
-        </button>
-      </div>
+
     </div>
   );
 }

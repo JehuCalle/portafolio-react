@@ -19,6 +19,9 @@
   -o-border-radius: 30px;
 }
 .titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: green;
 }
 
@@ -26,25 +29,43 @@
 
 
 .contenedorCuerpo {
-  height: 737px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: rgb(165, 47, 47);
 }
+.tamañoGrandeContCuerpo {
+  height: 737px;
+}
+.tamañoChicoContCuerpo {
+  height: 400px;
+}
+.contenedorTarjeta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(25, 85, 85);
+  position: relative;
+}
+.tamañoGrandeContTarjeta {
+  height: 700px;
+}
+.tañamoChicoContTarjeta {
+  height: 300px;
+}
 .imagenes {
-  height: 650px;
-  width: 500px;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
   /*background-color: rgb(10, 37, 37);*/
   position: absolute;
+  object-fit: cover;
 }
-.tamañoIMG {
-  height: 650px;
-  width: 500px;
+.tamañoTarjetaIMG {
+  height: 100%;
+  width: 100%;
 }
 .pagina1 {
   transform-origin: right center;

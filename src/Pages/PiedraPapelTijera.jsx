@@ -184,118 +184,127 @@ function PiedraPapelTijera() {
 
   return(
     <div className="cuerpo">
-      <div className="contenedorIzquierda">
-        <div className="divImagenIzq ocultar">
-          <label>PERDISTE</label>
-          <img
-            className="tamañoIMG"
-            src={GatoTriste}
-            alt="GatoTriste"/>
-        </div>
-      </div>
-      <div className="contenedorCentro">
-        <div
-          className="contVidasEnemigo">
-            <label>VIDAS:</label>
-            <img
-              className="tamañoVidas"
-              src={ImgVidasEnemigo}
-              alt="ImgVidasEnemigo"/>
-        </div>
-        <div className="cont1">
-          <div className="neutro">
-            <img
-              className="tamañoIMG"
-              src={RandomPiPaTi}
-              alt="RandomPiPaTi"/>
+      <div className="contContenedores col-12 col-sm-12 col-md-12 col-lg-11 col-xl-11 col-xxl-10">
+        <div className="contenedorCentro col-12 col-sm-12 col-md-12 col-lg-11 col-xl-10 col-xxl-12">
+          <div
+            className="contVidasEnemigo">
+              <label>VIDAS:</label>
+              <img
+                className="tamañoVidas"
+                src={ImgVidasEnemigo}
+                alt="ImgVidasEnemigo"/>
           </div>
-          <div className="piedra1 ocultar">
-            <img
-              className="tamañoIMG"
-              src={PiedraBot}
-              alt="PiedraBot"/>
+          
+
+          <div className="cont1 col-10">
+            <div className="contenedorIzquierda">
+              <div className="divImagenIzq ocultar">
+                <label>PERDISTE</label>
+                <img
+                  className="tamañoIMG"
+                  src={GatoTriste}
+                  alt="GatoTriste"/>
+              </div>
+            </div>
+
+
+            <div className="neutro">
+              <img
+                className="tamañoIMG"
+                src={RandomPiPaTi}
+                alt="RandomPiPaTi"/>
+            </div>
+            <div className="piedra1 ocultar">
+              <img
+                className="tamañoIMG"
+                src={PiedraBot}
+                alt="PiedraBot"/>
+            </div>
+            <div className="papel1 ocultar">
+              <img
+                className="tamañoIMG"
+                src={PapelBot}
+                alt="PapelBot"/>
+            </div>
+            <div className="tijera1 ocultar">
+              <img
+                className="tamañoIMG"
+                src={TijeraBot}
+                alt="TijeraBot"/>
+            </div>
+
+
+            <div className="contenedorDerecha">
+              <div className="divImagenDer ocultar">
+                <label>GANASTE</label>
+                <img
+                  className="tamañoIMG"
+                  src={NoHaceNadaHD}
+                  alt="NoHaceNadaHD"/>
+              </div>
+            </div>
+
+
           </div>
-          <div className="papel1 ocultar">
-            <img
-              className="tamañoIMG"
-              src={PapelBot}
-              alt="PapelBot"/>
+          <div className="cont2 ocultar">
+            <label>EMPATE</label>
           </div>
-          <div className="tijera1 ocultar">
-            <img
-              className="tamañoIMG"
-              src={TijeraBot}
-              alt="TijeraBot"/>
+          <div className="cont3">
+            <BtnPiePapTijRnd
+              id="idPiedra2"
+              classNameBTN="piedra2"
+              onClick={(id) => random(id)}
+              classNameIMG="tamañoIMG"
+              src={PiedraPlayer}
+              alt="PiedraPlayer"/>
+            <BtnPiePapTijRnd
+              id="idPapel2"
+              classNameBTN="papel2"
+              onClick={(id) => random(id)}
+              classNameIMG="tamañoIMG"
+              src={PapelPlayer}
+              alt="PapelPlayer"/>
+            <BtnPiePapTijRnd
+              id="idTijera2"
+              classNameBTN="tijera2"
+              onClick={(id) => random(id)}
+              classNameIMG="tamañoIMG"
+              src={TijeraPlayer}
+              alt="TijeraPlayer"/>
           </div>
-        </div>
-        <div className="cont2 ocultar">
-          <label>EMPATE</label>
-        </div>
-        <div className="cont3">
-          <BtnPiePapTijRnd
-            id="idPiedra2"
-            classNameBTN="piedra2"
-            onClick={(id) => random(id)}
-            classNameIMG="tamañoIMG"
-            src={PiedraPlayer}
-            alt="PiedraPlayer"/>
-          <BtnPiePapTijRnd
-            id="idPapel2"
-            classNameBTN="papel2"
-            onClick={(id) => random(id)}
-            classNameIMG="tamañoIMG"
-            src={PapelPlayer}
-            alt="PapelPlayer"/>
-          <BtnPiePapTijRnd
-            id="idTijera2"
-            classNameBTN="tijera2"
-            onClick={(id) => random(id)}
-            classNameIMG="tamañoIMG"
-            src={TijeraPlayer}
-            alt="TijeraPlayer"/>
-        </div>
-        <div
-          className="contVidasPlayer">
+          <div
+            className="contVidasPlayer">
             <label>VIDAS:</label>
             <img
               className="tamañoVidas"
               src={ImgVidasPlayer}
               alt="ImgVidasPlayer"/>
-        </div>
-      </div>
-      <div className="contenedorDerecha">
-        <div className="divImagenDer ocultar">
-            <label>GANASTE</label>
-            <img
-              className="tamañoIMG"
-              src={NoHaceNadaHD}
-              alt="NoHaceNadaHD"/>
           </div>
-      </div>
+        </div>
 
 
-
-      <div className="alertaGanar ocultar">
-        <label>Has derrotado al enemigo </label>
-        <img
-          className="tamañoImgAlertaGanaste"
-          src={GatoGanaste}
-          alt="GatoGanaste"/>
-        <button
-          onClick={ReiniciarJuego}>
-          Reiniciar
-        </button>
-      </div>
-      <div className="alertaPerder ocultar">
-        <label>Te has quedado sin vidas</label>
-        <img
-          className="tamañoImgAlertaPerdiste"
-          src={GatoPerdiste}
-          alt="GatoPerdiste"/>
-        <button
-          onClick={ReiniciarJuego}>
-          Reiniciar
-        </button>
+        <div className="alertaGanar ocultar">
+          <label>Has derrotado al enemigo </label>
+          <img
+            className="tamañoImgAlertaGanaste"
+            src={GatoGanaste}
+            alt="GatoGanaste"/>
+          <button
+            onClick={ReiniciarJuego}>
+            Reiniciar
+          </button>
+        </div>
+        <div className="alertaPerder ocultar">
+          <label>Te has quedado sin vidas</label>
+          <img
+            className="tamañoImgAlertaPerdiste"
+            src={GatoPerdiste}
+            alt="GatoPerdiste"/>
+          <button
+            onClick={ReiniciarJuego}>
+            Reiniciar
+          </button>
+        </div>
       </div>
     </div>
   )
