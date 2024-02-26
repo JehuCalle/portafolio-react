@@ -179,11 +179,13 @@ function PiedraPapelTijera() {
   }, [piePapTijRND, mountedH, idDelBoton, piedra1, papel1, tijera1, neutro, divImagenDer, divImagenIzq, VidasEnemigo, VidasPlayer, divEmpate]);
 
 
-
+  const grandeOChico = capTamaño => {
+    return(capTamaño <= 575);
+  }
 
 
   return(
-    <div className="cuerpo">
+    <div className={`cuerpo ${grandeOChico(window.innerWidth) ? 'cuerpoAlturaChico' : 'cuerpoAlturaGrande'}`}>
       <div className="contContenedores col-12 col-sm-12 col-md-12 col-lg-11 col-xl-11 col-xxl-10">
         <div className="contenedorCentro col-12 col-sm-12 col-md-12 col-lg-11 col-xl-10 col-xxl-12">
           <div
@@ -196,7 +198,7 @@ function PiedraPapelTijera() {
           </div>
           
 
-          <div className="cont1 col-10">
+          <div className={`cont1 col-10 ${grandeOChico(window.innerWidth) ? 'cont1AlturaChico' : 'cont1AlturaGrande'}`}>
             <div className="contenedorIzquierda">
               <div className="divImagenIzq ocultar">
                 <label>PERDISTE</label>
@@ -249,7 +251,7 @@ function PiedraPapelTijera() {
           <div className="cont2 ocultar">
             <label>EMPATE</label>
           </div>
-          <div className="cont3">
+          <div className={`cont3 ${grandeOChico(window.innerWidth) ? 'cont3AlturaChico' : 'cont3AlturaGrande'}`}>
             <BtnPiePapTijRnd
               id="idPiedra2"
               classNameBTN="piedra2"
@@ -283,7 +285,7 @@ function PiedraPapelTijera() {
         </div>
 
 
-        <div className="alertaGanar ocultar">
+        <div className={`alertaGanar col-12 col-sm-12 col-md-12 col-lg-11 col-xl-10 col-xxl-12 ocultar ${grandeOChico(window.innerWidth) ? 'alertaGanarChico' : 'alertaGanarGrande'}`}>
           <label>Has derrotado al enemigo </label>
           <img
             className="tamañoImgAlertaGanaste"
@@ -294,7 +296,7 @@ function PiedraPapelTijera() {
             Reiniciar
           </button>
         </div>
-        <div className="alertaPerder ocultar">
+        <div className={`alertaPerder col-12 col-sm-12 col-md-12 col-lg-11 col-xl-10 col-xxl-12 ocultar ${grandeOChico(window.innerWidth) ? 'alertaPerderChico' : 'alertaPerderGrande'}`}>
           <label>Te has quedado sin vidas</label>
           <img
             className="tamañoImgAlertaPerdiste"

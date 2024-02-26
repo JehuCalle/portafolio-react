@@ -1,9 +1,14 @@
 .cuerpo {
-  height: 875px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+.cuerpoAlturaGrande {
+  height: 875px;
+}
+.cuerpoAlturaChico {
+  height: 560px;
 }
 
 .contContenedores {
@@ -59,12 +64,17 @@
 
 /* PIEDRA PAPEL TIJERA 1 */
 .cont1 {
-  height: 400px;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   background-color: rgb(3, 97, 97);
+}
+.cont1AlturaGrande {
+  height: 400px;
+}
+.cont1AlturaChico {
+  height: 260px;
 }
 .neutro {
   height: 250px;
@@ -109,12 +119,17 @@
 
 /* PIEDRA PAPEL TIJERA 3 */
 .cont3 {
-  height: 400px;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   background-color: rgb(4, 66, 66);
+}
+.cont3AlturaGrande {
+  height: 400px;
+}
+.cont3AlturaChico {
+  height: 212px;
 }
 .piedra2 {
   height: 200px;
@@ -169,14 +184,18 @@
 /* ALERTA ALERTA ALERTA ALERTA ALERTA ALERTA */
 
 .alertaGanar {
-  height: 800px;
-  width: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
   background-color:rgb(3, 46, 46);
+}
+.alertaGanarGrande {
+  height: 800px;
+}
+.alertaGanarChico {
+  height: 462px;
 }
 .tamañoImgAlertaGanaste {
   height: 300px;
@@ -184,14 +203,18 @@
 }
 
 .alertaPerder {
-  height: 800px;
-  width: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
   background-color:rgb(3, 46, 46);
+}
+.alertaPerderGrande {
+  height: 800px;
+}
+.alertaPerderChico {
+  height: 462px;
 }
 .tamañoImgAlertaPerdiste {
   height: 300px;
