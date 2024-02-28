@@ -141,7 +141,7 @@ function GatoFormulario(props){
       setMountedClase(false);
       setMountedArma(false);
     }
-  }, [claseGato, armaGato, mountedClase, mountedArma])
+  }, [claseGato, armaGato, mountedClase, mountedArma, btnClasePres, btnArmaPres])
 
 
   const manejarEnvio = e => {

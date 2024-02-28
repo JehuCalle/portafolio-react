@@ -12,6 +12,7 @@ function ListaDeGatos(props, ref){
   const [mountedT, setMountedT] = useState(false);
 
   useEffect(() => {
+    console.log(mountedT);
     if(referencia.current && mountedT === true){
       setMountedT(false);
       console.log("aaa");

@@ -53,6 +53,19 @@ function ProyectosRND(){
 
   const [respuestaCaraOSello, setrespuestaCaraOSello] = useState('');
   const [nombre, setnombre] = useState('');
+  
+
+
+
+// 4- SE LLAMA LA FUNCIÓN ESTABLECIDA PARA USARLA
+  const manejarFuncionB = (funcionB) => {
+    // Llama a funcionB cuando sea necesario desde el componente A
+    if (funcionB) {
+      funcionB();
+    }
+  };
+
+  const [ ae, setAe ] = useState(true);
 
   const enviar = () => {
     const nombreTxt = document.querySelector("#nombre");
@@ -64,20 +77,39 @@ function ProyectosRND(){
 
     caraOSelloRandom();
     console.log(calculoResultado);
-    console.log();
     setMounted1(true);
+    
+    // 5- SE LLAMA LA FUNCIÓN PARA USARLA
+    manejarFuncionB();
+    setAe(true);
+
   };
+
   const [mounted1, setMounted1] = useState(false);
   useEffect(() => {
     // Esta función se ejecuta cuando caraOSelloTxt cambia
+
+
+
+    const respuestaPrimMayus = respuestaCaraOSello.charAt(0).toUpperCase() + respuestaCaraOSello.slice(1);
+
+
     if (mounted1 === true) {
-      if((respuestaCaraOSello === calculoResultado)){
-        console.log("acertado");
-        setresultado(`La respuesta de ${nombre} ha sido ${respuestaCaraOSello} y ha acertado`);
-      }else if (respuestaCaraOSello !== calculoResultado){
-        console.log("fallado");
-        setresultado(`La respuesta de ${nombre} ha sido ${respuestaCaraOSello} y ha fallado`);
-      };
+      if (nombre !== '' && respuestaCaraOSello !== '') {
+        if(respuestaPrimMayus === calculoResultado){
+          console.log(calculoResultado);
+          console.log("acertado");
+          setresultado(`La respuesta de ${nombre} ha sido ${respuestaCaraOSello} y ha acertado`);
+          setMounted1(false);
+        }else if (respuestaPrimMayus !== calculoResultado){
+          console.log(calculoResultado);
+          console.log("fallado");
+          setresultado(`La respuesta de ${nombre} ha sido ${respuestaCaraOSello} y ha fallado`);
+          setMounted1(false);
+        };
+      } else {
+        console.log("CAMPOS VACIOS");
+      }
     };
   }, [respuestaCaraOSello, nombre, calculoResultado, mounted1]); // Establece las dependencias
 
@@ -105,13 +137,14 @@ function ProyectosRND(){
       if((caraOSelloTxt === calculoResultado)){
         console.log("acertado");
         setresultado(`Tu respuesta ha sido ${caraOSelloTxt} y has acertado`);
+        setMounted(false);
       }else{
         console.log("fallado");
         setresultado(`Tu respuesta ha sido ${caraOSelloTxt} y has fallado`);
+        setMounted(false);
       };
     };
   }, [caraOSelloTxt, calculoResultado, mounted]); // Establece las dependencias
-
 
   return(
     <div>
@@ -126,7 +159,9 @@ function ProyectosRND(){
           sello={sello}
           respuesta={`${resultado}`}
           resultadoCalculo={`${calculoResultado}`}
-          historial={`${historial}`} />
+          historial={`${historial}`}
+          onFuncionB={manejarFuncionB}
+          ae = {`${ae}`} />
         <ListaDeGatos/>
         <ListaGatoAPI/>
         <ListaChat/>
