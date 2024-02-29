@@ -8,7 +8,7 @@ import Contacto from "./Pages/Contacto.jsx";
 import ProyectosRND from './Pages/ProyectosRND.jsx';
 import TarjetaRND from './Pages/TarjetaRND.jsx';
 import PiedraPapelTijera from './Pages/PiedraPapelTijera.jsx';
-import PiedraPapelTijeraConCSS from './Pages/PiedraPapelTijeraConCSS.jsx';
+import DiferentesAnim from './Pages/DiferentesAnim.jsx';
 
 
 
@@ -28,7 +28,7 @@ function App() {
               <Route path="Pages/ProyectosRND" element={<ProyectosRND/>} />
               <Route path="Pages/TarjetaRND" element={<TarjetaRND/>} />
               <Route path="Pages/PiedraPapelTijera" element={<PiedraPapelTijera/>} />
-              <Route path="Pages/PiedraPapelTijeraConCSS" element={<PiedraPapelTijeraConCSS/>} />
+              <Route path="Pages/DiferentesAnim" element={<DiferentesAnim/>} />
             </Route>
           </Routes>
         </div>

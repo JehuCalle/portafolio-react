@@ -92,7 +92,7 @@ function Inicio(){
           <div className="contenedorImagenesProy col-10 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
             <Link 
               className="proyecto4 dividirPartesIguales"
-              to= "Pages/PiedraPapelTijeraConCSS">Proyecto N°4
+              to= "Pages/DiferentesAnim">Proyecto N°4
             </Link>
             <label className="proyecto5 dividirPartesIguales">proyecto5</label>
             <label className="proyecto6 dividirPartesIguales">proyecto6</label>
