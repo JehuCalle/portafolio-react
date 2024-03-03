@@ -1,3 +1,28 @@
+.contBotones {
+  margin: 0px 4px 0px 4px;
+}
+.estiloBtnDifAnim {
+  height: 60px;
+  margin: 6px 4px 6px 4px !important;
+  padding: 3px 6px 3px 6px !important;
+  color: rgb(141, 255, 255) !important;
+  background-color: rgb(0, 19, 27) !important;
+  border: 3px solid rgb(141, 255, 255) !important;
+  border-radius: 8px !important;
+  -webkit-border-radius: 8px !important;
+  -moz-border-radius: 8px !important;
+  -ms-border-radius: 8px !important;
+  -o-border-radius: 8px !important;
+  cursor: pointer;
+  text-transform: none !important;
+}
+.paddingUl {
+  padding-left: 1rem;
+}
+.tamañoLi {
+  font-size: 15px;
+}
+
 .tituloAnim {
   display: flex;
   justify-content: center;
@@ -22,18 +47,37 @@
   align-items: center;
   background-color: rgb(15, 99, 99);
 }
-.estiloBtnDifAnim {
-  height: 60px;
-  margin: 6px 4px 6px 4px;
-  padding: 3px 6px 3px 6px;
-  color: rgb(141, 255, 255) !important;
-  background-color: rgb(0, 19, 27) !important;
-  border: 3px solid rgb(141, 255, 255) !important;
-  border-radius: 8px !important;
-  -webkit-border-radius: 8px !important;
-  -moz-border-radius: 8px !important;
-  -ms-border-radius: 8px !important;
-  -o-border-radius: 8px !important;
-  cursor: pointer;
-  text-transform: none !important;
+
+.contAnimIzq {
+  background-color: rgb(16, 54, 54);
 }
+.contAlertaVanilla {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.alertaVanilla {
+  border: 3px solid rgb(168, 105, 23);
+  border-radius: 10px;
+  background-color: rgb(44, 179, 179);
+  text-align: center;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.alerVaCorr {
+  border: 3px solid rgb(44, 145, 49);
+}
+.alerVaInco {
+  border: 3px solid rgb(165, 40, 40);
+}
+
+.contAnimCen {
+  background-color: rgb(46, 107, 107);
+}
+
+.contAnimDer {
+  background-color: rgb(25, 160, 160);
+}
+
