@@ -3,7 +3,7 @@ import React, {useRef, useState, useEffect} from 'react';
 
 import "../Css/CaraOSello.css";
 
-function CaraOSello({ enviar, cara, sello, resultadoCalculo, respuesta, historial, ref, onFuncionB, ae}){
+function CaraOSello({ enviar, cara, sello, resultadoCalculo, respuesta, historial, ref, onFuncionB, activarFuncionEx}){
 
   // 1- SE ESTABLECE LA FUNCIÓN QUE SE EXPORTARÁ
   const funcionB = () => {
@@ -13,7 +13,7 @@ function CaraOSello({ enviar, cara, sello, resultadoCalculo, respuesta, historia
   // 2- SE ESTABLECE UN USEEFFECT PARA CONFIGURAR COMO SE USARÁ LA FUNCIÓN
   useEffect(() => {
     // Llama a la funciónB cuando el componente se monta
-    if (ae === 'true') {
+    if (activarFuncionEx === 'true') {
       onFuncionB(funcionB);
     }
 

@@ -65,7 +65,7 @@ function ProyectosRND(){
     }
   };
 
-  const [ ae, setAe ] = useState(true);
+  const [ activarFuncionEx, setActivarFuncionEx ] = useState(true);
 
   const enviar = () => {
     const nombreTxt = document.querySelector("#nombre");
@@ -81,7 +81,7 @@ function ProyectosRND(){
     
     // 5- SE LLAMA LA FUNCIÓN PARA USARLA
     manejarFuncionB();
-    setAe(true);
+    setActivarFuncionEx(true);
 
   };
 
@@ -89,10 +89,7 @@ function ProyectosRND(){
   useEffect(() => {
     // Esta función se ejecuta cuando caraOSelloTxt cambia
 
-
-
     const respuestaPrimMayus = respuestaCaraOSello.charAt(0).toUpperCase() + respuestaCaraOSello.slice(1);
-
 
     if (mounted1 === true) {
       if (nombre !== '' && respuestaCaraOSello !== '') {
@@ -161,7 +158,7 @@ function ProyectosRND(){
           resultadoCalculo={`${calculoResultado}`}
           historial={`${historial}`}
           onFuncionB={manejarFuncionB}
-          ae = {`${ae}`} />
+          activarFuncionEx = {`${activarFuncionEx}`} />
         <ListaDeGatos/>
         <ListaGatoAPI/>
         <ListaChat/>
