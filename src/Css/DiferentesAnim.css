@@ -1,3 +1,7 @@
+.contContBotones {
+  display: flex;
+  justify-content: center;
+}
 .contBotones {
   margin: 0px 4px 0px 4px;
 }
@@ -23,20 +27,30 @@
   font-size: 15px;
 }
 
-.tituloAnim {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgb(141, 255, 255);
+.tituloAlerVanilla {
+  text-align: center;
+  background-color: rgb(20, 70, 70);
+}
+
+.tituloAlerMUI {
+  text-align: center;
+  background-color: rgb(63, 97, 97);
 }
 
 .cuerpoAnim {
   height: 700px;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgb(73, 121, 121);
+}
+
+.contContCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contBtnDifAnim {
@@ -79,5 +93,33 @@
 
 .contAnimDer {
   background-color: rgb(25, 160, 160);
+}
+
+.AlertaAnimVanilla {
+  height: 50px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(4, 126, 89);
+  color: rgb(0, 53, 37);
+  border: 5px solid rgb(0, 53, 37);
+  border-radius: 10px;
+  position: absolute;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.anim {
+  animation-name: AlVani;
+  animation-duration: 3s;
+}
+@keyframes AlVani {
+  0% {left: -300px; top: 0px;}
+  30% {left: 0px; top: 0px;}
+  80% {left: 0px; top: 0px;}
+  100% {left: -300px; top: 0px;}
 }
 
