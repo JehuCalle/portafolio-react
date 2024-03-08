@@ -119,7 +119,6 @@ function DiferentesAnim(){
       setEstadoUEBtn4(false);
     };
   },[estadoUEBtn4, estadoResBtn4]);
-  /* #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA */
 
 /* BTN 5 BTN 5 BTN 5 BTN 5 BTN 5 BTN 5 */
 
@@ -164,8 +163,12 @@ function DiferentesAnim(){
     }, 2900);
   };
 
+  /* #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA */
+
+  const inputDerAlmacenado = useRef(null);
+
 /* BTN 1 BTN 1 BTN 1 BTN 1 BTN 1 BTN 1 */
-const [open, setOpen] = React.useState(false);
+const [open, setOpen] = useState(false);
 
 const handleClick = () => {
   setOpen(true);
@@ -317,9 +320,26 @@ const handleClose = (event, reason) => {
 
           {/* DERECHA DERECHA DERECHA DERECHA DERECHA */}
           <div className="contBtnDifAnim contAnimDer col-3">
-            <div className="contBotones col-5">
-                <Button className="estiloBtnDifAnim d-flex col-12" onClick={handleClick}>Boton Desplegable 5s</Button>
+            <input
+              className="col-8"
+              ref={inputDerAlmacenado}/>
+            <div className="contContBotones col-12">
+              <div className="contBotones col-5">
+                <Button
+                  className="estiloBtnDifAnim d-flex col-12"
+                  onClick={handleClick}>
+                    Boton Desplegable 5s
+                </Button>
                 <ul className="paddingUl">
+                  <li className="tamañoLi">
+                    Escribir "paralelo"
+                  </li>
+                  <li className="tamañoLi">
+                    Escribir "paralelo"
+                  </li>
+                  <li className="tamañoLi">
+                    Escribir "paralelo"
+                  </li>
                   <li className="tamañoLi">
                     Escribir "paralelo"
                   </li>
@@ -338,11 +358,99 @@ const handleClose = (event, reason) => {
                   </Alert>
                 </Snackbar>
               </div>
-            <button className="estiloBtnDifAnim col-5">ejemplo 2</button>
-            <button className="estiloBtnDifAnim col-5">ejemplo 3</button>
-            <button className="estiloBtnDifAnim col-5">ejemplo 4</button>
-            <button className="estiloBtnDifAnim col-5">ejemplo 5</button>
-            <button className="estiloBtnDifAnim col-5">ejemplo 6</button>
+              <div className="contBotones col-5">
+                <button className="estiloBtnDifAnim col-12">ejemplo 2</button>
+                <ul className="paddingUl">
+                  <li className="tamañoLi">
+                    Escribir "paralelo"
+                  </li>
+                  <li className="tamañoLi">
+                    Escribir "paralelo"
+                  </li>
+                  <li className="tamañoLi">
+                    Escribir "paralelo"
+                  </li>
+                  <li className="tamañoLi">
+                    Escribir "paralelo"
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="contContBotones col-12">
+              <div className="contBotones col-5">
+                <button className="estiloBtnDifAnim col-12">ejemplo 3</button>
+                <ul className="paddingUl">
+                  <li className="tamañoLi">
+                    Escribir "paralelo"
+                  </li>
+                  <li className="tamañoLi">
+                    Escribir "paralelo"
+                  </li>
+                  <li className="tamañoLi">
+                    Escribir "paralelo"
+                  </li>
+                  <li className="tamañoLi">
+                    Escribir "paralelo"
+                  </li>
+                </ul>
+              </div>
+              <div className="contBotones col-5">
+                <button className="estiloBtnDifAnim col-12">ejemplo 4</button>
+                <ul className="paddingUl">
+                  <li className="tamañoLi">
+                    Escribir "paralelo"
+                  </li>
+                  <li className="tamañoLi">
+                    Escribir "paralelo"
+                  </li>
+                  <li className="tamañoLi">
+                    Escribir "paralelo"
+                  </li>
+                  <li className="tamañoLi">
+                    Escribir "paralelo"
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="contContBotones col-12">
+              <div className="contBotones col-5">
+                <button className="estiloBtnDifAnim col-12">ejemplo 5</button>
+                <ul className="paddingUl">
+                  <li className="tamañoLi">
+                    Escribir "paralelo"
+                  </li>
+                  <li className="tamañoLi">
+                    Escribir "paralelo"
+                  </li>
+                  <li className="tamañoLi">
+                    Escribir "paralelo"
+                  </li>
+                  <li className="tamañoLi">
+                    Escribir "paralelo"
+                  </li>
+                </ul>
+              </div>
+              <div className="contBotones col-5">
+                <button className="estiloBtnDifAnim col-12">ejemplo 6</button>
+                <ul className="paddingUl">
+                  <li className="tamañoLi">
+                    Escribir "paralelo"
+                  </li>
+                  <li className="tamañoLi">
+                    Escribir "paralelo"
+                  </li>
+                  <li className="tamañoLi">
+                    Escribir "paralelo"
+                  </li>
+                  <li className="tamañoLi">
+                    Escribir "paralelo"
+                  </li>
+                </ul>
+              </div>
+            </div>
+
           </div>
         </div>
         <label
