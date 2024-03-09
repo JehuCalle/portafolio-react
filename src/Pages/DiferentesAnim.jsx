@@ -18,8 +18,8 @@ function DiferentesAnim(){
   const [ cumpleCondicion, setCumpleCondicion ] = useState(false);
   const [ ocultarAlertONo, setOcultarAlertONo ] = useState(true);
 
-  const VerifCondicion = estadoAler => {
-    return (estadoAler === true);
+  const VerifCondicion = estadoAlerIzq => {
+    return (estadoAlerIzq === true);
   }
   const ocultarONoAlerta = ocultar => {
     return (ocultar === true);
@@ -29,7 +29,7 @@ function DiferentesAnim(){
 
 /* BTN 1 BTN 1 BTN 1 BTN 1 BTN 1 BTN 1 */
 
-  const btn1 = () => {
+  const btnIzq1 = () => {
 
     if (inputAlmacenado.current.value === 'Angora') {
       alertaAlmacenada.current.textContent = 'Bien Hecho, Botón N°1 completado!!!';
@@ -47,7 +47,7 @@ function DiferentesAnim(){
   const [ resBtn2, setResBtn2 ] = useState('');
   const [ estadoUEBtn2, setEstadoUEBtn2 ] = useState(false);
 
-  const btn2 = () => {
+  const btnIzq2 = () => {
     setEstadoUEBtn2(true);
     setResBtn2(inputAlmacenado.current.value);
   };
@@ -73,7 +73,7 @@ function DiferentesAnim(){
   const [ resBtn3, setResBtn3 ] = useState('');
   const [ estadoUEBtn3, setEstadoUEBtn3 ] = useState(false);
 
-  const btn3 = () => {
+  const btnIzq3 = () => {
     setResBtn3(inputAlmacenado.current.value);
     setEstadoUEBtn3(true);
   };
@@ -101,7 +101,7 @@ function DiferentesAnim(){
   const [ estadoUEBtn4, setEstadoUEBtn4 ] = useState(false);
   const [ estadoResBtn4, setEstadoResBtn4 ] = useState(false);
 
-  const btn4 = () => {
+  const btnIzq4 = () => {
     setEstadoUEBtn4(true);
     setEstadoResBtn4(regexSoloNumYSpaBla.test(inputAlmacenado.current.value));
   };
@@ -126,7 +126,7 @@ function DiferentesAnim(){
   const [ estadoUEBtn5, setEstadoUEBtn5 ] = useState(false);
   const [ estadoResBtn5, setEstadoResBtn5 ] = useState(false);
 
-  const btn5 = () => {
+  const btnIzq5 = () => {
     setEstadoUEBtn5(true);
     setEstadoResBtn5(regexSoloLetYSpaBla.test(inputAlmacenado.current.value));
   };
@@ -152,7 +152,7 @@ function DiferentesAnim(){
   const [ ocultarAnim, setOcultarAnim ] = useState(true);
   const [ btn6Activado, setBtn6Activado ] = useState(false);
 
-  const btn6 = () => {
+  const btnIzq6 = () => {
     setActivAnim(true);
     setOcultarAnim(false);
     setBtn6Activado(true);
@@ -165,13 +165,32 @@ function DiferentesAnim(){
 
   /* #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA */
 
+  const [open, setOpen] = useState(false);
   const inputDerAlmacenado = useRef(null);
+  
+  const [ estadoAlertaDer, EstadoAlertaDer ] = useState(false);
+  const [ msgAlertDer, setMsgAlertDer ] = useState('')
+  /* success - info - warning - error */
+  const [ estiloSvrty, setEstiloSvrty ] = useState('')
+  
+
+  const verifEstado = estadoAlerDer => {
+    return (estadoAlerDer === true);
+  }
 
 /* BTN 1 BTN 1 BTN 1 BTN 1 BTN 1 BTN 1 */
-const [open, setOpen] = useState(false);
 
-const handleClick = () => {
+const btnDer1 = () => {
   setOpen(true);
+  if (inputDerAlmacenado.current.value === 'Angora') {
+    setMsgAlertDer('Bien Hecho, Botón Izquierdo N°1 completado!!!')
+    EstadoAlertaDer(true);
+    setEstiloSvrty('success');
+  }else {
+    setMsgAlertDer('Tienes que escribir "Angora" :]')
+    EstadoAlertaDer(false);
+    setEstiloSvrty('error')
+  };
 };
 
 const handleClose = (event, reason) => {
@@ -211,7 +230,7 @@ const handleClose = (event, reason) => {
               <div className="contBotones col-5">
                 <button
                   className="estiloBtnDifAnim col-12"
-                  onClick={btn1}
+                  onClick={btnIzq1}
                   >Boton N°1
                 </button>
                 <ul className="paddingUl">
@@ -228,7 +247,7 @@ const handleClose = (event, reason) => {
               <div className="contBotones col-5">
                 <button
                   className="estiloBtnDifAnim col-12"
-                  onClick={btn2}>
+                  onClick={btnIzq2}>
                     Botón N°2
                 </button>
                 <ul className="paddingUl">
@@ -250,7 +269,7 @@ const handleClose = (event, reason) => {
               <div className="contBotones col-5">
                 <button
                   className="estiloBtnDifAnim col-12"
-                  onClick={btn3}>
+                  onClick={btnIzq3}>
                     Botón N°3
                 </button>
                 <ul className="paddingUl">
@@ -270,7 +289,7 @@ const handleClose = (event, reason) => {
               <div className="contBotones col-5">
                 <button
                 className="estiloBtnDifAnim col-12"
-                onClick={btn4}>
+                onClick={btnIzq4}>
                   Botón N°4
                 </button>
                 <ul className="paddingUl">
@@ -286,7 +305,7 @@ const handleClose = (event, reason) => {
               <div className="contBotones col-5">
                 <button
                   className="estiloBtnDifAnim col-12"
-                  onClick={btn5}>
+                  onClick={btnIzq5}>
                     Botón N°5
                 </button>
                 <ul className="paddingUl">
@@ -300,7 +319,7 @@ const handleClose = (event, reason) => {
               <div className="contBotones col-5">
                 <button
                   className="estiloBtnDifAnim col-12"
-                  onClick={btn6}
+                  onClick={btnIzq6}
                   disabled={btn6Activado}>
                     Botón N°6
                 </button>
@@ -327,21 +346,15 @@ const handleClose = (event, reason) => {
               <div className="contBotones col-5">
                 <Button
                   className="estiloBtnDifAnim d-flex col-12"
-                  onClick={handleClick}>
-                    Boton Desplegable 5s
+                  onClick={btnDer1}>
+                    Boton Derecho N°1
                 </Button>
                 <ul className="paddingUl">
                   <li className="tamañoLi">
-                    Escribir "paralelo"
+                    Escribir "Angora"
                   </li>
                   <li className="tamañoLi">
-                    Escribir "paralelo"
-                  </li>
-                  <li className="tamañoLi">
-                    Escribir "paralelo"
-                  </li>
-                  <li className="tamañoLi">
-                    Escribir "paralelo"
+                    Sin espacios
                   </li>
                 </ul>
                 <Snackbar
@@ -349,12 +362,13 @@ const handleClose = (event, reason) => {
                   onClose={handleClose}
                   autoHideDuration={5000}>
                   <Alert
+                    className={`alertaDer ${verifEstado(estadoAlertaDer) ? 'alertaDerCorr' : 'alertaDerIncorr'}`}
                     onClose={handleClose}
                     variant="filled"
-                    severity="warning"
-                    icon={<DoneAllIcon color="primary" fontSize="inherit"/>}
-                    className="text-info border rounded-4 border-5 border-dark">
-                    a
+                    severity={estiloSvrty}
+                    icon={<DoneAllIcon color={`${verifEstado(estadoAlertaDer) ? 'secondary' : 'action'}`} fontSize="inherit"/>}
+                    >
+                    {msgAlertDer}
                   </Alert>
                 </Snackbar>
               </div>
@@ -365,13 +379,10 @@ const handleClose = (event, reason) => {
                     Escribir "paralelo"
                   </li>
                   <li className="tamañoLi">
-                    Escribir "paralelo"
+                    No importa si comienza con mayuscula o minuscula
                   </li>
                   <li className="tamañoLi">
-                    Escribir "paralelo"
-                  </li>
-                  <li className="tamañoLi">
-                    Escribir "paralelo"
+                    Sin espacios
                   </li>
                 </ul>
               </div>
@@ -382,16 +393,13 @@ const handleClose = (event, reason) => {
                 <button className="estiloBtnDifAnim col-12">ejemplo 3</button>
                 <ul className="paddingUl">
                   <li className="tamañoLi">
-                    Escribir "paralelo"
+                    Escribir "Guallaby"
                   </li>
                   <li className="tamañoLi">
-                    Escribir "paralelo"
+                    No importa si hay mayusculas entremedio
                   </li>
                   <li className="tamañoLi">
-                    Escribir "paralelo"
-                  </li>
-                  <li className="tamañoLi">
-                    Escribir "paralelo"
+                  Sin espacios
                   </li>
                 </ul>
               </div>
@@ -399,16 +407,7 @@ const handleClose = (event, reason) => {
                 <button className="estiloBtnDifAnim col-12">ejemplo 4</button>
                 <ul className="paddingUl">
                   <li className="tamañoLi">
-                    Escribir "paralelo"
-                  </li>
-                  <li className="tamañoLi">
-                    Escribir "paralelo"
-                  </li>
-                  <li className="tamañoLi">
-                    Escribir "paralelo"
-                  </li>
-                  <li className="tamañoLi">
-                    Escribir "paralelo"
+                    Solo escribir numeros
                   </li>
                 </ul>
               </div>
@@ -419,31 +418,13 @@ const handleClose = (event, reason) => {
                 <button className="estiloBtnDifAnim col-12">ejemplo 5</button>
                 <ul className="paddingUl">
                   <li className="tamañoLi">
-                    Escribir "paralelo"
-                  </li>
-                  <li className="tamañoLi">
-                    Escribir "paralelo"
-                  </li>
-                  <li className="tamañoLi">
-                    Escribir "paralelo"
-                  </li>
-                  <li className="tamañoLi">
-                    Escribir "paralelo"
+                  Solo escribir letras
                   </li>
                 </ul>
               </div>
               <div className="contBotones col-5">
                 <button className="estiloBtnDifAnim col-12">ejemplo 6</button>
                 <ul className="paddingUl">
-                  <li className="tamañoLi">
-                    Escribir "paralelo"
-                  </li>
-                  <li className="tamañoLi">
-                    Escribir "paralelo"
-                  </li>
-                  <li className="tamañoLi">
-                    Escribir "paralelo"
-                  </li>
                   <li className="tamañoLi">
                     Escribir "paralelo"
                   </li>

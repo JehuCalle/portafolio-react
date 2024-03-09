@@ -123,3 +123,23 @@
   100% {left: -300px; top: 0px;}
 }
 
+
+
+/* DERECHA DERECHA DERECHA DERECHA DERECHA */
+
+.alertaDer{
+  color: rgb(0, 255, 255) !important;
+  border-radius: 20px !important;
+  -webkit-border-radius: 20px !important;
+  -moz-border-radius: 20px !important;
+  -ms-border-radius: 20px !important;
+  -o-border-radius: 20px !important;
+}
+
+.alertaDerCorr {
+  border: 6px solid rgb(0, 73, 49) !important;
+}
+
+.alertaDerIncorr {
+  border: 6px solid rgb(134, 19, 19) !important;
+}
