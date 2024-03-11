@@ -32,7 +32,7 @@ function DiferentesAnim(){
   const btnIzq1 = () => {
 
     if (inputAlmacenado.current.value === 'Angora') {
-      alertaAlmacenada.current.textContent = 'Bien Hecho, Botón N°1 completado!!!';
+      alertaAlmacenada.current.textContent = 'Bien hecho, botón N°1 completado!!!';
       setCumpleCondicion(true);
       setOcultarAlertONo(false);
     } else {
@@ -58,7 +58,7 @@ function DiferentesAnim(){
     if(estadoUEBtn2 === true){
       setOcultarAlertONo(false);
       if (resBtn2Fix === "Paralelo") {
-        alertaAlmacenada.current.textContent = 'Bien Hecho, Botón N°2 completado!!!';
+        alertaAlmacenada.current.textContent = 'Bien hecho, botón N°2 completado!!!';
         setCumpleCondicion(true);
       } else {
         alertaAlmacenada.current.textContent = 'Tienes que escribir "Paralelo" :]';
@@ -85,7 +85,7 @@ function DiferentesAnim(){
     if( estadoUEBtn3 === true) {
       setOcultarAlertONo(false);
       if (ResBtn3Fix === 'guallaby') {
-        alertaAlmacenada.current.textContent = 'Bien Hecho, Botón N°3 completado!!!';
+        alertaAlmacenada.current.textContent = 'Bien hecho, botón N°3 completado!!!';
         setCumpleCondicion(true);
       } else {
         alertaAlmacenada.current.textContent = 'Tienes que escribir "Guallaby" :]';
@@ -110,7 +110,7 @@ function DiferentesAnim(){
     if( estadoUEBtn4 === true ) {
       setOcultarAlertONo(false);
       if (estadoResBtn4 === true) {
-        alertaAlmacenada.current.textContent = 'Bien Hecho, Botón N°4 completado!!!'
+        alertaAlmacenada.current.textContent = 'Bien hecho, botón N°4 completado!!!'
         setCumpleCondicion(true)
       }else {
         alertaAlmacenada.current.textContent = 'Tienes que escribir solo numeros :]'
@@ -136,7 +136,7 @@ function DiferentesAnim(){
       setOcultarAlertONo(false);
       if (estadoResBtn5 === true) {
         setCumpleCondicion(true);
-        alertaAlmacenada.current.textContent = 'Bien Hecho, Botón N°5 completado!!!'
+        alertaAlmacenada.current.textContent = 'Bien hecho, botón N°5 completado!!!'
       }else {
         setCumpleCondicion(false);
         alertaAlmacenada.current.textContent = 'Tienes que escribir solo letras :]'
@@ -167,6 +167,7 @@ function DiferentesAnim(){
 
   const [open, setOpen] = useState(false);
   const inputDerAlmacenado = useRef(null);
+  const [ textoInputDerAlmc, setTextoInputDerAlmc ] = useState('');
   
   const [ estadoAlertaDer, EstadoAlertaDer ] = useState(false);
   const [ msgAlertDer, setMsgAlertDer ] = useState('')
@@ -183,16 +184,99 @@ function DiferentesAnim(){
 const btnDer1 = () => {
   setOpen(true);
   if (inputDerAlmacenado.current.value === 'Angora') {
-    setMsgAlertDer('Bien Hecho, Botón Izquierdo N°1 completado!!!')
+    setMsgAlertDer('Bien hecho, botón derecho N°1 completado!!!')
     EstadoAlertaDer(true);
     setEstiloSvrty('success');
-    console.log("1231232132");
   }else {
     setMsgAlertDer('Tienes que escribir "Angora" :]')
     EstadoAlertaDer(false);
     setEstiloSvrty('error')
   };
 };
+
+/* BTN 2 BTN 2 BTN 2 BTN 2 BTN 2 BTN 2 */
+
+const [ uEBtn2Der, setUEBtn2Der ] = useState(false);
+
+const btnDer2 = () => {
+  setOpen(true);
+  setUEBtn2Der(true)
+  setTextoInputDerAlmc(inputDerAlmacenado.current.value);
+};
+
+
+useEffect(()=>{
+  if( uEBtn2Der === true){
+
+    const textoBtn2DerFix = textoInputDerAlmc.charAt(0).toUpperCase() + textoInputDerAlmc.slice(1); 
+
+    if(textoBtn2DerFix === 'Paralelo'){
+      setMsgAlertDer('Bien hecho, botón derecho N°2 completado!!!')
+      EstadoAlertaDer(true);
+      setEstiloSvrty('success');
+    } else {
+      setMsgAlertDer('Tienes que escribir "Paralelo" :]')
+      EstadoAlertaDer(false);
+      setEstiloSvrty('error')
+    }
+    setUEBtn2Der(false);
+  }
+},[uEBtn2Der, textoInputDerAlmc])
+
+/* BTN 3 BTN 3 BTN 3 BTN 3 BTN 3 BTN 3 */
+
+const [ uEBtn3Der, setUEBtn3Der ] = useState(false);
+
+const btnDer3 = () => {
+  setOpen(true);
+  setUEBtn3Der(true);
+  setTextoInputDerAlmc(inputDerAlmacenado.current.value);
+};
+
+useEffect(()=>{
+
+  const textoBtn3DerFix = textoInputDerAlmc.toLowerCase();
+  if( uEBtn3Der===true ){
+    if(textoBtn3DerFix === "guallaby"){
+      setMsgAlertDer('Bien hecho, botón derecho N°3 completado!!!')
+      EstadoAlertaDer(true);
+      setEstiloSvrty('success');
+    }else{
+      setMsgAlertDer('Tienes que escribir "Guallaby" :]')
+      EstadoAlertaDer(false);
+      setEstiloSvrty('error')
+    }
+  }
+  setUEBtn3Der(false);
+},[uEBtn3Der, textoInputDerAlmc])
+
+/* BTN 4 BTN 4 BTN 4 BTN 4 BTN 4 BTN 4 */
+
+const [ uEBtn4Der, setUEBtn4Der] = useState(false);
+const rGxSoloNumDer = /^[0-9\s]+$/;
+const [ estadoRgxSoloNumDer, seEstadoRgxSoloNumDert ] = useState(false);
+
+
+const btn4 = () => {
+  setOpen(true);
+  setUEBtn4Der(true);
+  seEstadoRgxSoloNumDert(rGxSoloNumDer.test(inputDerAlmacenado.current.value));
+};
+
+useEffect(()=>{
+  if( uEBtn4Der === true ){
+    if( estadoRgxSoloNumDer === true ){
+      setMsgAlertDer('Bien hecho, botón derecho N°4 completado!!!')
+      EstadoAlertaDer(true);
+      setEstiloSvrty('success');
+    } else {
+      setMsgAlertDer('Tienes que escribir solo numeros :]')
+      EstadoAlertaDer(false);
+      setEstiloSvrty('error')
+    }
+  }
+},[uEBtn4Der, estadoRgxSoloNumDer]);
+
 
 const handleClose = (event, reason) => {
   if (reason === 'clickaway') {
@@ -343,6 +427,21 @@ const handleClose = (event, reason) => {
             <input
               className="col-8"
               ref={inputDerAlmacenado}/>
+            
+            <Snackbar
+              open={open}
+              onClose={handleClose}
+              autoHideDuration={5000}>
+              <Alert
+                className={`alertaDer ${verifEstado(estadoAlertaDer) ? 'alertaDerCorr' : 'alertaDerIncorr'}`}
+                onClose={handleClose}
+                variant="filled"
+                severity={estiloSvrty}
+                icon={<DoneAllIcon color={`${verifEstado(estadoAlertaDer) ? 'secondary' : 'action'}`} fontSize="inherit"/>}
+                >
+                {msgAlertDer}
+              </Alert>
+            </Snackbar>
             <div className="contContBotones col-12">
               <div className="contBotones col-5">
                 <Button
@@ -358,23 +457,13 @@ const handleClose = (event, reason) => {
                     Sin espacios
                   </li>
                 </ul>
-                <Snackbar
-                  open={open}
-                  onClose={handleClose}
-                  autoHideDuration={5000}>
-                  <Alert
-                    className={`alertaDer ${verifEstado(estadoAlertaDer) ? 'alertaDerCorr' : 'alertaDerIncorr'}`}
-                    onClose={handleClose}
-                    variant="filled"
-                    severity={estiloSvrty}
-                    icon={<DoneAllIcon color={`${verifEstado(estadoAlertaDer) ? 'secondary' : 'action'}`} fontSize="inherit"/>}
-                    >
-                    {msgAlertDer}
-                  </Alert>
-                </Snackbar>
               </div>
               <div className="contBotones col-5">
-                <button className="estiloBtnDifAnim col-12">ejemplo 2</button>
+                <Button
+                  className="estiloBtnDifAnim col-12"
+                  onClick={btnDer2}>
+                    ejemplo 2
+                </Button>
                 <ul className="paddingUl">
                   <li className="tamañoLi">
                     Escribir "paralelo"
@@ -391,7 +480,11 @@ const handleClose = (event, reason) => {
 
             <div className="contContBotones col-12">
               <div className="contBotones col-5">
-                <button className="estiloBtnDifAnim col-12">ejemplo 3</button>
+                <Button
+                  className="estiloBtnDifAnim col-12"
+                  onClick={btnDer3}>
+                    ejemplo 3
+                </Button>
                 <ul className="paddingUl">
                   <li className="tamañoLi">
                     Escribir "Guallaby"
@@ -405,7 +498,11 @@ const handleClose = (event, reason) => {
                 </ul>
               </div>
               <div className="contBotones col-5">
-                <button className="estiloBtnDifAnim col-12">ejemplo 4</button>
+                <Button
+                  className="estiloBtnDifAnim col-12"
+                  onClick={btn4}>
+                    ejemplo 4
+                </Button>
                 <ul className="paddingUl">
                   <li className="tamañoLi">
                     Solo escribir numeros
@@ -416,7 +513,7 @@ const handleClose = (event, reason) => {
 
             <div className="contContBotones col-12">
               <div className="contBotones col-5">
-                <button className="estiloBtnDifAnim col-12">ejemplo 5</button>
+                <Button className="estiloBtnDifAnim col-12">ejemplo 5</Button>
                 <ul className="paddingUl">
                   <li className="tamañoLi">
                   Solo escribir letras
@@ -424,7 +521,7 @@ const handleClose = (event, reason) => {
                 </ul>
               </div>
               <div className="contBotones col-5">
-                <button className="estiloBtnDifAnim col-12">ejemplo 6</button>
+                <Button className="estiloBtnDifAnim col-12">ejemplo 6</Button>
                 <ul className="paddingUl">
                   <li className="tamañoLi">
                     Escribir "paralelo"
