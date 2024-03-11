@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portafolio-react/static/css/main.3adef6d0.css",
-    "main.js": "/portafolio-react/static/js/main.dba8b0e7.js",
+    "main.css": "/portafolio-react/static/css/main.526cb83c.css",
+    "main.js": "/portafolio-react/static/js/main.715795b1.js",
     "static/media/animacion.gif": "/portafolio-react/static/media/animacion.bf4baf8b4b2a856943c3.gif",
     "static/media/PaB.png": "/portafolio-react/static/media/PaB.138c5a54032180074923.png",
     "static/media/PaP.png": "/portafolio-react/static/media/PaP.3fd160775e41701b966e.png",
@@ -32,8 +32,8 @@
     "static/media/roboto-cyrillic-ext-400-normal.woff2": "/portafolio-react/static/media/roboto-cyrillic-ext-400-normal.804378952da8a10faae2.woff2",
     "static/media/roboto-cyrillic-ext-300-normal.woff2": "/portafolio-react/static/media/roboto-cyrillic-ext-300-normal.4777461b144e55145268.woff2",
     "static/media/roboto-cyrillic-ext-500-normal.woff2": "/portafolio-react/static/media/roboto-cyrillic-ext-500-normal.62ced72e5832f02c2796.woff2",
+    "static/media/roboto-latin-300-normal.woff": "/portafolio-react/static/media/roboto-latin-300-normal.f52426bf18280380fe67.woff",
     "static/media/roboto-cyrillic-ext-700-normal.woff2": "/portafolio-react/static/media/roboto-cyrillic-ext-700-normal.be4d02458ce53887dc37.woff2",
-    "static/media/roboto-latin-300-normal.woff": "/portafolio-react/static/media/roboto-latin-300-normal.0515ab82dae6923cab85.woff",
     "static/media/roboto-latin-500-normal.woff": "/portafolio-react/static/media/roboto-latin-500-normal.1f075502d0094a398e21.woff",
     "static/media/roboto-latin-700-normal.woff": "/portafolio-react/static/media/roboto-latin-700-normal.666d7a2f9db53cf52e2d.woff",
     "static/media/roboto-latin-400-normal.woff": "/portafolio-react/static/media/roboto-latin-400-normal.3f2b9a42f643e62a49b7.woff",
@@ -46,9 +46,9 @@
     "static/media/roboto-latin-ext-500-normal.woff2": "/portafolio-react/static/media/roboto-latin-ext-500-normal.9165081d10e1ba601384.woff2",
     "static/media/roboto-latin-ext-300-normal.woff2": "/portafolio-react/static/media/roboto-latin-ext-300-normal.dc7dcec8e3f654e0ed63.woff2",
     "static/media/javaLogo.png": "/portafolio-react/static/media/javaLogo.ae4aeb93738ebdf70858.png",
+    "static/media/roboto-latin-ext-400-normal.woff": "/portafolio-react/static/media/roboto-latin-ext-400-normal.662bc4c2c037bb0bd529.woff",
     "static/media/javaScriptLogo.png": "/portafolio-react/static/media/javaScriptLogo.dafbcd7fb56fcfce553c.png",
     "static/media/roboto-latin-ext-300-normal.woff": "/portafolio-react/static/media/roboto-latin-ext-300-normal.182712ab85f1472cdb2f.woff",
-    "static/media/roboto-latin-ext-400-normal.woff": "/portafolio-react/static/media/roboto-latin-ext-400-normal.e757c42df6aaa3e11b62.woff",
     "static/media/roboto-latin-ext-500-normal.woff": "/portafolio-react/static/media/roboto-latin-ext-500-normal.252057e589a0379208ed.woff",
     "static/media/roboto-latin-ext-700-normal.woff": "/portafolio-react/static/media/roboto-latin-ext-700-normal.c1cc6d6fc851b3a2f79d.woff",
     "static/media/roboto-cyrillic-500-normal.woff2": "/portafolio-react/static/media/roboto-cyrillic-500-normal.cad7d3d9cb265e334e58.woff2",
@@ -87,11 +87,11 @@
     "static/media/roboto-greek-ext-400-normal.woff": "/portafolio-react/static/media/roboto-greek-ext-400-normal.f708607d2a7290fb8bfa.woff",
     "static/media/roboto-greek-ext-700-normal.woff": "/portafolio-react/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
     "static/media/bootstrap-5Logo.svg": "/portafolio-react/static/media/bootstrap-5Logo.98585727bcfe0b1555649ec9bbab236c.svg",
-    "main.3adef6d0.css.map": "/portafolio-react/static/css/main.3adef6d0.css.map",
-    "main.dba8b0e7.js.map": "/portafolio-react/static/js/main.dba8b0e7.js.map"
+    "main.526cb83c.css.map": "/portafolio-react/static/css/main.526cb83c.css.map",
+    "main.715795b1.js.map": "/portafolio-react/static/js/main.715795b1.js.map"
   },
   "entrypoints": [
-    "static/css/main.3adef6d0.css",
-    "static/js/main.dba8b0e7.js"
+    "static/css/main.526cb83c.css",
+    "static/js/main.715795b1.js"
   ]
 }
