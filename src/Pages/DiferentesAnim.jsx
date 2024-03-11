@@ -186,7 +186,7 @@ const btnDer1 = () => {
     setMsgAlertDer('Bien Hecho, Botón Izquierdo N°1 completado!!!')
     EstadoAlertaDer(true);
     setEstiloSvrty('success');
-    console.log("asdasds");
+    console.log("1231232132");
   }else {
     setMsgAlertDer('Tienes que escribir "Angora" :]')
     EstadoAlertaDer(false);
