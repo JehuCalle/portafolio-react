@@ -20,6 +20,12 @@
   cursor: pointer;
   text-transform: none !important;
 }
+.estiloBtnDifAnimCorr {
+  border: 3px solid rgb(32, 255, 0) !important;
+}
+.estiloBtnDifAnimIncorr {
+  border: 3px solid rgb(197, 0, 0) !important;
+}
 .paddingUl {
   padding-left: 1rem;
 }

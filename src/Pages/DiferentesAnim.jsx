@@ -169,7 +169,7 @@ function DiferentesAnim(){
   const inputDerAlmacenado = useRef(null);
   const [ textoInputDerAlmc, setTextoInputDerAlmc ] = useState('');
   
-  const [ estadoAlertaDer, EstadoAlertaDer ] = useState(false);
+  const [ estadoAlertaDer, setEstadoAlertaDer ] = useState(false);
   const [ msgAlertDer, setMsgAlertDer ] = useState('')
   /* success - info - warning - error */
   const [ estiloSvrty, setEstiloSvrty ] = useState('')
@@ -180,21 +180,25 @@ function DiferentesAnim(){
   }
 
 /* BTN 1 BTN 1 BTN 1 BTN 1 BTN 1 BTN 1 */
+const [ estadoBtnDer1, setEstadoBtnDer1 ] = useState('');
 
 const btnDer1 = () => {
   setOpen(true);
   if (inputDerAlmacenado.current.value === 'Angora') {
     setMsgAlertDer('Bien hecho, botón derecho N°1 completado!!!')
-    EstadoAlertaDer(true);
+    setEstadoAlertaDer(true);
+    setEstadoBtnDer1('estiloBtnDifAnimCorr');
     setEstiloSvrty('success');
   }else {
     setMsgAlertDer('Tienes que escribir "Angora" :]')
-    EstadoAlertaDer(false);
+    setEstadoAlertaDer(false);
+    setEstadoBtnDer1('estiloBtnDifAnimIncorr');
     setEstiloSvrty('error')
   };
 };
 
 /* BTN 2 BTN 2 BTN 2 BTN 2 BTN 2 BTN 2 */
+const [ estadoBtnDer2, setEstadoBtnDer2 ] = useState('');
 
 const [ uEBtn2Der, setUEBtn2Der ] = useState(false);
 
@@ -212,11 +216,13 @@ useEffect(()=>{
 
     if(textoBtn2DerFix === 'Paralelo'){
       setMsgAlertDer('Bien hecho, botón derecho N°2 completado!!!')
-      EstadoAlertaDer(true);
+      setEstadoAlertaDer(true);
+      setEstadoBtnDer2('estiloBtnDifAnimCorr');
       setEstiloSvrty('success');
     } else {
       setMsgAlertDer('Tienes que escribir "Paralelo" :]')
-      EstadoAlertaDer(false);
+      setEstadoAlertaDer(false);
+      setEstadoBtnDer2('estiloBtnDifAnimIncorr');
       setEstiloSvrty('error')
     }
     setUEBtn2Der(false);
@@ -224,6 +230,7 @@ useEffect(()=>{
 },[uEBtn2Der, textoInputDerAlmc])
 
 /* BTN 3 BTN 3 BTN 3 BTN 3 BTN 3 BTN 3 */
+const [ estadoBtnDer3, setEstadoBtnDer3 ] = useState('');
 
 const [ uEBtn3Der, setUEBtn3Der ] = useState(false);
 
@@ -239,25 +246,28 @@ useEffect(()=>{
   if( uEBtn3Der===true ){
     if(textoBtn3DerFix === "guallaby"){
       setMsgAlertDer('Bien hecho, botón derecho N°3 completado!!!')
-      EstadoAlertaDer(true);
+      setEstadoAlertaDer(true);
+      setEstadoBtnDer3('estiloBtnDifAnimCorr');
       setEstiloSvrty('success');
     }else{
       setMsgAlertDer('Tienes que escribir "Guallaby" :]')
-      EstadoAlertaDer(false);
+      setEstadoAlertaDer(false);
+      setEstadoBtnDer3('estiloBtnDifAnimIncorr');
       setEstiloSvrty('error')
     }
+    setUEBtn3Der(false);
   }
-  setUEBtn3Der(false);
 },[uEBtn3Der, textoInputDerAlmc])
 
 /* BTN 4 BTN 4 BTN 4 BTN 4 BTN 4 BTN 4 */
+const [ estadoBtnDer4, setEstadoBtnDer4 ] = useState('');
 
 const [ uEBtn4Der, setUEBtn4Der] = useState(false);
 const rGxSoloNumDer = /^[0-9\s]+$/;
 const [ estadoRgxSoloNumDer, seEstadoRgxSoloNumDert ] = useState(false);
 
 
-const btn4 = () => {
+const btnDer4 = () => {
   setOpen(true);
   setUEBtn4Der(true);
   seEstadoRgxSoloNumDert(rGxSoloNumDer.test(inputDerAlmacenado.current.value));
@@ -267,16 +277,59 @@ useEffect(()=>{
   if( uEBtn4Der === true ){
     if( estadoRgxSoloNumDer === true ){
       setMsgAlertDer('Bien hecho, botón derecho N°4 completado!!!')
-      EstadoAlertaDer(true);
+      setEstadoAlertaDer(true);
+      setEstadoBtnDer4('estiloBtnDifAnimCorr');
       setEstiloSvrty('success');
     } else {
       setMsgAlertDer('Tienes que escribir solo numeros :]')
-      EstadoAlertaDer(false);
+      setEstadoAlertaDer(false);
+      setEstadoBtnDer4('estiloBtnDifAnimIncorr');
       setEstiloSvrty('error')
     }
+    setUEBtn4Der(false);
   }
 },[uEBtn4Der, estadoRgxSoloNumDer]);
 
+
+/* BTN 5 BTN 5 BTN 5 BTN 5 BTN 5 BTN 5 */
+const [ estadoBtnDer5, setEstadoBtnDer5 ] = useState('');
+
+const rGxSoloLetDer = /^[a-zA-Z\s]+$/;
+const [ estadoRgxSoloLetDer, seEstadoRgxSoloLetDert ] = useState(false);
+const [ uEBtn5Der, setUEBtn5Der ] = useState(false);
+
+const btnDer5 = () => {
+  setOpen(true);
+  setUEBtn5Der(true);
+  seEstadoRgxSoloLetDert(rGxSoloLetDer.test(inputDerAlmacenado.current.value));
+};
+
+useEffect(()=>{
+  if( uEBtn5Der === true ){
+    if (estadoRgxSoloLetDer === true) {
+      setMsgAlertDer('Bien hecho, botón derecho N°5 completado!!!')
+      setEstadoAlertaDer(true);
+      setEstadoBtnDer5('estiloBtnDifAnimCorr');
+      setEstiloSvrty('success');
+    }else {
+      setMsgAlertDer('Tienes que escribir solo letras :]')
+      setEstadoAlertaDer(false);
+      setEstadoBtnDer5('estiloBtnDifAnimIncorr');
+      setEstiloSvrty('error')
+    }
+    setUEBtn5Der(false);
+  }
+},[uEBtn5Der, estadoRgxSoloLetDer]);
+
+/* BTN 5 BTN 5 BTN 5 BTN 5 BTN 5 BTN 5 */
+
+const btnDer6 = () => {
+  setEstadoBtnDer1('');
+  setEstadoBtnDer2('');
+  setEstadoBtnDer3('');
+  setEstadoBtnDer4('');
+  setEstadoBtnDer5('');
+}
 
 const handleClose = (event, reason) => {
   if (reason === 'clickaway') {
@@ -445,7 +498,7 @@ const handleClose = (event, reason) => {
             <div className="contContBotones col-12">
               <div className="contBotones col-5">
                 <Button
-                  className="estiloBtnDifAnim d-flex col-12"
+                  className={`estiloBtnDifAnim col-12 ${estadoBtnDer1}`}
                   onClick={btnDer1}>
                     Boton Derecho N°1
                 </Button>
@@ -460,7 +513,7 @@ const handleClose = (event, reason) => {
               </div>
               <div className="contBotones col-5">
                 <Button
-                  className="estiloBtnDifAnim col-12"
+                  className={`estiloBtnDifAnim col-12 ${estadoBtnDer2}`}
                   onClick={btnDer2}>
                     ejemplo 2
                 </Button>
@@ -481,7 +534,7 @@ const handleClose = (event, reason) => {
             <div className="contContBotones col-12">
               <div className="contBotones col-5">
                 <Button
-                  className="estiloBtnDifAnim col-12"
+                  className={`estiloBtnDifAnim col-12 ${estadoBtnDer3}`}
                   onClick={btnDer3}>
                     ejemplo 3
                 </Button>
@@ -499,8 +552,8 @@ const handleClose = (event, reason) => {
               </div>
               <div className="contBotones col-5">
                 <Button
-                  className="estiloBtnDifAnim col-12"
-                  onClick={btn4}>
+                  className={`estiloBtnDifAnim col-12 ${estadoBtnDer4}`}
+                  onClick={btnDer4}>
                     ejemplo 4
                 </Button>
                 <ul className="paddingUl">
@@ -513,7 +566,11 @@ const handleClose = (event, reason) => {
 
             <div className="contContBotones col-12">
               <div className="contBotones col-5">
-                <Button className="estiloBtnDifAnim col-12">ejemplo 5</Button>
+                <Button
+                  className={`estiloBtnDifAnim col-12 ${estadoBtnDer5}`}
+                  onClick={btnDer5}>
+                    ejemplo 5
+                </Button>
                 <ul className="paddingUl">
                   <li className="tamañoLi">
                   Solo escribir letras
@@ -521,7 +578,11 @@ const handleClose = (event, reason) => {
                 </ul>
               </div>
               <div className="contBotones col-5">
-                <Button className="estiloBtnDifAnim col-12">ejemplo 6</Button>
+                <Button
+                  className="estiloBtnDifAnim col-12"
+                  onClick={btnDer6}>
+                    ejemplo 6
+                </Button>
                 <ul className="paddingUl">
                   <li className="tamañoLi">
                     Escribir "paralelo"
