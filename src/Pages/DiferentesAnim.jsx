@@ -515,7 +515,7 @@ const handleClose = (event, reason) => {
                 <Button
                   className={`estiloBtnDifAnim col-12 ${estadoBtnDer2}`}
                   onClick={btnDer2}>
-                    ejemplo 2
+                    Boton Derecho N°2
                 </Button>
                 <ul className="paddingUl">
                   <li className="tamañoLi">
@@ -536,7 +536,7 @@ const handleClose = (event, reason) => {
                 <Button
                   className={`estiloBtnDifAnim col-12 ${estadoBtnDer3}`}
                   onClick={btnDer3}>
-                    ejemplo 3
+                    Boton Derecho N°3
                 </Button>
                 <ul className="paddingUl">
                   <li className="tamañoLi">
@@ -554,7 +554,7 @@ const handleClose = (event, reason) => {
                 <Button
                   className={`estiloBtnDifAnim col-12 ${estadoBtnDer4}`}
                   onClick={btnDer4}>
-                    ejemplo 4
+                    Boton Derecho N°4
                 </Button>
                 <ul className="paddingUl">
                   <li className="tamañoLi">
@@ -569,7 +569,7 @@ const handleClose = (event, reason) => {
                 <Button
                   className={`estiloBtnDifAnim col-12 ${estadoBtnDer5}`}
                   onClick={btnDer5}>
-                    ejemplo 5
+                    Boton Derecho N°5
                 </Button>
                 <ul className="paddingUl">
                   <li className="tamañoLi">
@@ -581,7 +581,7 @@ const handleClose = (event, reason) => {
                 <Button
                   className="estiloBtnDifAnim col-12"
                   onClick={btnDer6}>
-                    ejemplo 6
+                    Reiniciar botones
                 </Button>
                 <ul className="paddingUl">
                   <li className="tamañoLi">
