@@ -163,6 +163,20 @@ function DiferentesAnim(){
     }, 2900);
   };
 
+  /* #### CENTRO #### CENTRO #### CENTRO #### CENTRO #### CENTRO #### CENTRO #### CENTRO #### CENTRO #### CENTRO #### CENTRO #### CENTRO #### CENTRO #### CENTRO #### CENTRO*/
+
+  const [ sexo, setSexo ] = useState("");
+
+  const sexoChange = (e) => {
+    setSexo(e.target.value);
+  };
+
+  const envioFormulario = (e) => {
+    e.preventDefault();
+
+    console.log(sexo)
+  };
+
   /* #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA */
 
   const [open, setOpen] = useState(false);
@@ -471,8 +485,45 @@ const handleClose = (event, reason) => {
           </div>
 
           {/* CENTRO CENTRO CENTRO CENTRO CENTRO */}
-          <div className="contBtnDifAnim contAnimCen col-3">
-            COMPROBAR DATOS MEDIANTE REGEX Y NOTIFICACION DE ERROR CON MUI
+          <div className="contCentro contAnimCen col-3">
+            <form
+              className="testC col-10"
+              onSubmit={envioFormulario}>
+                <div className="testC">
+                  <div className="miniContenedor col-6">
+                  <label className="estiloLabel">Nombre</label>
+                  <input></input>
+                  </div>
+                  <div className="miniContenedor col-6">
+                    <label>Apellido</label>
+                    <input></input>
+                  </div>
+                  <div className="miniContenedor col-6">
+                    <label>RUT</label>
+                    <input></input>
+                  </div>
+                  <div className="miniContenedor col-6">
+                    <label>Correo</label>
+                    <input></input>
+                  </div>
+                  <div className="miniContenedor col-6">
+                    <label>Sexo</label>
+                    <select
+                      className="estiloSelect"
+                      value={sexo}
+                      onChange={sexoChange}>
+                      <option value="">Seleccionar sexo</option>
+                      <option value="masculino">Masculino</option>
+                      <option value="femenino">Femenino</option>
+                      <option value="otro">Otro</option>
+                    </select>
+                  </div>
+                </div>
+              <button
+                type="submit">
+                  Registrarse
+              </button>
+            </form>
           </div>
 
           {/* DERECHA DERECHA DERECHA DERECHA DERECHA */}
@@ -594,7 +645,7 @@ const handleClose = (event, reason) => {
           </div>
         </div>
         <label
-          className={`AlertaAnimVanilla ${activAnim ? 'anim' : ''} ${ocultarAnim ? 'd-none' : ''}`}
+          className={`alertaAnimVanilla ${activAnim ? 'anim' : ''} ${ocultarAnim ? 'd-none' : ''}`}
           ref={refAlerAnim}>
             ALERTA VANILLA 😼
         </label>
