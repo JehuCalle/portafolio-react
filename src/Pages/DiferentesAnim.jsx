@@ -1,6 +1,6 @@
   import React, {useState, useEffect, useRef} from "react";
 
-import { Alert } from "@mui/material";
+import { Alert, fabClasses } from "@mui/material";
 import Button from '@mui/material/Button';
 import Snackbar from '@mui/material/Snackbar';
 
@@ -165,7 +165,37 @@ function DiferentesAnim(){
 
   /* #### CENTRO #### CENTRO #### CENTRO #### CENTRO #### CENTRO #### CENTRO #### CENTRO #### CENTRO #### CENTRO #### CENTRO #### CENTRO #### CENTRO #### CENTRO #### CENTRO*/
 
+  const refNombre = useRef(null);
+  const [ nombre, setNombre ] = useState("");
+
+  const refApellido = useRef(null);
+  const [ apellido, setApellido ] = useState("");
+
+  const validRut = /^\d{7,8}-[0-9kK]$/;
+  const refRut = useRef(null);
+  const [ rut, setRut ] = useState("");
+
+  const validCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const refCorreo = useRef(null);
+  const [ correo, setCorreo ] = useState("");
+
   const [ sexo, setSexo ] = useState("");
+
+  const validContraseña = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+  const refContraseña = useRef(null);
+  const [ contraseña, setContraseña ] = useState("");
+
+  const [ estadoUEForm, setEstadoUEForm ] = useState(false);
+
+  const [ usuarios, setUsuarios ] = useState([]);
+  const [ nuevoUsuario, setNuevoUsuario ] = useState({
+    Nombre: '',
+    Apellido: '',
+    Rut: '',
+    Correo: '',
+    Sexo: '',
+    Contraseña: ''
+  });
 
   const sexoChange = (e) => {
     setSexo(e.target.value);
@@ -174,8 +204,58 @@ function DiferentesAnim(){
   const envioFormulario = (e) => {
     e.preventDefault();
 
-    console.log(sexo)
+    setEstadoUEForm(true);
+
+    setNombre(refNombre.current.value);
+    setApellido(refApellido.current.value);
+    setRut(refRut.current.value);
+    setCorreo(refCorreo.current.value);
+    setContraseña(refContraseña.current.value);
+
+    setNuevoUsuario(prevUsuario => ({
+      ...prevUsuario,
+      Nombre: refNombre.current.value,
+      Apellido: refApellido.current.value,
+      Rut: refRut.current.value,
+      Correo: refCorreo.current.value,
+      Sexo: sexo,
+      Contraseña: refContraseña.current.value
+    }));
+
+
   };
+
+  useEffect(()=>{
+    if(estadoUEForm === true){
+      setOpen(true);
+      if (nombre !== "" && apellido !== "" && validRut.test(refRut.current.value) === true && validCorreo.test(refCorreo.current.value) === true && sexo !== "" && validContraseña.test(refContraseña.current.value) === true) {
+        setMsgAlertDer('Registrado!!!')
+        setEstadoAlertaDer(true);
+        setEstiloSvrty('success');
+
+        setUsuarios(prevUsuario => [...prevUsuario, nuevoUsuario]);
+
+        setNuevoUsuario({
+          Nombre: '',
+          Apellido: '',
+          Rut: '',
+          Correo: '',
+          Sexo: '',
+          Contraseña: ''
+        });
+
+        console.log(usuarios)
+
+      } else {
+        setMsgAlertDer('Tienes que completar el formulario :]')
+        setEstadoAlertaDer(false);
+        setEstiloSvrty('error')
+
+
+      }
+      setEstadoUEForm(false);
+    }
+  },[estadoUEForm, nombre, apellido, rut, correo, sexo, contraseña, usuarios, nuevoUsuario]);
 
   /* #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA */
 
@@ -487,43 +567,64 @@ const handleClose = (event, reason) => {
           {/* CENTRO CENTRO CENTRO CENTRO CENTRO */}
           <div className="contCentro contAnimCen col-3">
             <form
-              className="testC col-10"
+              className="estiloForm col-10"
               onSubmit={envioFormulario}>
-                <div className="testC">
-                  <div className="miniContenedor col-6">
-                  <label className="estiloLabel">Nombre</label>
-                  <input></input>
-                  </div>
-                  <div className="miniContenedor col-6">
-                    <label>Apellido</label>
-                    <input></input>
-                  </div>
-                  <div className="miniContenedor col-6">
-                    <label>RUT</label>
-                    <input></input>
-                  </div>
-                  <div className="miniContenedor col-6">
-                    <label>Correo</label>
-                    <input></input>
-                  </div>
-                  <div className="miniContenedor col-6">
-                    <label>Sexo</label>
-                    <select
-                      className="estiloSelect"
-                      value={sexo}
-                      onChange={sexoChange}>
-                      <option value="">Seleccionar sexo</option>
-                      <option value="masculino">Masculino</option>
-                      <option value="femenino">Femenino</option>
-                      <option value="otro">Otro</option>
-                    </select>
-                  </div>
+              <div className="estiloForm">
+                <div className="miniContenedor col-6">
+                <label className="estiloLabel">Nombre</label>
+                <input ref={refNombre}/>
                 </div>
-              <button
-                type="submit">
-                  Registrarse
-              </button>
+                <div className="miniContenedor col-6">
+                  <label className="estiloLabel">Apellido</label>
+                  <input ref={refApellido}/>
+                </div>
+                <div className="miniContenedor col-6">
+                  <label className="estiloLabel">RUT</label>
+                  <input ref={refRut}/>
+                </div>
+                <div className="miniContenedor col-6">
+                  <label className="estiloLabel">Correo</label>
+                  <input ref={refCorreo}/>
+                </div>
+                <div className="miniContenedor col-6">
+                  <label className="estiloLabel">Sexo</label>
+                  <select
+                    className="estiloSelect"
+                    value={sexo}
+                    onChange={sexoChange}>
+                    <option value="">Seleccionar sexo</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otro">Otro</option>
+                  </select>
+                </div>
+                <div className="miniContenedor col-6">
+                  <label className="estiloLabel">Contraseña</label>
+                  <input ref={refContraseña}/>
+                </div>
+              </div>
+              <div
+                className="contenedorBtnForm col-12">
+                <button
+                  type="submit">
+                    Registrarse
+                </button>
+              </div>
             </form>
+            <div className="contenedorReq col-10">
+              <label className="col-12">La contraseña debe tener minimo:</label>
+              <ul className="paddingUl">
+                <li className="tamañoLi">
+                  Una letra mayuscula
+                </li>
+                <li className="tamañoLi">
+                  Un numero
+                </li>
+                <li className="tamañoLi">
+                  8 caracteres
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* DERECHA DERECHA DERECHA DERECHA DERECHA */}

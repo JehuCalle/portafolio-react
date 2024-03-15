@@ -146,7 +146,6 @@
 /* CENTRO CENTRO CENTRO CENTRO CENTRO CENTRO */
 
 .contCentro {
-  height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -154,16 +153,25 @@
   background-color: rgb(15, 99, 99);
 }
 
-.testC {
+.estiloForm {
   display: flex;
   flex-wrap: wrap;
   background-color: aqua;
 }
-
 .miniContenedor {
   display: flex;
   flex-direction: column;
   color: rgb(0, 56, 56);
+}
+
+.contenedorBtnForm {
+  display: flex;
+  justify-content: center;
+}
+
+.contenedorReq {
+  display: flex;
+  flex-direction: column;
 }
 
 /* DERECHA DERECHA DERECHA DERECHA DERECHA */
