@@ -181,81 +181,75 @@ function DiferentesAnim(){
 
   const [ sexo, setSexo ] = useState("");
 
-  const validContraseña = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
-  const refContraseña = useRef(null);
-  const [ contraseña, setContraseña ] = useState("");
+  const validPass = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+  const refPass = useRef(null);
+  const [ pass, setPass ] = useState("");
 
   const [ estadoUEForm, setEstadoUEForm ] = useState(false);
 
   const [ usuarios, setUsuarios ] = useState([]);
-  const [ nuevoUsuario, setNuevoUsuario ] = useState({
-    Nombre: '',
-    Apellido: '',
-    Rut: '',
-    Correo: '',
-    Sexo: '',
-    Contraseña: ''
-  });
+
+  const [ a, seta ] = useState(""); 
+
+  const nombreChange = () => {
+    setNombre(refNombre.current.value);
+  };
+
+  const apellidoChange = () => {
+    setApellido(refApellido.current.value);
+  };
+
+  const rutChange = () => {
+    setRut(refRut.current.value);
+  };
+
+  const correoChange = () => {
+    setCorreo(refCorreo.current.value);
+  };
 
   const sexoChange = (e) => {
     setSexo(e.target.value);
+  };
+
+  const passChange = () => {
+    setPass(refPass.current.value);
   };
 
   const envioFormulario = (e) => {
     e.preventDefault();
 
     setEstadoUEForm(true);
-
-    setNombre(refNombre.current.value);
-    setApellido(refApellido.current.value);
-    setRut(refRut.current.value);
-    setCorreo(refCorreo.current.value);
-    setContraseña(refContraseña.current.value);
-
-    setNuevoUsuario(prevUsuario => ({
-      ...prevUsuario,
-      Nombre: refNombre.current.value,
-      Apellido: refApellido.current.value,
-      Rut: refRut.current.value,
-      Correo: refCorreo.current.value,
-      Sexo: sexo,
-      Contraseña: refContraseña.current.value
-    }));
-
-
   };
 
   useEffect(()=>{
     if(estadoUEForm === true){
       setOpen(true);
-      if (nombre !== "" && apellido !== "" && validRut.test(refRut.current.value) === true && validCorreo.test(refCorreo.current.value) === true && sexo !== "" && validContraseña.test(refContraseña.current.value) === true) {
+      if (nombre !== "" && apellido !== "" && validRut.test(refRut.current.value) === true && validCorreo.test(refCorreo.current.value) === true && sexo !== "" && validPass.test(refPass.current.value) === true) {
         setMsgAlertDer('Registrado!!!')
         setEstadoAlertaDer(true);
         setEstiloSvrty('success');
 
-        setUsuarios(prevUsuario => [...prevUsuario, nuevoUsuario]);
+        const nuevoUsuario = {
+          Nombre: nombre,
+          Apellido: apellido,
+          Rut: rut,
+          Correo: correo,
+          Sexo: sexo,
+          Pass: pass
+        };
 
-        setNuevoUsuario({
-          Nombre: '',
-          Apellido: '',
-          Rut: '',
-          Correo: '',
-          Sexo: '',
-          Contraseña: ''
-        });
+        setUsuarios(prevUsuarios => [...prevUsuarios, nuevoUsuario]);
 
-        console.log(usuarios)
+        console.log([...usuarios, nuevoUsuario]);
 
       } else {
         setMsgAlertDer('Tienes que completar el formulario :]')
         setEstadoAlertaDer(false);
         setEstiloSvrty('error')
-
-
       }
       setEstadoUEForm(false);
     }
-  },[estadoUEForm, nombre, apellido, rut, correo, sexo, contraseña, usuarios, nuevoUsuario]);
+  },[estadoUEForm, nombre, apellido, rut, correo, sexo, pass, usuarios]);
 
   /* #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA #### DERECHA */
 
@@ -572,19 +566,27 @@ const handleClose = (event, reason) => {
               <div className="estiloForm">
                 <div className="miniContenedor col-6">
                 <label className="estiloLabel">Nombre</label>
-                <input ref={refNombre}/>
+                <input
+                  onChange={nombreChange}
+                  ref={refNombre}/>
                 </div>
                 <div className="miniContenedor col-6">
                   <label className="estiloLabel">Apellido</label>
-                  <input ref={refApellido}/>
+                  <input
+                    onChange={apellidoChange}
+                    ref={refApellido}/>
                 </div>
                 <div className="miniContenedor col-6">
                   <label className="estiloLabel">RUT</label>
-                  <input ref={refRut}/>
+                  <input
+                    onChange={rutChange}
+                    ref={refRut}/>
                 </div>
                 <div className="miniContenedor col-6">
                   <label className="estiloLabel">Correo</label>
-                  <input ref={refCorreo}/>
+                  <input
+                    onChange={correoChange}
+                    ref={refCorreo}/>
                 </div>
                 <div className="miniContenedor col-6">
                   <label className="estiloLabel">Sexo</label>
@@ -600,7 +602,9 @@ const handleClose = (event, reason) => {
                 </div>
                 <div className="miniContenedor col-6">
                   <label className="estiloLabel">Contraseña</label>
-                  <input ref={refContraseña}/>
+                  <input
+                    onChange={passChange}
+                    ref={refPass}/>
                 </div>
               </div>
               <div
