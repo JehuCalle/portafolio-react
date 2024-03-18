@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portafolio-react/static/css/main.dae47f16.css",
-    "main.js": "/portafolio-react/static/js/main.d1da2f6d.js",
+    "main.css": "/portafolio-react/static/css/main.adcfdeef.css",
+    "main.js": "/portafolio-react/static/js/main.15c5629d.js",
     "static/media/animacion.gif": "/portafolio-react/static/media/animacion.bf4baf8b4b2a856943c3.gif",
     "static/media/PaB.png": "/portafolio-react/static/media/PaB.138c5a54032180074923.png",
     "static/media/PaP.png": "/portafolio-react/static/media/PaP.3fd160775e41701b966e.png",
@@ -17,9 +17,11 @@
     "static/media/reactLogo2.png": "/portafolio-react/static/media/reactLogo2.6bcffb56bd0efaa47767.png",
     "static/media/Vidas3.png": "/portafolio-react/static/media/Vidas3.504200ed85a098b3e2a1.png",
     "static/media/GatoTriste.jpg": "/portafolio-react/static/media/GatoTriste.90af2a0fc05e16bd1bcd.jpg",
+    "static/media/MostrarPass.png": "/portafolio-react/static/media/MostrarPass.8b52948ef180bd8a4b02.png",
     "static/media/cLogo.png": "/portafolio-react/static/media/cLogo.456d41f630085700b5d8.png",
     "static/media/GatoGanaste.jpg": "/portafolio-react/static/media/GatoGanaste.c2f9986b6b2f7757db7c.jpg",
     "static/media/androidStudioLogo.png": "/portafolio-react/static/media/androidStudioLogo.a7f35426ae4f8ad051cf.png",
+    "static/media/OcultarPass.png": "/portafolio-react/static/media/OcultarPass.b0ed4bedc3dfe37f364a.png",
     "static/media/githubLogo.png": "/portafolio-react/static/media/githubLogo.9e0a1ad5b7392718f7bd.png",
     "static/media/NoHaceNadaChiquito.png": "/portafolio-react/static/media/NoHaceNadaChiquito.3566c73b539ed4a89d88.png",
     "static/media/GatoPerdiste.png": "/portafolio-react/static/media/GatoPerdiste.e410bef47f7a0800762d.png",
@@ -87,11 +89,11 @@
     "static/media/roboto-greek-ext-400-normal.woff": "/portafolio-react/static/media/roboto-greek-ext-400-normal.f708607d2a7290fb8bfa.woff",
     "static/media/roboto-greek-ext-700-normal.woff": "/portafolio-react/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
     "static/media/bootstrap-5Logo.svg": "/portafolio-react/static/media/bootstrap-5Logo.98585727bcfe0b1555649ec9bbab236c.svg",
-    "main.dae47f16.css.map": "/portafolio-react/static/css/main.dae47f16.css.map",
-    "main.d1da2f6d.js.map": "/portafolio-react/static/js/main.d1da2f6d.js.map"
+    "main.adcfdeef.css.map": "/portafolio-react/static/css/main.adcfdeef.css.map",
+    "main.15c5629d.js.map": "/portafolio-react/static/js/main.15c5629d.js.map"
   },
   "entrypoints": [
-    "static/css/main.dae47f16.css",
-    "static/js/main.d1da2f6d.js"
+    "static/css/main.adcfdeef.css",
+    "static/js/main.15c5629d.js"
   ]
 }
