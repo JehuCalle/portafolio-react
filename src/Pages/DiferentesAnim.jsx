@@ -1,4 +1,7 @@
-  import React, {useState, useEffect, useRef} from "react";
+import React, {useState, useEffect, useRef} from "react";
+
+import mostrarPass from '../Img/Proyecto4Form/MostrarPass.png'
+import ocultarPass from '../Img/Proyecto4Form/OcultarPass.png'
 
 import { Alert, fabClasses } from "@mui/material";
 import Button from '@mui/material/Button';
@@ -184,12 +187,13 @@ function DiferentesAnim(){
   const validPass = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
   const refPass = useRef(null);
   const [ pass, setPass ] = useState("");
+  const [ tipoPass, setTipoPass ] = useState('password');
+
+  const [ imgPass, setImgPass ] = useState(ocultarPass);
 
   const [ estadoUEForm, setEstadoUEForm ] = useState(false);
 
   const [ usuarios, setUsuarios ] = useState([]);
-
-  const [ a, seta ] = useState(""); 
 
   const nombreChange = () => {
     setNombre(refNombre.current.value);
@@ -214,6 +218,16 @@ function DiferentesAnim(){
   const passChange = () => {
     setPass(refPass.current.value);
   };
+
+  const oculMostPass = () => {
+    if (imgPass === mostrarPass) {
+      setImgPass(ocultarPass);
+      setTipoPass('password');
+    } else if (imgPass === ocultarPass) {
+      setImgPass(mostrarPass);
+      setTipoPass('text');
+    }
+  }
 
   const envioFormulario = (e) => {
     e.preventDefault();
@@ -559,76 +573,93 @@ const handleClose = (event, reason) => {
           </div>
 
           {/* CENTRO CENTRO CENTRO CENTRO CENTRO */}
-          <div className="contCentro contAnimCen col-3">
-            <form
-              className="estiloForm col-10"
-              onSubmit={envioFormulario}>
-              <div className="estiloForm">
-                <div className="miniContenedor col-6">
-                <label className="estiloLabel">Nombre</label>
-                <input
-                  onChange={nombreChange}
-                  ref={refNombre}/>
-                </div>
-                <div className="miniContenedor col-6">
-                  <label className="estiloLabel">Apellido</label>
+          <div className="contAnimCen col-3">
+            <div className="contCentro col-11">
+              <form
+                className="estiloForm col-12"
+                onSubmit={envioFormulario}>
+                <div className="estiloForm">
+                  <div className="miniContenedor col-6">
+                  <label className="estiloLabel">Nombre</label>
                   <input
-                    onChange={apellidoChange}
-                    ref={refApellido}/>
+                    onChange={nombreChange}
+                    ref={refNombre}/>
+                  </div>
+                  <div className="miniContenedor col-6">
+                    <label className="estiloLabel">Apellido</label>
+                    <input
+                      onChange={apellidoChange}
+                      ref={refApellido}/>
+                  </div>
+                  <div className="miniContenedor col-6">
+                    <label className="estiloLabel">RUT</label>
+                    <input
+                      placeholder="Ej: 12345678-9"
+                      onChange={rutChange}
+                      ref={refRut}/>
+                  </div>
+                  <div className="miniContenedor col-6">
+                    <label className="estiloLabel">Correo</label>
+                    <input
+                      onChange={correoChange}
+                      ref={refCorreo}/>
+                  </div>
+                  <div className="miniContenedor col-6">
+                    <label className="estiloLabel">Sexo</label>
+                    <select
+                      className="estiloSelect"
+                      value={sexo}
+                      onChange={sexoChange}>
+                      <option value="">Seleccionar sexo</option>
+                      <option value="masculino">Masculino</option>
+                      <option value="femenino">Femenino</option>
+                      <option value="otro">Otro</option>
+                    </select>
+                  </div>
+                  <div className="miniContenedor col-6">
+                    <label className="estiloLabel">Contraseña</label>
+                    <div className="contPassComp">
+                      <input
+                        className="inputPass col-12"
+                        type={tipoPass}
+                        onChange={passChange}
+                        ref={refPass}
+                        />
+                      <button
+                        className="btnOcultarPass"
+                        type="button"
+                        onClick={oculMostPass}>
+                        <img
+                          className="imgBtnOcuMosPass"
+                          src={imgPass}
+                          alt="imgPass"/>
+                      </button>
+                    </div>
+                  </div>
                 </div>
-                <div className="miniContenedor col-6">
-                  <label className="estiloLabel">RUT</label>
-                  <input
-                    onChange={rutChange}
-                    ref={refRut}/>
+                <div
+                  className="contenedorBtnForm col-12">
+                  <button
+                    type="submit">
+                      Registrarse
+                  </button>
                 </div>
-                <div className="miniContenedor col-6">
-                  <label className="estiloLabel">Correo</label>
-                  <input
-                    onChange={correoChange}
-                    ref={refCorreo}/>
-                </div>
-                <div className="miniContenedor col-6">
-                  <label className="estiloLabel">Sexo</label>
-                  <select
-                    className="estiloSelect"
-                    value={sexo}
-                    onChange={sexoChange}>
-                    <option value="">Seleccionar sexo</option>
-                    <option value="masculino">Masculino</option>
-                    <option value="femenino">Femenino</option>
-                    <option value="otro">Otro</option>
-                  </select>
-                </div>
-                <div className="miniContenedor col-6">
-                  <label className="estiloLabel">Contraseña</label>
-                  <input
-                    onChange={passChange}
-                    ref={refPass}/>
-                </div>
+              </form>
+              <div className="contenedorReq col-12">
+                <label className="col-12">La contraseña debe tener minimo:</label>
+                <ul className="paddingUl">
+                  <li className="tamañoLi">
+                    Una letra mayuscula
+                  </li>
+                  <li className="tamañoLi">
+                    Un numero
+                  </li>
+                  <li className="tamañoLi">
+                    8 caracteres
+                  </li>
+                </ul>
               </div>
-              <div
-                className="contenedorBtnForm col-12">
-                <button
-                  type="submit">
-                    Registrarse
-                </button>
-              </div>
-            </form>
-            <div className="contenedorReq col-10">
-              <label className="col-12">La contraseña debe tener minimo:</label>
-              <ul className="paddingUl">
-                <li className="tamañoLi">
-                  Una letra mayuscula
-                </li>
-                <li className="tamañoLi">
-                  Un numero
-                </li>
-                <li className="tamañoLi">
-                  8 caracteres
-                </li>
-              </ul>
-            </div>
+            </div>  
           </div>
 
           {/* DERECHA DERECHA DERECHA DERECHA DERECHA */}

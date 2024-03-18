@@ -107,10 +107,6 @@
   border: 3px solid rgb(165, 40, 40);
 }
 
-.contAnimCen {
-  background-color: rgb(46, 107, 107);
-}
-
 .contAnimDer {
   background-color: rgb(25, 160, 160);
 }
@@ -145,12 +141,25 @@
 
 /* CENTRO CENTRO CENTRO CENTRO CENTRO CENTRO */
 
+.contAnimCen {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(46, 107, 107);
+}
+
 .contCentro {
+  padding: 5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: rgb(15, 99, 99);
+  background-color: rgb(108, 177, 177);
+  border: 6px solid rgb(1, 29, 29);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .estiloForm {
@@ -163,6 +172,32 @@
   flex-direction: column;
   color: rgb(0, 56, 56);
 }
+
+.contPassComp {
+  position: relative;
+}
+.inputPass {
+  padding-right: 30px;
+}
+.btnOcultarPass {
+  height: 30px;
+  width: 30px;
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+  top: 50%;
+  right: 2px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.imgBtnOcuMosPass{
+  width: 100%;
+  height: 100%;
+}
+
 
 .contenedorBtnForm {
   display: flex;
