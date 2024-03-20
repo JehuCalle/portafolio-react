@@ -445,135 +445,134 @@ const handleClose = (event, reason) => {
   return(
     <div>
       <div className="cuerpoAnim col-12">
-        <div className="col-9">
-          <label className="tituloAlerVanilla col-4"> ALERTAS VANILLA</label>
-          <label className="tituloAlerMUI col-8"> ALERTAS CON MUI </label>
-        </div>
         <div className="contContCont col-12">
           {/* IZQUIERDA IZQUIERDA IZQUIERDA IZQUIERDA IZQUIERDA */}
-          <div className="contBtnDifAnim contAnimIzq col-3">
-            
-            <div className="contAlertaVanilla col-12">
-              <label
-                className={`alertaVanilla col-10 ${VerifCondicion(cumpleCondicion) ? 'alerVaCorr' : 'alerVaInco'} ${ocultarONoAlerta(ocultarAlertONo) ? 'd-none' : ''}`}
-                ref={alertaAlmacenada}
-                >Alerta Vanilla
-              </label>
-            </div>
-            <input
-              id="inputMsg"
-              className="col-8"
-              ref={inputAlmacenado}/>
+          <div className="contAnimIzq col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-3">
+            <label className="tituloAlerVanilla col-12"> ALERTAS VANILLA</label>
+            <div className="contBtnDifAnim">
+              <div className="contAlertaVanilla col-12">
+                <label
+                  className={`alertaVanilla col-10 ${VerifCondicion(cumpleCondicion) ? 'alerVaCorr' : 'alerVaInco'} ${ocultarONoAlerta(ocultarAlertONo) ? 'd-none' : ''}`}
+                  ref={alertaAlmacenada}
+                  >Alerta Vanilla
+                </label>
+              </div>
+              <input
+                id="inputMsg"
+                className="col-8"
+                ref={inputAlmacenado}/>
 
 
-            <div className="contContBotones col-12">
-              <div className="contBotones col-5">
-                <button
-                  className="estiloBtnDifAnim col-12"
-                  onClick={btnIzq1}
-                  >Boton N°1
-                </button>
-                <ul className="paddingUl">
-                  <li className="tamañoLi">
-                    Escribir "Angora"
-                  </li>
-                  <li className="tamañoLi">
-                    Sin espacios
-                  </li>
-                </ul>
+              <div className="contContBotones col-12">
+                <div className="contBotones col-5">
+                  <button
+                    className="estiloBtnDifAnim col-12"
+                    onClick={btnIzq1}
+                    >Boton N°1
+                  </button>
+                  <ul className="paddingUl">
+                    <li className="tamañoLi">
+                      Escribir "Angora"
+                    </li>
+                    <li className="tamañoLi">
+                      Sin espacios
+                    </li>
+                  </ul>
+                </div>
+
+
+                <div className="contBotones col-5">
+                  <button
+                    className="estiloBtnDifAnim col-12"
+                    onClick={btnIzq2}>
+                      Botón N°2
+                  </button>
+                  <ul className="paddingUl">
+                    <li className="tamañoLi">
+                      Escribir "paralelo"
+                    </li>
+                    <li className="tamañoLi">
+                      No importa si comienza con mayuscula o minuscula
+                    </li>
+                    <li className="tamañoLi">
+                      Sin espacios
+                    </li>
+                  </ul>
+                </div>
               </div>
 
 
-              <div className="contBotones col-5">
-                <button
-                  className="estiloBtnDifAnim col-12"
-                  onClick={btnIzq2}>
-                    Botón N°2
-                </button>
-                <ul className="paddingUl">
-                  <li className="tamañoLi">
-                    Escribir "paralelo"
-                  </li>
-                  <li className="tamañoLi">
-                    No importa si comienza con mayuscula o minuscula
-                  </li>
-                  <li className="tamañoLi">
-                    Sin espacios
-                  </li>
-                </ul>
-              </div>
-            </div>
+              <div className="contContBotones col-12">
+                <div className="contBotones col-5">
+                  <button
+                    className="estiloBtnDifAnim col-12"
+                    onClick={btnIzq3}>
+                      Botón N°3
+                  </button>
+                  <ul className="paddingUl">
+                    <li className="tamañoLi">
+                      Escribir "Guallaby"
+                    </li>
+                    <li className="tamañoLi">
+                      No importa si hay mayusculas entremedio
+                    </li>
+                    <li className="tamañoLi">
+                      Sin espacios
+                    </li>
+                  </ul>
+                </div>
 
 
-            <div className="contContBotones col-12">
-              <div className="contBotones col-5">
-                <button
+                <div className="contBotones col-5">
+                  <button
                   className="estiloBtnDifAnim col-12"
-                  onClick={btnIzq3}>
-                    Botón N°3
-                </button>
-                <ul className="paddingUl">
-                  <li className="tamañoLi">
-                    Escribir "Guallaby"
-                  </li>
-                  <li className="tamañoLi">
-                    No importa si hay mayusculas entremedio
-                  </li>
-                  <li className="tamañoLi">
-                    Sin espacios
-                  </li>
-                </ul>
+                  onClick={btnIzq4}>
+                    Botón N°4
+                  </button>
+                  <ul className="paddingUl">
+                    <li className="tamañoLi">
+                      Solo escribir numeros
+                    </li>
+                  </ul>
+                </div>
               </div>
 
 
-              <div className="contBotones col-5">
-                <button
-                className="estiloBtnDifAnim col-12"
-                onClick={btnIzq4}>
-                  Botón N°4
-                </button>
-                <ul className="paddingUl">
-                  <li className="tamañoLi">
-                    Solo escribir numeros
-                  </li>
-                </ul>
-              </div>
-            </div>
+              <div className="contContBotones col-12">
+                <div className="contBotones col-5">
+                  <button
+                    className="estiloBtnDifAnim col-12"
+                    onClick={btnIzq5}>
+                      Botón N°5
+                  </button>
+                  <ul className="paddingUl">
+                    <li className="tamañoLi">
+                      Solo escribir letras
+                    </li>
+                  </ul>
+                </div>
 
 
-            <div className="contContBotones col-12">
-              <div className="contBotones col-5">
-                <button
-                  className="estiloBtnDifAnim col-12"
-                  onClick={btnIzq5}>
-                    Botón N°5
-                </button>
-                <ul className="paddingUl">
-                  <li className="tamañoLi">
-                    Solo escribir letras
-                  </li>
-                </ul>
-              </div>
-
-
-              <div className="contBotones col-5">
-                <button
-                  className="estiloBtnDifAnim col-12"
-                  onClick={btnIzq6}
-                  disabled={btn6Activado}>
-                    Botón N°6
-                </button>
-                <ul className="paddingUl">
-                  <li className="tamañoLi">
-                    ¿?¿?¿?¿?¿?
-                  </li>
-                </ul>
+                <div className="contBotones col-5">
+                  <button
+                    className="estiloBtnDifAnim col-12"
+                    onClick={btnIzq6}
+                    disabled={btn6Activado}>
+                      Botón N°6
+                  </button>
+                  <ul className="paddingUl">
+                    <li className="tamañoLi">
+                      ¿?¿?¿?¿?¿?
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
 
           {/* CENTRO CENTRO CENTRO CENTRO CENTRO */}
-          <div className="contAnimCen col-3">
+          <div className="contAnimCen col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+            <label className="tituloAlerMUI col-12"> ALERTAS CON MUI </label>
             <div className="contCentro col-11">
               <form
                 className="estiloForm col-12"
@@ -645,8 +644,8 @@ const handleClose = (event, reason) => {
                   </button>
                 </div>
               </form>
-              <div className="contenedorReq col-12">
-                <label className="col-12">La contraseña debe tener minimo:</label>
+              <div className="contenedorReq colorTxtReq col-12">
+                <label className="colorTxtReq col-12">La contraseña debe tener minimo:</label>
                 <ul className="paddingUl">
                   <li className="tamañoLi">
                     Una letra mayuscula
@@ -663,118 +662,121 @@ const handleClose = (event, reason) => {
           </div>
 
           {/* DERECHA DERECHA DERECHA DERECHA DERECHA */}
-          <div className="contBtnDifAnim contAnimDer col-3">
-            <input
-              className="col-8"
-              ref={inputDerAlmacenado}/>
-            
-            <Snackbar
-              open={open}
-              onClose={handleClose}
-              autoHideDuration={5000}>
-              <Alert
-                className={`alertaDer ${verifEstado(estadoAlertaDer) ? 'alertaDerCorr' : 'alertaDerIncorr'}`}
+          <div className=" col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 contAnimDer col-xxl-3">
+            <label className="tituloAlerMUI col-12"> ALERTAS CON MUI </label>
+            <div className="contBtnDifAnim">
+              <input
+                className="col-8"
+                ref={inputDerAlmacenado}/>
+              
+              <Snackbar
+                open={open}
                 onClose={handleClose}
-                variant="filled"
-                severity={estiloSvrty}
-                icon={<DoneAllIcon color={`${verifEstado(estadoAlertaDer) ? 'secondary' : 'action'}`} fontSize="inherit"/>}
-                >
-                {msgAlertDer}
-              </Alert>
-            </Snackbar>
-            <div className="contContBotones col-12">
-              <div className="contBotones col-5">
-                <Button
-                  className={`estiloBtnDifAnim col-12 ${estadoBtnDer1}`}
-                  onClick={btnDer1}>
-                    Boton Derecho N°1
-                </Button>
-                <ul className="paddingUl">
-                  <li className="tamañoLi">
-                    Escribir "Angora"
-                  </li>
-                  <li className="tamañoLi">
-                    Sin espacios
-                  </li>
-                </ul>
+                autoHideDuration={5000}>
+                <Alert
+                  className={`alertaDer ${verifEstado(estadoAlertaDer) ? 'alertaDerCorr' : 'alertaDerIncorr'}`}
+                  onClose={handleClose}
+                  variant="filled"
+                  severity={estiloSvrty}
+                  icon={<DoneAllIcon color={`${verifEstado(estadoAlertaDer) ? 'secondary' : 'action'}`} fontSize="inherit"/>}
+                  >
+                  {msgAlertDer}
+                </Alert>
+              </Snackbar>
+              <div className="contContBotones col-12">
+                <div className="contBotones col-5">
+                  <Button
+                    className={`estiloBtnDifAnim col-12 ${estadoBtnDer1}`}
+                    onClick={btnDer1}>
+                      Boton Derecho N°1
+                  </Button>
+                  <ul className="paddingUl">
+                    <li className="tamañoLi">
+                      Escribir "Angora"
+                    </li>
+                    <li className="tamañoLi">
+                      Sin espacios
+                    </li>
+                  </ul>
+                </div>
+                <div className="contBotones col-5">
+                  <Button
+                    className={`estiloBtnDifAnim col-12 ${estadoBtnDer2}`}
+                    onClick={btnDer2}>
+                      Boton Derecho N°2
+                  </Button>
+                  <ul className="paddingUl">
+                    <li className="tamañoLi">
+                      Escribir "paralelo"
+                    </li>
+                    <li className="tamañoLi">
+                      No importa si comienza con mayuscula o minuscula
+                    </li>
+                    <li className="tamañoLi">
+                      Sin espacios
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div className="contBotones col-5">
-                <Button
-                  className={`estiloBtnDifAnim col-12 ${estadoBtnDer2}`}
-                  onClick={btnDer2}>
-                    Boton Derecho N°2
-                </Button>
-                <ul className="paddingUl">
-                  <li className="tamañoLi">
-                    Escribir "paralelo"
-                  </li>
-                  <li className="tamañoLi">
-                    No importa si comienza con mayuscula o minuscula
-                  </li>
-                  <li className="tamañoLi">
-                    Sin espacios
-                  </li>
-                </ul>
-              </div>
-            </div>
 
-            <div className="contContBotones col-12">
-              <div className="contBotones col-5">
-                <Button
-                  className={`estiloBtnDifAnim col-12 ${estadoBtnDer3}`}
-                  onClick={btnDer3}>
-                    Boton Derecho N°3
-                </Button>
-                <ul className="paddingUl">
-                  <li className="tamañoLi">
-                    Escribir "Guallaby"
-                  </li>
-                  <li className="tamañoLi">
-                    No importa si hay mayusculas entremedio
-                  </li>
-                  <li className="tamañoLi">
-                  Sin espacios
-                  </li>
-                </ul>
+              <div className="contContBotones col-12">
+                <div className="contBotones col-5">
+                  <Button
+                    className={`estiloBtnDifAnim col-12 ${estadoBtnDer3}`}
+                    onClick={btnDer3}>
+                      Boton Derecho N°3
+                  </Button>
+                  <ul className="paddingUl">
+                    <li className="tamañoLi">
+                      Escribir "Guallaby"
+                    </li>
+                    <li className="tamañoLi">
+                      No importa si hay mayusculas entremedio
+                    </li>
+                    <li className="tamañoLi">
+                    Sin espacios
+                    </li>
+                  </ul>
+                </div>
+                <div className="contBotones col-5">
+                  <Button
+                    className={`estiloBtnDifAnim col-12 ${estadoBtnDer4}`}
+                    onClick={btnDer4}>
+                      Boton Derecho N°4
+                  </Button>
+                  <ul className="paddingUl">
+                    <li className="tamañoLi">
+                      Solo escribir numeros
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div className="contBotones col-5">
-                <Button
-                  className={`estiloBtnDifAnim col-12 ${estadoBtnDer4}`}
-                  onClick={btnDer4}>
-                    Boton Derecho N°4
-                </Button>
-                <ul className="paddingUl">
-                  <li className="tamañoLi">
-                    Solo escribir numeros
-                  </li>
-                </ul>
-              </div>
-            </div>
 
-            <div className="contContBotones col-12">
-              <div className="contBotones col-5">
-                <Button
-                  className={`estiloBtnDifAnim col-12 ${estadoBtnDer5}`}
-                  onClick={btnDer5}>
-                    Boton Derecho N°5
-                </Button>
-                <ul className="paddingUl">
-                  <li className="tamañoLi">
-                  Solo escribir letras
-                  </li>
-                </ul>
-              </div>
-              <div className="contBotones col-5">
-                <Button
-                  className="estiloBtnDifAnim col-12"
-                  onClick={btnDer6}>
-                    Reiniciar botones
-                </Button>
-                <ul className="paddingUl">
-                  <li className="tamañoLi">
-                    Escribir "paralelo"
-                  </li>
-                </ul>
+              <div className="contContBotones col-12">
+                <div className="contBotones col-5">
+                  <Button
+                    className={`estiloBtnDifAnim col-12 ${estadoBtnDer5}`}
+                    onClick={btnDer5}>
+                      Boton Derecho N°5
+                  </Button>
+                  <ul className="paddingUl">
+                    <li className="tamañoLi">
+                    Solo escribir letras
+                    </li>
+                  </ul>
+                </div>
+                <div className="contBotones col-5">
+                  <Button
+                    className="estiloBtnDifAnim col-12"
+                    onClick={btnDer6}>
+                      Reiniciar botones
+                  </Button>
+                  <ul className="paddingUl">
+                    <li className="tamañoLi">
+                      Escribir "paralelo"
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
