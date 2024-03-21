@@ -81,23 +81,24 @@
   flex: 1 1 ;
   color: rgb(0, 19, 27);
 }
-.proyecto1 {
+.proyectoActivado {
   background-color: aqua;
+  border: 5px solid rgb(18, 43, 43);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
-.proyecto2 {
-  background-color: aqua;
+.proyectoActivado:hover {
+  background-color: rgb(0, 63, 63);
+  border: 5px solid rgb(0, 0, 0);
 }
-.proyecto3 {
+.proyectoDesactivado {
   background-color: aqua;
-}
-.proyecto4 {
-  background-color: aqua;
-}
-.proyecto5 {
-  background-color: aqua;
-}
-.proyecto6 {
-  background-color: aqua;
+  border: 5px solid rgb(18, 43, 43);
+  border-radius: 10px;
+  opacity: 30%;
 }
 
 .contenedorHerramientas{

@@ -77,25 +77,25 @@ function Inicio(){
         <h1>MIS PROYECTOS</h1>
           <div className="contenedorImagenesProy col-10 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
             <Link
-              className="proyecto1 dividirPartesIguales"
+              className="proyectoActivado dividirPartesIguales"
               to= "Pages/ProyectosRND">Proyecto N°1
             </Link>
             <Link 
-              className="proyecto2 dividirPartesIguales"
+              className="proyectoActivado dividirPartesIguales"
               to= "Pages/TarjetaRND">Proyecto N°2
             </Link>
             <Link 
-              className="proyecto3 dividirPartesIguales"
+              className="proyectoActivado dividirPartesIguales"
               to= "Pages/PiedraPapelTijera">Proyecto N°3
             </Link>
           </div>
           <div className="contenedorImagenesProy col-10 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
             <Link 
-              className="proyecto4 dividirPartesIguales"
+              className="proyectoActivado dividirPartesIguales"
               to= "Pages/DiferentesAnim">Proyecto N°4
             </Link>
-            <label className="proyecto5 dividirPartesIguales">proyecto5</label>
-            <label className="proyecto6 dividirPartesIguales">proyecto6</label>
+            <label className="proyectoDesactivado dividirPartesIguales">proyecto5</label>
+            <label className="proyectoDesactivado dividirPartesIguales">proyecto6</label>
           </div>
       </div>
 
