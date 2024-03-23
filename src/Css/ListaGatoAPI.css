@@ -1,11 +1,21 @@
 /*----------------- AGREGAR IMAGEN RANDOM DE GATO API --------------------*/
 .imagen-random-gatoAPI {
+  margin-top: 10px;
   height: 550px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(5, 24, 24);
+  background-color: rgb(3, 34, 34);
+  border-top: 5px groove red;
+  border-right: 5px groove red;
+  border-left: 5px dotted red;
+  border-bottom: 5px dotted red;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
 }
 
 .contenedor-imagenes {
@@ -13,8 +23,7 @@
   height: 500px;
   display: flex;
   justify-content: flex-start;
-  flex-wrap: wrap;
-  background-color: rgb(33, 139, 139); 
+  flex-wrap: wrap; 
   overflow-y: scroll;
 }
 /*----------------- AGREGAR IMAGEN RANDOM DE GATO API --------------------*/

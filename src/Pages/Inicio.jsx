@@ -74,8 +74,8 @@ function Inicio(){
       </div>
 
       <div className="contenedorProtectos col-12">
-        <h1>MIS PROYECTOS</h1>
-          <div className="contenedorImagenesProy col-10 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+        <h1>Mis Proyectos</h1>
+          <div className="contenedorImagenesProy col-12 col-sm-7 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
             <Link
               className="proyectoActivado dividirPartesIguales"
               to= "Pages/ProyectosRND">Proyecto N°1
@@ -89,7 +89,7 @@ function Inicio(){
               to= "Pages/PiedraPapelTijera">Proyecto N°3
             </Link>
           </div>
-          <div className="contenedorImagenesProy col-10 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+          <div className="contenedorImagenesProy col-12 col-sm-7 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
             <Link 
               className="proyectoActivado dividirPartesIguales"
               to= "Pages/DiferentesAnim">Proyecto N°4

@@ -53,8 +53,7 @@ function ListaChat() {
   }, [ mountedMSG, todosLosMSGs ]);
 
   return(
-    <div
-    className='Chat'>
+    <div className='Chat'>
       <div className="ContenedorChats col-12 col-md-5 col-lg-4 col-xl-4 col-xxl-3">
         <FormularioPrimerChat
           onSubmit = {agregarPrimerMSG}/>

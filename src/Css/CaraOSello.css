@@ -4,7 +4,16 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: rgb(83, 133, 133);
+  background-color: rgb(9, 63, 63);
+  border: 5px dotted red;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.margenSup{
+  margin-top: 10px;
 }
 
 

@@ -74,7 +74,13 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: rgb(0, 153, 153);
+  background-color: rgb(0, 36, 36);
+  border: 10px double red;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 .dividirPartesIguales {
   margin: 10px 10px;
@@ -82,8 +88,9 @@
   color: rgb(0, 19, 27);
 }
 .proyectoActivado {
-  background-color: aqua;
-  border: 5px solid rgb(18, 43, 43);
+  color: rgb(141, 255, 255);
+  background-color: rgb(0, 17, 17);
+  border: 5px solid rgb(1, 255, 255);
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -91,12 +98,14 @@
   -o-border-radius: 10px;
 }
 .proyectoActivado:hover {
-  background-color: rgb(0, 63, 63);
-  border: 5px solid rgb(0, 0, 0);
+  color: rgb(77, 177, 177);
+  background-color: rgb(1, 29, 29);
+  border: 5px solid rgb(0, 126, 126);
 }
 .proyectoDesactivado {
-  background-color: aqua;
-  border: 5px solid rgb(18, 43, 43);
+  color: rgb(141, 255, 255);
+  background-color: rgb(0, 17, 17);
+  border: 5px solid rgb(1, 255, 255);
   border-radius: 10px;
   opacity: 30%;
 }

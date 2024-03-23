@@ -1,11 +1,18 @@
 /*----------------------- ESCOGER CLASE DEL GATO -------------------------*/
 .gato-rpg {
+  margin-top: 10px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  background-color: rgb(62, 112, 112);
+  background-color: rgb(1, 39, 39);
+  border: 10px double red;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
 }
 
 .contenedor-caracteristicas {
@@ -14,7 +21,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(15, 66, 66);
   line-height: 50px;
 }
 
