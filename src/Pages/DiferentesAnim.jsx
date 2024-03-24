@@ -454,7 +454,7 @@ const handleClose = (event, reason) => {
                 <label
                   className={`alertaVanilla col-12 ${verifCondicion(cumpleCondicion) ? 'alerVaCorr' : 'alerVaInco'} ${ocultarONoAlerta(ocultarAlertONo) ? 'd-none' : ''}`}
                   ref={alertaAlmacenada}
-                  >Alerta Vanilla
+                  >Alerta Vanilla tst
                 </label>
               </div>
               <input
