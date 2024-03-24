@@ -3,11 +3,17 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   background-color: rgb(29, 65, 65);
+  border: 10px ridge red;
 }
 .imgTitulo {
   display: flex;
-  padding: 10px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
 }
 .imgLogo {
   height: 80px;
@@ -19,10 +25,10 @@
   -o-border-radius: 30px;
 }
 .titulo {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: green;
 }
 
 
@@ -33,7 +39,6 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: rgb(165, 47, 47);
 }
 .tamañoGrandeContCuerpo {
   height: 737px;
@@ -45,7 +50,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(25, 85, 85);
   position: relative;
 }
 .tamañoGrandeContTarjeta {

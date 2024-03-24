@@ -49,12 +49,22 @@
 
 .tituloAlerVanilla {
   text-align: center;
-  background-color: rgb(22, 36, 36);
+  border: 5px double red;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 .tituloAlerMUI {
   text-align: center;
-  background-color: rgb(12, 63, 63);
+  border: 5px double red;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 .cuerpoAnim {
@@ -67,6 +77,8 @@
 }
 
 .contContCont {
+  padding-top: 50px;
+  padding-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -90,11 +102,13 @@
 }
 
 .contAnimIzq {
-  background-color: rgb(16, 54, 54);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .contAlertaVanilla {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 .alertaVanilla {
@@ -115,7 +129,9 @@
 }
 
 .contAnimDer {
-  background-color: rgb(25, 160, 160);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .alertaAnimVanilla {
@@ -152,10 +168,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: rgb(46, 107, 107);
 }
 
 .contCentro {
+  margin: 5px;
   padding: 5px;
   display: flex;
   flex-wrap: wrap;
@@ -173,7 +189,6 @@
 .estiloForm {
   display: flex;
   flex-wrap: wrap;
-  background-color: aqua;
 }
 .miniContenedor {
   display: flex;
@@ -214,6 +229,7 @@
 .contenedorReq {
   display: flex;
   flex-direction: column;
+  background-color: rgb(86, 151, 151);
 }
 .colorTxtReq {
   color: rgb(0, 43, 43);

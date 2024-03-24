@@ -199,7 +199,7 @@ function PiedraPapelTijera() {
           
 
           <div className={`cont1 col-10 ${grandeOChico(window.innerWidth) ? 'cont1AlturaChico' : 'cont1AlturaGrande'}`}>
-            <div className="contenedorIzquierda">
+            <div className={`contenedorIzquierda ${grandeOChico(window.innerWidth) ? 'eleccionCotn1Chiquito' : ''}`}>
               <div className="divImagenIzq ocultar">
                 <label>PERDISTE</label>
                 <img
@@ -210,25 +210,25 @@ function PiedraPapelTijera() {
             </div>
 
 
-            <div className="neutro">
+            <div className={`neutro ${grandeOChico(window.innerWidth) ? 'eleccionCotn1Chiquito' : ''}`}>
               <img
                 className="tamañoIMG"
                 src={RandomPiPaTi}
                 alt="RandomPiPaTi"/>
             </div>
-            <div className="piedra1 ocultar">
+            <div className={`piedra1 ${grandeOChico(window.innerWidth) ? 'eleccionCotn1Chiquito' : ''} ocultar`}>
               <img
                 className="tamañoIMG"
                 src={PiedraBot}
                 alt="PiedraBot"/>
             </div>
-            <div className="papel1 ocultar">
+            <div className={`papel1 ${grandeOChico(window.innerWidth) ? 'eleccionCotn1Chiquito' : ''} ocultar`}>
               <img
                 className="tamañoIMG"
                 src={PapelBot}
                 alt="PapelBot"/>
             </div>
-            <div className="tijera1 ocultar">
+            <div className={`tijera1 ${grandeOChico(window.innerWidth) ? 'eleccionCotn1Chiquito' : ''} ocultar`}>
               <img
                 className="tamañoIMG"
                 src={TijeraBot}
@@ -236,7 +236,7 @@ function PiedraPapelTijera() {
             </div>
 
 
-            <div className="contenedorDerecha">
+            <div className={`contenedorDerecha ${grandeOChico(window.innerWidth) ? 'eleccionCotn1Chiquito' : ''}`}>
               <div className="divImagenDer ocultar">
                 <label>GANASTE</label>
                 <img
@@ -254,21 +254,21 @@ function PiedraPapelTijera() {
           <div className={`cont3 ${grandeOChico(window.innerWidth) ? 'cont3AlturaChico' : 'cont3AlturaGrande'}`}>
             <BtnPiePapTijRnd
               id="idPiedra2"
-              classNameBTN="piedra2"
+              classNameBTN={`piedra2 ${grandeOChico(window.innerWidth) ? 'piePapTij2Chiquito' : ''}`}
               onClick={(id) => random(id)}
               classNameIMG="tamañoIMG"
               src={PiedraPlayer}
               alt="PiedraPlayer"/>
             <BtnPiePapTijRnd
               id="idPapel2"
-              classNameBTN="papel2"
+              classNameBTN={`papel2 ${grandeOChico(window.innerWidth) ? 'piePapTij2Chiquito' : ''}`}
               onClick={(id) => random(id)}
               classNameIMG="tamañoIMG"
               src={PapelPlayer}
               alt="PapelPlayer"/>
             <BtnPiePapTijRnd
               id="idTijera2"
-              classNameBTN="tijera2"
+              classNameBTN={`tijera2 ${grandeOChico(window.innerWidth) ? 'piePapTij2Chiquito' : ''}`}
               onClick={(id) => random(id)}
               classNameIMG="tamañoIMG"
               src={TijeraPlayer}
