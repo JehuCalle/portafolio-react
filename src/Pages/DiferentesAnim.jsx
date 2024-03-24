@@ -452,7 +452,7 @@ const handleClose = (event, reason) => {
             <div className="contBtnDifAnim">
               <div className="contAlertaVanilla col-12">
                 <label
-                  className={`alertaVanilla col-10 ${verifCondicion(cumpleCondicion) ? 'alerVaCorr' : 'alerVaInco'} ${ocultarONoAlerta(ocultarAlertONo) ? 'd-none' : ''}`}
+                  className={`alertaVanilla col-12 ${verifCondicion(cumpleCondicion) ? 'alerVaCorr' : 'alerVaInco'} ${ocultarONoAlerta(ocultarAlertONo) ? 'd-none' : ''}`}
                   ref={alertaAlmacenada}
                   >Alerta Vanilla
                 </label>
