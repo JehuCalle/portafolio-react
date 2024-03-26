@@ -10,8 +10,6 @@ import TarjetaRND from './Pages/TarjetaRND.jsx';
 import PiedraPapelTijera from './Pages/PiedraPapelTijera.jsx';
 import DiferentesAnim from './Pages/DiferentesAnim.jsx';
 
-
-
 import { Routes, Route} from 'react-router-dom';
 
 function App() {
