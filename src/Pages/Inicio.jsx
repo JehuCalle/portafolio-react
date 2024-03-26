@@ -34,35 +34,39 @@ function Inicio(){
 
       <div className="contenedorHabilidades">
         <h1>Habilidades en</h1>
-        <div className="contenedorImagenesHab col-11 col-sm-9 col-md-9 col-lg-9 col-xl-8 col-xxl-7">
-          <img
-            className="logoBootstrap"
-            src={LogoBootstrap}
-            alt="Bootstrap logo" />
-          <img
-            className="logoHTML"
-            src={LogoHTML}
-            alt="HTML logo" />
-          <img
-            className="logoJS"
-            src={LogoJS}
-            alt="JavaScript logo" />
-          <img
-            className="logoCSS"
-            src={LogoCSS}
-            alt="CSS logo" />
-          <img
-            className="logoReact"
-            src={LogoReact}
-            alt="React logo" />
-          <img
-            className="logoC"
-            src={LogoC}
-            alt="C# logo" />
-          <img
-            className="logoJava"
-            src={LogoJava}
-            alt="Java logo" />
+        <div className="contenedorImagenesHab col-11 col-sm-9 col-md-8 col-lg-9 col-xl-8 col-xxl-8">
+          <div className="col-12 col-sm-12 col-md-11 col-lg-7 col-xl-7 col-xxl-7">
+            <img
+              className="logoBootstrap"
+              src={LogoBootstrap}
+              alt="Bootstrap logo" />
+            <img
+              className="logoHTML"
+              src={LogoHTML}
+              alt="HTML logo" />
+            <img
+              className="logoJS"
+              src={LogoJS}
+              alt="JavaScript logo" />
+            <img
+              className="logoCSS"
+              src={LogoCSS}
+              alt="CSS logo" />
+          </div>
+          <div className="col-8 col-sm-8 col-md-7 col-lg-5 col-xl-5 col-xxl-5">
+            <img
+              className="logoReact"
+              src={LogoReact}
+              alt="React logo" />
+            <img
+              className="logoC"
+              src={LogoC}
+              alt="C# logo" />
+            <img
+              className="logoJava"
+              src={LogoJava}
+              alt="Java logo" />
+          </div>
         </div>
       </div>  
 
@@ -101,27 +105,31 @@ function Inicio(){
 
       <div className="contenedorHerramientas col-12">
         <h1>Herramientas que utilizo</h1>
-        <div className="contenedorImagenesHerr col-8 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-5">
-          <img
-            className="logoVisualCode"
-            src={LogoVisualCode}
-            alt="Visual Studio Code logo" />
-          <img
-            className="logoGitHub"
-            src={LogoGitHub}
-            alt="GitHub logo" />
-          <img
-            className="logoGitHubDesk"
-            src={LogoGitHubDesk}
-            alt="GitHub Desktop logo" />
-          <img
-            className="logoAndroidStudio"
-            src={LogoAndroidStudio}
-            alt="Android Studio logo" />
-          <img
-            className="logoUnity"
-            src={LogoUnity}
-            alt="Unity logo" />
+        <div className="contenedorImagenesHerr col-8 col-sm-6 col-md-6 col-lg-6 col-xl-7 col-xxl-5">
+          <div className="col-12 col-sm-12 col-md-11 col-lg-7 col-xl-7 col-xxl-7">
+            <img
+              className="logoVisualCode"
+              src={LogoVisualCode}
+              alt="Visual Studio Code logo" />
+            <img
+              className="logoGitHub"
+              src={LogoGitHub}
+              alt="GitHub logo" />
+            <img
+              className="logoGitHubDesk"
+              src={LogoGitHubDesk}
+              alt="GitHub Desktop logo" />
+          </div>
+          <div className="col-8 col-sm-8 col-md-7 col-lg-5 col-xl-5 col-xxl-5">
+            <img
+              className="logoAndroidStudio"
+              src={LogoAndroidStudio}
+              alt="Android Studio logo" />
+            <img
+              className="logoUnity"
+              src={LogoUnity}
+              alt="Unity logo" />
+          </div>
         </div>
       </div>
     </div>

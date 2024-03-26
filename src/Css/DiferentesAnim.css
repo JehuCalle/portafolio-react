@@ -156,10 +156,10 @@
   animation-duration: 3s;
 }
 @keyframes AlVani {
-  0% {left: -300px; top: 0px;}
-  30% {left: 0px; top: 0px;}
-  80% {left: 0px; top: 0px;}
-  100% {left: -300px; top: 0px;}
+  0% {left: -300px; top: 100px;}
+  30% {left: 0px; top: 100px;}
+  80% {left: 0px; top: 100px;}
+  100% {left: -300px; top: 100px;}
 }
 
 /* CENTRO CENTRO CENTRO CENTRO CENTRO CENTRO */

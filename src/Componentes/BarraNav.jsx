@@ -84,14 +84,6 @@ function BarraNav(){
             className='BotonCambioPag'
             to="Pages/Contacto">Contacto
           </Link>
-          <Link
-            className='BotonCambioPag'
-            to="/portafolio-react" >Ejemplo 4
-          </Link>
-          <Link
-            className='BotonCambioPag'
-            to="/portafolio-react" >Ejemplo 5
-          </Link>
         </div>
       </div>
       <div>
