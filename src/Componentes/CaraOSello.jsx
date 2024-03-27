@@ -3,7 +3,7 @@ import React, {useRef, useState, useEffect} from 'react';
 
 import "../Css/CaraOSello.css";
 
-function CaraOSello({ enviar, cara, sello, resultadoCalculo, respuesta, historial, ref, onFuncionB, activarFuncionEx}){
+function CaraOSello({ enviar, cara, sello, resultadoCalculo, respuesta, historial, refInputNom, refInputRes, onFuncionB, activarFuncionEx}){
 
   // 1- SE ESTABLECE LA FUNCIÓN QUE SE EXPORTARÁ
   const funcionB = () => {
@@ -28,7 +28,6 @@ function CaraOSello({ enviar, cara, sello, resultadoCalculo, respuesta, historia
   const [ mountedHist, setMountedHist ] = useState(false);
 
   useEffect(() => {
-    console.log("USEEFFECT SCROLL");
     if ( referenciaHistorial.current && mountedHist === true ){
       setMountedHist(false);
       referenciaHistorial.current.scrollTop = referenciaHistorial.current.scrollHeight;
@@ -47,12 +46,14 @@ function CaraOSello({ enviar, cara, sello, resultadoCalculo, respuesta, historia
           <input
             className='inputCaraOSello'
             type="text"
-            id="nombre" />
+            id="nombre"
+            ref={refInputNom} />
           <label>respuesta</label>
           <input
             className='inputCaraOSello'
             type="text"
-            id="respuesta"/>
+            id="respuesta"
+            ref={refInputRes}/>
           <button
             onClick={enviar}>
             Enviar

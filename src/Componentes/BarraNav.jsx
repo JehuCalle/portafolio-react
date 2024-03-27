@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import logoBarra from '../Img/gato-normal.jpg';
 import { Outlet, Link } from "react-router-dom";
 
@@ -6,23 +6,20 @@ import '../Css/BarraNav.css';
 
 
 function BarraNav(){
-
-  console.log("BARRANAV.JSX");
-  console.log(window.innerWidth);
-  console.log(window.innerHeight);
-
+  const barraNavPC = useRef(null);
+  const barraNavMobil = useRef(null);
 
   useEffect(() => {
-    const barraNavPC = document.querySelector(".contImgBarra");
-    const barraNavMobil = document.querySelector(".contBarraMovil");
+
+    
 
     if( window.innerWidth <= 640){
-      barraNavPC.classList.add("ocultar");
-      barraNavMobil.classList.remove("ocultar");
+      barraNavPC.current.classList.add("ocultar");
+      barraNavMobil.current.classList.remove("ocultar");
       console.log("MENOR A 640");
     } else if ( window.innerWidth > 640 ) {
-      barraNavPC.classList.remove("ocultar");
-      barraNavMobil.classList.add("ocultar");
+      barraNavPC.current.classList.remove("ocultar");
+      barraNavMobil.current.classList.add("ocultar");
       console.log("MAYOR A 640");
     };
   }, []); // El segundo argumento vacío asegura que el efecto solo se ejecute una vez al montar el componente
@@ -31,7 +28,9 @@ function BarraNav(){
   return(
     <div>
 
-        <div className='col-12 contBarraMovil'>
+        <div
+          className='col-12 contBarraMovil'
+          ref={barraNavMobil}>
           <div className="col-ImgBarDesplegable col-3 col-sm-2">
             <img
               className = 'imagenBarra'
@@ -64,10 +63,12 @@ function BarraNav(){
 
 
 
-      <div className = "contImgBarra">
+      <div
+        className="contImgBarra"
+        ref={barraNavPC}>
         <div className="col-ImgBarraNav">
           <img
-            className = 'imagenBarra'
+            className='imagenBarra'
             src = {logoBarra}
             alt = 'Logo barra nav' />
         </div>

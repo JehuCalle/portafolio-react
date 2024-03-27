@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from "react";
+import React, { useEffect,useRef,useState } from "react";
 
 import BtnPiePapTijRnd from '../Componentes/PiePapTijRnd.jsx';
 
@@ -24,17 +24,17 @@ import RandomPiPaTi from '../Img/PiedraPapelTijera/RNDB.png';
 
 function PiedraPapelTijera() {
 
-  const divImagenIzq = document.querySelector(".divImagenIzq");
-  const divImagenDer = document.querySelector(".divImagenDer");
-  const divEmpate = document.querySelector(".cont2");
+  const divImagenIzq = useRef(null);
+  const divImagenDer = useRef(null);
+  const divEmpate = useRef(null);
 
-  const neutro = document.querySelector(".neutro");
-  const piedra1 = document.querySelector(".piedra1");
-  const papel1 = document.querySelector(".papel1");
-  const tijera1 = document.querySelector(".tijera1");
+  const neutro = useRef(null);
+  const piedra1 = useRef(null);
+  const papel1 = useRef(null);
+  const tijera1 = useRef(null);
 
-  const divAlertaGanar = document.querySelector(".alertaGanar");
-  const divAlertaPerder = document.querySelector(".alertaPerder");
+  const divAlertaGanar = useRef(null);
+  const divAlertaPerder = useRef(null);
 
 
   const [ piePapTijRND, setpiePapTijRND ] = useState("");
@@ -76,9 +76,9 @@ function PiedraPapelTijera() {
         setImgVidasEnemigos(Vidas1);
       } else if (nuevaVidaEnemigo === 0) {
         setImgVidasEnemigos(Vidas0);
-        divAlertaGanar.classList.remove("ocultar");
+        divAlertaGanar.current.classList.remove("ocultar");
       }
-      console.log("Vida Actual Enemigo: "+nuevaVidaEnemigo);
+      console.log("Vida Actual Enemigo: " + nuevaVidaEnemigo);
       return nuevaVidaEnemigo;
     });
   };
@@ -95,9 +95,9 @@ function PiedraPapelTijera() {
         setImgVidasPlayer(Vidas1);
       } else if (nuevaVidaPlayer === 0){
         setImgVidasPlayer(Vidas0);
-        divAlertaPerder.classList.remove("ocultar");
+        divAlertaPerder.current.classList.remove("ocultar");
       };
-      console.log("Vida Actual Enemigo: "+ nuevaVidaPlayer);
+      console.log("Vida Actual Player: "+ nuevaVidaPlayer);
       return nuevaVidaPlayer;
     });
   };
@@ -108,14 +108,14 @@ function PiedraPapelTijera() {
     setImgVidasEnemigos(Vidas3);
     setVidasPlayer(3);
     setImgVidasPlayer(Vidas3);
-    divImagenIzq.classList.add("ocultar");
-    divImagenDer.classList.add("ocultar");
-    divAlertaGanar.classList.add("ocultar");
-    divAlertaPerder.classList.add("ocultar");
-    neutro.classList.remove("ocultar");
-    piedra1.classList.add("ocultar");
-    papel1.classList.add("ocultar");
-    tijera1.classList.add("ocultar");
+    divImagenIzq.current.classList.add("ocultar");
+    divImagenDer.current.classList.add("ocultar");
+    divAlertaGanar.current.classList.add("ocultar");
+    divAlertaPerder.current.classList.add("ocultar");
+    neutro.current.classList.remove("ocultar");
+    piedra1.current.classList.add("ocultar");
+    papel1.current.classList.add("ocultar");
+    tijera1.current.classList.add("ocultar");
   }
 
 
@@ -124,7 +124,6 @@ function PiedraPapelTijera() {
     if (mountedH === true && piePapTijRND !== "" && idDelBoton !== "" && VidasEnemigo !== "" && VidasPlayer !== ""){
       setMountedH(false);
       console.log("BOT: " + piePapTijRND);
-      console.log(idDelBoton);
 
       let eleccionPlayer = "";
 
@@ -135,46 +134,45 @@ function PiedraPapelTijera() {
       } else if (idDelBoton === "idTijera2"){
         eleccionPlayer = "Tijera";
       };
-      console.log("Escogiste " + eleccionPlayer);
+      console.log("Escogiste: " + eleccionPlayer);
 
       /* BOT BOT BOT BOT BOT BOT BOT */
-      neutro.classList.add("ocultar");
+      neutro.current.classList.add("ocultar");
 
       if (piePapTijRND === "Piedra"){
-        piedra1.classList.remove("ocultar");
-        papel1.classList.add("ocultar");
-        tijera1.classList.add("ocultar");
+        piedra1.current.classList.remove("ocultar");
+        papel1.current.classList.add("ocultar");
+        tijera1.current.classList.add("ocultar");
       } else if (piePapTijRND === "Papel") {
-        piedra1.classList.add("ocultar");
-        papel1.classList.remove("ocultar");
-        tijera1.classList.add("ocultar");
+        piedra1.current.classList.add("ocultar");
+        papel1.current.classList.remove("ocultar");
+        tijera1.current.classList.add("ocultar");
       }else if (piePapTijRND === "Tijera"){
-        piedra1.classList.add("ocultar");
-        papel1.classList.add("ocultar");
-        tijera1.classList.remove("ocultar");
+        piedra1.current.classList.add("ocultar");
+        papel1.current.classList.add("ocultar");
+        tijera1.current.classList.remove("ocultar");
       };
       /* BOT BOT BOT BOT BOT BOT BOT */
 
 
       if (eleccionPlayer === piePapTijRND) {
-        console.log("EMPATE 🐈");
-        divEmpate.classList.remove("ocultar");
-        divImagenDer.classList.add("ocultar");
-        divImagenIzq.classList.add("ocultar");
+        console.log("Estado: EMPATE 🐈");
+        divEmpate.current.classList.remove("ocultar");
+        divImagenDer.current.classList.add("ocultar");
+        divImagenIzq.current.classList.add("ocultar");
       } else if ((eleccionPlayer === "Piedra" && piePapTijRND === "Papel") || (eleccionPlayer === "Papel" && piePapTijRND === "Tijera") || (eleccionPlayer === "Tijera" && piePapTijRND === "Piedra")){
-        console.log("Perdiste 😾");
+        console.log("Estado: Perdiste 😾");
         CambioVidasPlayer()
-        divImagenIzq.classList.remove("ocultar")
-        divImagenDer.classList.add("ocultar");
-        divEmpate.classList.add("ocultar");
+        divImagenIzq.current.classList.remove("ocultar")
+        divImagenDer.current.classList.add("ocultar");
+        divEmpate.current.classList.add("ocultar");
       } else if ((eleccionPlayer === "Piedra" && piePapTijRND === "Tijera") || (eleccionPlayer === "Papel" && piePapTijRND === "Piedra") || (eleccionPlayer === "Tijera" && piePapTijRND === "Papel")){
-        console.log("Ganaste 😼");
+        console.log("Estado: Ganaste 😼");
         CambioVidasEnemigo();
-        divImagenDer.classList.remove("ocultar");
-        divImagenIzq.classList.add("ocultar");
-        divEmpate.classList.add("ocultar");
+        divImagenDer.current.classList.remove("ocultar");
+        divImagenIzq.current.classList.add("ocultar");
+        divEmpate.current.classList.add("ocultar");
       }
-
     };
   }, [piePapTijRND, mountedH, idDelBoton, piedra1, papel1, tijera1, neutro, divImagenDer, divImagenIzq, VidasEnemigo, VidasPlayer, divEmpate]);
 
@@ -200,7 +198,9 @@ function PiedraPapelTijera() {
 
           <div className={`cont1 col-10 ${grandeOChico(window.innerWidth) ? 'cont1AlturaChico' : 'cont1AlturaGrande'}`}>
             <div className={`contenedorIzquierda ${grandeOChico(window.innerWidth) ? 'eleccionCotn1Chiquito' : ''}`}>
-              <div className="divImagenIzq ocultar">
+              <div
+                className="divImagenIzq ocultar"
+                ref={divImagenIzq}>
                 <label>PERDISTE</label>
                 <img
                   className="tamañoIMG"
@@ -210,25 +210,33 @@ function PiedraPapelTijera() {
             </div>
 
 
-            <div className={`neutro ${grandeOChico(window.innerWidth) ? 'eleccionCotn1Chiquito' : ''}`}>
+            <div
+              className={`neutro ${grandeOChico(window.innerWidth) ? 'eleccionCotn1Chiquito' : ''}`}
+              ref={neutro}>
               <img
                 className="tamañoIMG"
                 src={RandomPiPaTi}
                 alt="RandomPiPaTi"/>
             </div>
-            <div className={`piedra1 ${grandeOChico(window.innerWidth) ? 'eleccionCotn1Chiquito' : ''} ocultar`}>
+            <div
+              className={`piedra1 ${grandeOChico(window.innerWidth) ? 'eleccionCotn1Chiquito' : ''} ocultar`}
+              ref={piedra1}>
               <img
                 className="tamañoIMG"
                 src={PiedraBot}
                 alt="PiedraBot"/>
             </div>
-            <div className={`papel1 ${grandeOChico(window.innerWidth) ? 'eleccionCotn1Chiquito' : ''} ocultar`}>
+            <div
+              className={`papel1 ${grandeOChico(window.innerWidth) ? 'eleccionCotn1Chiquito' : ''} ocultar`}
+              ref={papel1}>
               <img
                 className="tamañoIMG"
                 src={PapelBot}
                 alt="PapelBot"/>
             </div>
-            <div className={`tijera1 ${grandeOChico(window.innerWidth) ? 'eleccionCotn1Chiquito' : ''} ocultar`}>
+            <div
+              className={`tijera1 ${grandeOChico(window.innerWidth) ? 'eleccionCotn1Chiquito' : ''} ocultar`}
+              ref={tijera1}>
               <img
                 className="tamañoIMG"
                 src={TijeraBot}
@@ -237,7 +245,9 @@ function PiedraPapelTijera() {
 
 
             <div className={`contenedorDerecha ${grandeOChico(window.innerWidth) ? 'eleccionCotn1Chiquito' : ''}`}>
-              <div className="divImagenDer ocultar">
+              <div
+                className="divImagenDer ocultar"
+                ref={divImagenDer}>
                 <label>GANASTE</label>
                 <img
                   className="tamañoIMG"
@@ -248,7 +258,9 @@ function PiedraPapelTijera() {
 
 
           </div>
-          <div className="cont2 ocultar">
+          <div
+            className="cont2 ocultar"
+            ref={divEmpate}>
             <label>EMPATE</label>
           </div>
           <div className={`cont3 ${grandeOChico(window.innerWidth) ? 'cont3AlturaChico' : 'cont3AlturaGrande'}`}>
@@ -285,7 +297,9 @@ function PiedraPapelTijera() {
         </div>
 
 
-        <div className={`alertaGanar col-12 col-sm-12 col-md-12 col-lg-11 col-xl-10 col-xxl-12 ocultar ${grandeOChico(window.innerWidth) ? 'alertaGanarChico' : 'alertaGanarGrande'}`}>
+        <div
+          className={`alertaGanar col-12 col-sm-12 col-md-12 col-lg-11 col-xl-10 col-xxl-12 ocultar ${grandeOChico(window.innerWidth) ? 'alertaGanarChico' : 'alertaGanarGrande'}`}
+          ref={divAlertaGanar}>
           <label>Has derrotado al enemigo </label>
           <img
             className="tamañoImgAlertaGanaste"
@@ -296,7 +310,9 @@ function PiedraPapelTijera() {
             Reiniciar
           </button>
         </div>
-        <div className={`alertaPerder col-12 col-sm-12 col-md-12 col-lg-11 col-xl-10 col-xxl-12 ocultar ${grandeOChico(window.innerWidth) ? 'alertaPerderChico' : 'alertaPerderGrande'}`}>
+        <div
+          className={`alertaPerder col-12 col-sm-12 col-md-12 col-lg-11 col-xl-10 col-xxl-12 ocultar ${grandeOChico(window.innerWidth) ? 'alertaPerderChico' : 'alertaPerderGrande'}`}
+          ref={divAlertaPerder}>
           <label>Te has quedado sin vidas</label>
           <img
             className="tamañoImgAlertaPerdiste"

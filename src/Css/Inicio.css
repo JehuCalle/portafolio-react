@@ -20,6 +20,8 @@
   line-height: 3.5rem;
 }
 
+/* HABILIDADES HABILIDADES HABILIDADES HABILIDADES HABILIDADES HABILIDADES HABILIDADES HABILIDADES HABILIDADES HABILIDADES */
+
 .contenedorHabilidades{
   display: flex;
   flex-direction: column;
@@ -65,16 +67,27 @@
   width: 100%;
 }
 
-.contenedorProtectos {
+/* PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS */
+
+.campoProyectos {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.contenedorImagenesProy {
+.contenedorProtectos {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedorImagenesProy {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   background-color: rgb(0, 36, 36);
   border: 10px double red;
@@ -85,9 +98,13 @@
   -o-border-radius: 20px;
 }
 .dividirPartesIguales {
-  margin: 10px 10px;
-  flex: 1 1 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: rgb(0, 19, 27);
+}
+.dividirPartesIguales label {
+  cursor: pointer;
 }
 .proyectoActivado {
   color: rgb(141, 255, 255);
@@ -111,6 +128,63 @@
   border-radius: 10px;
   opacity: 30%;
 }
+
+.proyectoN1 {
+  height: 250px;
+  width: 100% ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+}
+.proyectoN2 {
+  height: 250px;
+  width: 100% ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(36, 124, 109);
+}
+.proyectoN3 {
+  height: 250px;
+  width: 100% ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(14, 100, 116);
+}
+.proyectoN4 {
+  height: 250px;
+  width: 100% ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(71, 175, 170);
+}
+.proyectoN5 {
+  height: 250px;
+  width: 100% ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(138, 1, 1);
+}
+.proyectoN6 {
+  height: 250px;
+  width: 100% ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(61, 21, 21);
+}
+
+/* HERRAMIENTAS HERRAMIENTAS HERRAMIENTAS HERRAMIENTAS HERRAMIENTAS HERRAMIENTAS HERRAMIENTAS HERRAMIENTAS */
 
 .contenedorHerramientas{
   display: flex;

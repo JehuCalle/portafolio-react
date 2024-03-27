@@ -14,7 +14,7 @@ function FormularioSegundoChat(props) {
 
   const ManejarEnvioSegForm = e => {
     e.preventDefault();
-    console.log("a");
+    console.log("Enviando mensaje chat 2");
 
     const nuevoSegundoMensaje = {
       id: uuidv4(),

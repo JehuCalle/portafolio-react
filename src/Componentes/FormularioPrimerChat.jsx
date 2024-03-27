@@ -14,7 +14,7 @@ function FormularioPrimerChat(props) {
 
   const ManejarEnvioPrimForm = e => {
     e.preventDefault();
-    console.log("b");
+    console.log("Enviando mensaje chat 1");
 
     const nuevoPrimerMensaje = {
       id: uuidv4(),

@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from "react";
+import React, { useEffect, useState, useRef} from "react";
 
 import TextoColRND from '../Componentes/TextoColRND.jsx';
 import CaraOSello from "../Componentes/CaraOSello.jsx";
@@ -11,6 +11,7 @@ import '../Css/ProyectosRND.css';
 
 function ProyectosRND(){
 
+  /* COLOR RND COLOR RND COLOR RND */
   const [colorRND, setColorRND] = useState({});
   const aplicarEstilo = () => {
     const rojo = Math.floor(Math.random() * 256);
@@ -26,13 +27,12 @@ function ProyectosRND(){
     setColorRND(nuevoEstilo);
   };
 
-  
+  /* CARA O SELLO CARA O SELLO CARA O SELLO CARA O SELLO */
   const [historial, setHistorial] = useState([]);
 
   const [calculoResultado, setcalculoResultado] = useState('');
   const caraOSelloRandom = () => {
     const calculo = Math.floor(Math.random() * 2);
-    console.log(calculo);
 
     if(calculo === 0){
       setcalculoResultado("Cara");
@@ -67,16 +67,13 @@ function ProyectosRND(){
 
   const [ activarFuncionEx, setActivarFuncionEx ] = useState(true);
 
+  const nombreTxt = useRef(null);
+  const respuestaTxt = useRef(null);
   const enviar = () => {
-    const nombreTxt = document.querySelector("#nombre");
-    setnombre(nombreTxt.value);
-
-    const respuestaTxt = document.querySelector("#respuesta");
-    setrespuestaCaraOSello(respuestaTxt.value);
-    console.log(respuestaCaraOSello);
+    setnombre(nombreTxt.current.value);
+    setrespuestaCaraOSello(respuestaTxt.current.value);
 
     caraOSelloRandom();
-    console.log(calculoResultado);
     setMounted1(true);
     
     // 5- SE LLAMA LA FUNCIÓN PARA USARLA
@@ -93,17 +90,19 @@ function ProyectosRND(){
 
     if (mounted1 === true) {
       if (nombre !== '' && respuestaCaraOSello !== '') {
+        console.log('Nombre: ' + nombre)
+        console.log('Respuesta: ' + respuestaCaraOSello)
+        console.log('Salió: ' + calculoResultado)
         if(respuestaPrimMayus === calculoResultado){
-          console.log(calculoResultado);
-          console.log("acertado");
+          console.log("Estado: Ha acertado");
           setresultado(`La respuesta de ${nombre} ha sido ${respuestaCaraOSello} y ha acertado`);
           setMounted1(false);
         }else if (respuestaPrimMayus !== calculoResultado){
-          console.log(calculoResultado);
-          console.log("fallado");
+          console.log("Estado; Ha fallado");
           setresultado(`La respuesta de ${nombre} ha sido ${respuestaCaraOSello} y ha fallado`);
           setMounted1(false);
         };
+        console.log('//////////////')
       } else {
         console.log("CAMPOS VACIOS");
       }
@@ -157,6 +156,8 @@ function ProyectosRND(){
           respuesta={`${resultado}`}
           resultadoCalculo={`${calculoResultado}`}
           historial={`${historial}`}
+          refInputNom={nombreTxt}
+          refInputRes={respuestaTxt}
           onFuncionB={manejarFuncionB}
           activarFuncionEx = {`${activarFuncionEx}`} />
         <ListaDeGatos/>

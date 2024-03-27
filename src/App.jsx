@@ -13,7 +13,6 @@ import DiferentesAnim from './Pages/DiferentesAnim.jsx';
 import { Routes, Route} from 'react-router-dom';
 
 function App() {
-  console.log("APP.JSX");
   return (
     <div className="App">
       <div className='contenedor-cuerpo'>

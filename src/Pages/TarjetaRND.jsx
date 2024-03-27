@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import Logo from '../Img/NoHaceNadaChiquito.png';
 /*
@@ -13,57 +13,57 @@ import NoHaceNadaHD from '../Img/PiedraPapelTijera/NoHaceNadaHD.png'
 
 import '../Css/TarjetaRND.css';
 
-let contPag1 = 0;
+function TarjetaRND(){
 
-let contadorOrdenBtn = 0;
+  let contPag1 = 0;
 
-const btnDerecha = (e) => {
-  e.preventDefault();
-  const pagina1 = document.querySelector('.pagina1');
-  const pagina2 = document.querySelector('.pagina2');
+  let contadorOrdenBtn = 0;
+  
+  let contPag2 = 0;
 
-  if (contPag1 === 0 && contadorOrdenBtn === 1) {
-    pagina1.style.transform = 'rotateY(-180deg)';
-    pagina2.style.transform = 'rotateY(-180deg)';
-    console.log("1");
-    contPag1 += 1;
-    contadorOrdenBtn +=1;
-    console.log(contadorOrdenBtn);
-  } else if (contadorOrdenBtn === 2) {
-    pagina1.style.transform = 'rotateY(0deg)';
-    pagina2.style.transform = 'rotateY(0deg)';
-    console.log("2");
-    contPag1 -= 1;
-    contadorOrdenBtn -=1;
-    console.log(contadorOrdenBtn);
+  const pagina1 = useRef(null);
+  const pagina2 = useRef(null);
+  const btnDerecha = (e) => {
+    e.preventDefault();
+  
+    if (contPag1 === 0 && contadorOrdenBtn === 1) {
+      pagina1.current.style.transform = 'rotateY(-180deg)';
+      pagina2.current.style.transform = 'rotateY(-180deg)';
+      console.log("1");
+      contPag1 += 1;
+      contadorOrdenBtn +=1;
+      console.log(contadorOrdenBtn);
+    } else if (contadorOrdenBtn === 2) {
+      pagina1.current.style.transform = 'rotateY(0deg)';
+      pagina2.current.style.transform = 'rotateY(0deg)';
+      console.log("2");
+      contPag1 -= 1;
+      contadorOrdenBtn -=1;
+      console.log(contadorOrdenBtn);
+    };
   };
-};
 
-let contPag2 = 0;
-
-const btnIzquierda = (e) => {
-  e.preventDefault();
-  const pagina3 = document.querySelector('.pagina3');
-  const pagina4 = document.querySelector('.pagina4');
+  const pagina3 = useRef(null);
+  const pagina4 = useRef(null);
+  const btnIzquierda = (e) => {
+    e.preventDefault();
 
     if (contPag2 === 0 && contadorOrdenBtn === 0) {
-      pagina3.style.transform = 'rotateY(-180deg)';
-      pagina4.style.transform = 'rotateY(-180deg)';
+      pagina3.current.style.transform = 'rotateY(-180deg)';
+      pagina4.current.style.transform = 'rotateY(-180deg)';
       console.log("3");
       contPag2 += 1;
       contadorOrdenBtn +=1;
       console.log(contadorOrdenBtn);
     } else if (contadorOrdenBtn === 1){
-      pagina3.style.transform = 'rotateY(0deg)';
-      pagina4.style.transform = 'rotateY(0deg)';
+      pagina3.current.style.transform = 'rotateY(0deg)';
+      pagina4.current.style.transform = 'rotateY(0deg)';
       console.log("4");
       contPag2 -=1
       contadorOrdenBtn -=1;
       console.log(contadorOrdenBtn);
     };
-} 
-
-function TarjetaRND(){
+  } 
 
   const tamañomini = valor => {
     return (valor <= 767);
@@ -93,7 +93,8 @@ function TarjetaRND(){
             <img
               className="tamañoTarjetaIMG tercerDiv pagina1"
               src={NoHaceNadaHD}
-              alt="QuintaIMG">
+              alt="QuintaIMG"
+              ref={pagina1}>
             </img>
           </div>
 
@@ -101,14 +102,16 @@ function TarjetaRND(){
             <img
               className="tamañoTarjetaIMG segundoDiv pagina2"
               src={NoHaceNadaHD}
-              alt="SegundaIMG">
+              alt="SegundaIMG"
+              ref={pagina2}>
             </img>
           </div>
           <div className="imagenes col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
             <img
               className="tamañoTarjetaIMG segundoDiv pagina3"
               src={NoHaceNadaHD }
-              alt="TerceraIMG">
+              alt="TerceraIMG"
+              ref={pagina3}>
             </img>
           </div>
 
@@ -116,7 +119,8 @@ function TarjetaRND(){
             <img
               className="tamañoTarjetaIMG tercerDiv pagina4"
               src={NoHaceNadaHD}
-              alt="PrimeraIMG">
+              alt="PrimeraIMG"
+              ref={pagina4}>
             </img>
           </div>
           

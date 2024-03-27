@@ -26,11 +26,9 @@ function GatoFormulario(props){
 
   const manejarCambioNombre = e => {
     setInputNombre(e.target.value);
-    console.log("CampoNombre");
   };
   const manejarCambioEdad = e => {
     setInputEdad(e.target.value);
-    console.log("CampoEdad");
   };
 
   const claseAsesino = (e) => {
@@ -120,7 +118,6 @@ function GatoFormulario(props){
     };
   };
   useEffect(() => {
-    console.log(btnClasePres)
     if( btnClasePres.length === 1){
       btnClasePres[0].classList.add("active");
     } else if (btnClasePres.length === 2) {

@@ -34,7 +34,6 @@ function GatoFormularioAPI(props){
 
   const manejarEnvioForm = e => {
     e.preventDefault();
-    console.log("GatoAPIAgregado");
     a();
   };
 

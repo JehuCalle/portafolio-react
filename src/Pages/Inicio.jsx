@@ -20,7 +20,6 @@ import LogoUnity from '../Img/unityLogo.png';
 import '../Css/Inicio.css';
 
 function Inicio(){
-  console.log("INICIO.JSX");
 
   return(
     <div className="contenedorDivs">
@@ -77,30 +76,69 @@ function Inicio(){
           alt="Gif Random" />
       </div>
 
-      <div className="contenedorProtectos col-12">
+      <div className="campoProyectos col-12">
         <h1>Mis Proyectos</h1>
-          <div className="contenedorImagenesProy col-12 col-sm-7 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+        <div className="contenedorProtectos col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
+          <div className="contenedorImagenesProy col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
             <Link
-              className="proyectoActivado dividirPartesIguales"
-              to= "Pages/ProyectosRND">Proyecto N°1
+              className="proyectoActivado dividirPartesIguales col-12"
+              to= "Pages/ProyectosRND">
+                <div className="proyectoN1">
+                  <label className="h1">Proyecto N°1</label>
+                  <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste qui quas laudantium dignissimos perspiciatis. Nisi architecto, perferendis animi assumenda, ipsum quo, quis labore dolore blanditiis accusantium odio quas quia at?</label>
+                  <label> XXXXXXX, 2023 </label>
+                </div>
             </Link>
             <Link 
-              className="proyectoActivado dividirPartesIguales"
-              to= "Pages/TarjetaRND">Proyecto N°2
-            </Link>
-            <Link 
-              className="proyectoActivado dividirPartesIguales"
-              to= "Pages/PiedraPapelTijera">Proyecto N°3
+              className="proyectoActivado dividirPartesIguales col-12"
+              to= "Pages/TarjetaRND">
+                <div className="proyectoN2">
+                  <label className="h1">Proyecto N°2</label>
+                  <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste qui quas laudantium dignissimos perspiciatis. Nisi architecto, perferendis animi assumenda, ipsum quo, quis labore dolore blanditiis accusantium odio quas quia at?</label>
+                  <label> XXXXXXX, 2023 </label>
+                </div>
             </Link>
           </div>
-          <div className="contenedorImagenesProy col-12 col-sm-7 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+          <div className="contenedorImagenesProy col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
             <Link 
-              className="proyectoActivado dividirPartesIguales"
-              to= "Pages/DiferentesAnim">Proyecto N°4
+              className="proyectoActivado dividirPartesIguales col-12"
+              to= "Pages/PiedraPapelTijera">
+                <div className="proyectoN3">
+                  <label className="h1">Proyecto N°3</label>
+                  <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste qui quas laudantium dignissimos perspiciatis. Nisi architecto, perferendis animi assumenda, ipsum quo, quis labore dolore blanditiis accusantium odio quas quia at?</label>
+                  <label> XXXXXXX, 2023 </label>
+                </div>
             </Link>
-            <label className="proyectoDesactivado dividirPartesIguales">proyecto5</label>
-            <label className="proyectoDesactivado dividirPartesIguales">proyecto6</label>
+            <Link 
+              className="proyectoActivado dividirPartesIguales col-12"
+              to= "Pages/DiferentesAnim">
+                <div className="proyectoN4">
+                  <label className="h1">Proyecto N°4</label>
+                  <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste qui quas laudantium dignissimos perspiciatis. Nisi architecto, perferendis animi assumenda, ipsum quo, quis labore dolore blanditiis accusantium odio quas quia at?</label>
+                  <label> XXXXXXX, 2023 </label>
+                </div>
+            </Link>
           </div>
+          <div className="contenedorImagenesProy col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+            <Link
+              className="proyectoDesactivado dividirPartesIguales col-12"
+              >
+                <div className="proyectoN5">
+                  <label className="h1">Proyecto N°5</label>
+                  <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste qui quas laudantium dignissimos perspiciatis. Nisi architecto, perferendis animi assumenda, ipsum quo, quis labore dolore blanditiis accusantium odio quas quia at?</label>
+                  <label> XXXXXXX, 2023 </label>
+                </div>
+            </Link>
+            <Link
+              className="proyectoDesactivado dividirPartesIguales col-12">
+                <div className="proyectoN6">
+                  <label className="h1">Proyecto N°6</label>
+                  <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste qui quas laudantium dignissimos perspiciatis. Nisi architecto, perferendis animi assumenda, ipsum quo, quis labore dolore blanditiis accusantium odio quas quia at?</label>
+                  <label> XXXXXXX, 2023 </label>
+                </div>
+            </Link>
+          </div>
+        </div>
       </div>
 
       <div className="contenedorHerramientas col-12">
