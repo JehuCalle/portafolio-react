@@ -78,63 +78,134 @@ function Inicio(){
 
       <div className="campoProyectos col-12">
         <h1>Mis Proyectos</h1>
-        <div className="contenedorProtectos col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
-          <div className="contenedorImagenesProy col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+        <div className="contenedorProtectos col-12 col-sm-8 col-md-8 col-lg-6 col-xl-12 col-xxl-10">
+          <div className="contenedorImagenesProy col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4">
             <Link
               className="proyectoActivado dividirPartesIguales col-12"
               to= "Pages/ProyectosRND">
                 <div className="proyectoN1">
-                  <label className="h1">Proyecto N°1</label>
+                  <label className="h3">Proyecto N°1</label>
                   <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste qui quas laudantium dignissimos perspiciatis. Nisi architecto, perferendis animi assumenda, ipsum quo, quis labore dolore blanditiis accusantium odio quas quia at?</label>
-                  <label> XXXXXXX, 2023 </label>
+                  <label>
+                    <img
+                      className="imgLogoProy" 
+                      alt="A"
+                      src={LogoHTML}/>
+                    <img
+                      className="imgLogoProy" 
+                      alt="A"
+                      src={LogoCSS}/>
+                    <img
+                      className="imgLogoProy" 
+                      alt="A"
+                      src={LogoJS}/>
+                    <img
+                      className="imgLogoProy" 
+                      alt="A"
+                      src={LogoReact}/>
+                    XXXXXXX, 2023 
+                  </label>
                 </div>
             </Link>
             <Link 
               className="proyectoActivado dividirPartesIguales col-12"
               to= "Pages/TarjetaRND">
                 <div className="proyectoN2">
-                  <label className="h1">Proyecto N°2</label>
+                  <label className="h3">Proyecto N°2</label>
                   <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste qui quas laudantium dignissimos perspiciatis. Nisi architecto, perferendis animi assumenda, ipsum quo, quis labore dolore blanditiis accusantium odio quas quia at?</label>
-                  <label> XXXXXXX, 2023 </label>
+                  <label>
+                    <img
+                      className="imgLogoProy" 
+                      alt="A"
+                      src={LogoHTML}/>
+                    <img
+                      className="imgLogoProy" 
+                      alt="A"
+                      src={LogoCSS}/>
+                    <img
+                      className="imgLogoProy" 
+                      alt="A"
+                      src={LogoJS}/>
+                    <img
+                      className="imgLogoProy" 
+                      alt="A"
+                      src={LogoReact}/>
+                    XXXXXXX, 2023 
+                  </label>
                 </div>
             </Link>
           </div>
-          <div className="contenedorImagenesProy col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+          <div className="contenedorImagenesProy col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4">
             <Link 
               className="proyectoActivado dividirPartesIguales col-12"
               to= "Pages/PiedraPapelTijera">
                 <div className="proyectoN3">
-                  <label className="h1">Proyecto N°3</label>
+                  <label className="h3">Proyecto N°3</label>
                   <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste qui quas laudantium dignissimos perspiciatis. Nisi architecto, perferendis animi assumenda, ipsum quo, quis labore dolore blanditiis accusantium odio quas quia at?</label>
-                  <label> XXXXXXX, 2023 </label>
+                  <label>
+                    <img
+                      className="imgLogoProy" 
+                      alt="A"
+                      src={LogoHTML}/>
+                    <img
+                      className="imgLogoProy" 
+                      alt="A"
+                      src={LogoCSS}/>
+                    <img
+                      className="imgLogoProy" 
+                      alt="A"
+                      src={LogoJS}/>
+                    <img
+                      className="imgLogoProy" 
+                      alt="A"
+                      src={LogoReact}/>
+                    XXXXXXX, 2023 
+                  </label>
                 </div>
             </Link>
             <Link 
               className="proyectoActivado dividirPartesIguales col-12"
               to= "Pages/DiferentesAnim">
                 <div className="proyectoN4">
-                  <label className="h1">Proyecto N°4</label>
+                  <label className="h3">Proyecto N°4</label>
                   <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste qui quas laudantium dignissimos perspiciatis. Nisi architecto, perferendis animi assumenda, ipsum quo, quis labore dolore blanditiis accusantium odio quas quia at?</label>
-                  <label> XXXXXXX, 2023 </label>
+                  <label>
+                    <img
+                      className="imgLogoProy" 
+                      alt="A"
+                      src={LogoHTML}/>
+                    <img
+                      className="imgLogoProy" 
+                      alt="A"
+                      src={LogoCSS}/>
+                    <img
+                      className="imgLogoProy" 
+                      alt="A"
+                      src={LogoJS}/>
+                    <img
+                      className="imgLogoProy" 
+                      alt="A"
+                      src={LogoReact}/>
+                    XXXXXXX, 2023 
+                  </label>
                 </div>
             </Link>
           </div>
-          <div className="contenedorImagenesProy col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+          <div className="contenedorImagenesProy col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4">
             <Link
-              className="proyectoDesactivado dividirPartesIguales col-12"
-              >
+              className="proyectoDesactivado dividirPartesIguales col-12">
                 <div className="proyectoN5">
-                  <label className="h1">Proyecto N°5</label>
+                  <label className="h3">Proyecto N°5</label>
                   <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste qui quas laudantium dignissimos perspiciatis. Nisi architecto, perferendis animi assumenda, ipsum quo, quis labore dolore blanditiis accusantium odio quas quia at?</label>
-                  <label> XXXXXXX, 2023 </label>
+                  <label> XXXXXXX, XXXX </label>
                 </div>
             </Link>
             <Link
               className="proyectoDesactivado dividirPartesIguales col-12">
                 <div className="proyectoN6">
-                  <label className="h1">Proyecto N°6</label>
+                  <label className="h3">Proyecto N°6</label>
                   <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste qui quas laudantium dignissimos perspiciatis. Nisi architecto, perferendis animi assumenda, ipsum quo, quis labore dolore blanditiis accusantium odio quas quia at?</label>
-                  <label> XXXXXXX, 2023 </label>
+                  <label> XXXXXXX, XXXX </label>
                 </div>
             </Link>
           </div>

@@ -117,9 +117,7 @@
   -o-border-radius: 10px;
 }
 .proyectoActivado:hover {
-  color: rgb(77, 177, 177);
-  background-color: rgb(1, 29, 29);
-  border: 5px solid rgb(0, 126, 126);
+  opacity: 50%;
 }
 .proyectoDesactivado {
   color: rgb(141, 255, 255);
@@ -130,7 +128,7 @@
 }
 
 .proyectoN1 {
-  height: 250px;
+  height: 280px;
   width: 100% ;
   display: flex;
   flex-direction: column;
@@ -139,7 +137,7 @@
   background-color: red;
 }
 .proyectoN2 {
-  height: 250px;
+  height: 280px;
   width: 100% ;
   display: flex;
   flex-direction: column;
@@ -148,7 +146,7 @@
   background-color: rgb(36, 124, 109);
 }
 .proyectoN3 {
-  height: 250px;
+  height: 280px;
   width: 100% ;
   display: flex;
   flex-direction: column;
@@ -157,7 +155,7 @@
   background-color: rgb(14, 100, 116);
 }
 .proyectoN4 {
-  height: 250px;
+  height: 280px;
   width: 100% ;
   display: flex;
   flex-direction: column;
@@ -166,7 +164,7 @@
   background-color: rgb(71, 175, 170);
 }
 .proyectoN5 {
-  height: 250px;
+  height: 280px;
   width: 100% ;
   display: flex;
   flex-direction: column;
@@ -175,13 +173,18 @@
   background-color: rgb(138, 1, 1);
 }
 .proyectoN6 {
-  height: 250px;
+  height: 280px;
   width: 100% ;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgb(61, 21, 21);
+}
+
+.imgLogoProy {
+  height: 40px;
+  width: 40px;
 }
 
 /* HERRAMIENTAS HERRAMIENTAS HERRAMIENTAS HERRAMIENTAS HERRAMIENTAS HERRAMIENTAS HERRAMIENTAS HERRAMIENTAS */

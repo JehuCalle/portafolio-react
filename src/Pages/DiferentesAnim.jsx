@@ -32,8 +32,10 @@ function DiferentesAnim(){
 
 /* BTN 1 BTN 1 BTN 1 BTN 1 BTN 1 BTN 1 */
 
-  const btnIzq1 = () => {
+  const refAnimBtn1 = useRef(null);
 
+  const btnIzq1 = () => {
+    refAnimBtn1.current.classList.add('animBtn1');
     if (inputAlmacenado.current.value === 'Angora') {
       alertaAlmacenada.current.textContent = 'Bien hecho, botón N°1 completado!!!';
       setCumpleCondicion(true);
@@ -43,6 +45,10 @@ function DiferentesAnim(){
       setCumpleCondicion(false);
       setOcultarAlertONo(false);
     }
+
+    setTimeout(()=>{
+      refAnimBtn1.current.classList.remove('animBtn1');
+    },500)
   };
 
 /* BTN 2 BTN 2 BTN 2 BTN 2 BTN 2 BTN 2 */
@@ -465,11 +471,22 @@ const handleClose = (event, reason) => {
 
               <div className="contContBotones col-12">
                 <div className="contBotones col-5">
-                  <button
-                    className="estiloBtnDifAnim col-12"
-                    onClick={btnIzq1}
-                    >Boton N°1
-                  </button>
+                  <div className="contBtn">
+                    <button
+                      className="estiloBtnDifAnim col-12"
+                      onClick={btnIzq1}>
+                      <div className="conTxtBtn">
+                        <text>Botón N°1</text>
+                      </div>
+                      <div className="contAnimBtn1">
+                        <div
+                          className=""
+                          ref={refAnimBtn1}>
+                          a
+                        </div>
+                      </div>
+                    </button>
+                  </div>
                   <ul className="paddingUl">
                     <li className="tamañoLi">
                       Escribir "Angora"
@@ -482,11 +499,21 @@ const handleClose = (event, reason) => {
 
 
                 <div className="contBotones col-5">
-                  <button
-                    className="estiloBtnDifAnim col-12"
-                    onClick={btnIzq2}>
-                      Botón N°2
-                  </button>
+                  <div className="contBtn">
+                    <button
+                      className="estiloBtnDifAnim col-12"
+                      onClick={btnIzq2}>
+                      <div className="conTxtBtn">
+                        <text>Botón N°2</text>
+                      </div>
+                      <div className="contAnimBtn2">
+                        <div
+                          className="">
+                          a
+                        </div>
+                      </div>
+                    </button>
+                  </div>
                   <ul className="paddingUl">
                     <li className="tamañoLi">
                       Escribir "paralelo"
@@ -504,11 +531,21 @@ const handleClose = (event, reason) => {
 
               <div className="contContBotones col-12">
                 <div className="contBotones col-5">
-                  <button
-                    className="estiloBtnDifAnim col-12"
-                    onClick={btnIzq3}>
-                      Botón N°3
-                  </button>
+                  <div className="contBtn">
+                    <button
+                      className="estiloBtnDifAnim col-12"
+                      onClick={btnIzq3}>
+                      <div className="conTxtBtn">
+                        <text>Botón N°3</text>
+                      </div>
+                      <div className="contAnimBtn3">
+                        <div
+                          className="">
+                          a
+                        </div>
+                      </div>
+                    </button>
+                  </div>
                   <ul className="paddingUl">
                     <li className="tamañoLi">
                       Escribir "Guallaby"
@@ -524,11 +561,21 @@ const handleClose = (event, reason) => {
 
 
                 <div className="contBotones col-5">
-                  <button
-                  className="estiloBtnDifAnim col-12"
-                  onClick={btnIzq4}>
-                    Botón N°4
-                  </button>
+                  <div className="contBtn">
+                    <button
+                      className="estiloBtnDifAnim col-12"
+                      onClick={btnIzq4}>
+                      <div className="conTxtBtn">
+                        <text>Botón N°4</text>
+                      </div>
+                      <div className="contAnimBtn4">
+                        <div
+                          className="">
+                          a
+                        </div>
+                      </div>
+                    </button>
+                  </div>
                   <ul className="paddingUl">
                     <li className="tamañoLi">
                       Solo escribir numeros
@@ -540,11 +587,21 @@ const handleClose = (event, reason) => {
 
               <div className="contContBotones col-12">
                 <div className="contBotones col-5">
-                  <button
-                    className="estiloBtnDifAnim col-12"
-                    onClick={btnIzq5}>
-                      Botón N°5
-                  </button>
+                  <div className="contBtn">
+                    <button
+                      className="estiloBtnDifAnim col-12"
+                      onClick={btnIzq5}>
+                      <div className="conTxtBtn">
+                        <text>Botón N°5</text>
+                      </div>
+                      <div className="contAnimBtn5">
+                        <div
+                          className="">
+                          a
+                        </div>
+                      </div>
+                    </button>
+                  </div>
                   <ul className="paddingUl">
                     <li className="tamañoLi">
                       Solo escribir letras
@@ -554,12 +611,21 @@ const handleClose = (event, reason) => {
 
 
                 <div className="contBotones col-5">
-                  <button
-                    className="estiloBtnDifAnim col-12"
-                    onClick={btnIzq6}
-                    disabled={btn6Activado}>
-                      Botón N°6
-                  </button>
+                  <div className="contBtn">
+                    <button
+                      className="estiloBtnDifAnim col-12"
+                      onClick={btnIzq6}>
+                      <div className="conTxtBtn">
+                        <text>Botón N°6</text>
+                      </div>
+                      <div className="contAnimBtn6">
+                        <div
+                          className="">
+                          a
+                        </div>
+                      </div>
+                    </button>
+                  </div>
                   <ul className="paddingUl">
                     <li className="tamañoLi">
                       ¿?¿?¿?¿?¿?
