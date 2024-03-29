@@ -482,7 +482,7 @@ const handleClose = (event, reason) => {
                         <div
                           className=""
                           ref={refAnimBtn1}>
-                          a
+                          
                         </div>
                       </div>
                     </button>
@@ -509,7 +509,7 @@ const handleClose = (event, reason) => {
                       <div className="contAnimBtn2">
                         <div
                           className="">
-                          a
+                          
                         </div>
                       </div>
                     </button>
@@ -541,7 +541,7 @@ const handleClose = (event, reason) => {
                       <div className="contAnimBtn3">
                         <div
                           className="">
-                          a
+                          
                         </div>
                       </div>
                     </button>
@@ -571,7 +571,7 @@ const handleClose = (event, reason) => {
                       <div className="contAnimBtn4">
                         <div
                           className="">
-                          a
+                          
                         </div>
                       </div>
                     </button>
@@ -597,7 +597,7 @@ const handleClose = (event, reason) => {
                       <div className="contAnimBtn5">
                         <div
                           className="">
-                          a
+                          
                         </div>
                       </div>
                     </button>
@@ -621,7 +621,7 @@ const handleClose = (event, reason) => {
                       <div className="contAnimBtn6">
                         <div
                           className="">
-                          a
+                          
                         </div>
                       </div>
                     </button>

@@ -36,12 +36,14 @@
   align-items: center;
 }
 .contAnimBtn1 {
+  height: 100%;
   position: relative;
-  left: -75px;
+  top: 5px;
+  left: -50px;
 }
 .animBtn1 {
   height: 30px;
-  width: 250px;
+  width: 100%;
   background-color: aqua;
   filter: blur(5px);
   animation-name: Btn1anim;
@@ -50,14 +52,14 @@
   -webkit-filter: blur(5px);
 }
 @keyframes Btn1anim{
-  0% { }
+  0% {  }
   100% {
     background-color: red !important;
-    transform: rotateZ(100deg) translate(1em, -12em);
-    -webkit-transform: rotateZ(100deg) translate(1em, -12em);
-    -moz-transform: rotateZ(100deg) translate(1em, -12em);
-    -ms-transform: rotateZ(100deg) translate(1em, -12em);
-    -o-transform: rotateZ(100deg) translate(1em, -12em);
+    transform: rotateZ(140deg) translate(4.5em, -17em);
+    -webkit-transform: rotateZ(140deg) translate(4.5em, -17em);
+    -moz-transform: rotateZ(140deg) translate(4.5em, -17em);
+    -ms-transform: rotateZ(140deg) translate(4.5em, -17em);
+    -o-transform: rotateZ(140deg) translate(4.5em, -17em);
 }
 }
 
