@@ -46,8 +46,12 @@ function DiferentesAnim(){
       setOcultarAlertONo(false);
     }
 
-    setTimeout(()=>{
-      refAnimBtn1.current.classList.remove('animBtn1');
+    setTimeout(() => {
+      if(refAnimBtn1.current === null) {
+        console.log('refAnimBtn1 null');
+      }else if (refAnimBtn1.current !== null){
+        refAnimBtn1.current.classList.remove('animBtn1')
+      }
     },500)
   };
 
@@ -56,9 +60,19 @@ function DiferentesAnim(){
   const [ resBtn2, setResBtn2 ] = useState('');
   const [ estadoUEBtn2, setEstadoUEBtn2 ] = useState(false);
 
+  const refAnimBtn2 = useRef(null);
+
   const btnIzq2 = () => {
     setEstadoUEBtn2(true);
     setResBtn2(inputAlmacenado.current.value);
+    refAnimBtn2.current.classList.add('animBtn2');
+    setTimeout(() => {
+      if(refAnimBtn2.current === null) {
+        console.log('refAnimBtn2 null');
+      } else if (refAnimBtn2.current !== null) {
+        refAnimBtn2.current.classList.remove('animBtn2');
+      }
+    },800);
   };
 
   useEffect(() => {
@@ -82,6 +96,8 @@ function DiferentesAnim(){
   const [ resBtn3, setResBtn3 ] = useState('');
   const [ estadoUEBtn3, setEstadoUEBtn3 ] = useState(false);
 
+  const refAnimBtn3 = useRef(null);
+
   const btnIzq3 = () => {
     setResBtn3(inputAlmacenado.current.value);
     setEstadoUEBtn3(true);
@@ -96,10 +112,27 @@ function DiferentesAnim(){
       if (ResBtn3Fix === 'guallaby') {
         alertaAlmacenada.current.textContent = 'Bien hecho, botón N°3 completado!!!';
         setCumpleCondicion(true);
+        refAnimBtn3.current.classList.add('animBtn3Correcto');
+        setTimeout(()=>{
+          if(refAnimBtn3.current === null) {
+            console.log('refAnimBtn3 null');
+          }else if(refAnimBtn3.current !== null) {
+            refAnimBtn3.current.classList.remove('animBtn3Correcto');
+          }
+        },900);
       } else {
         alertaAlmacenada.current.textContent = 'Tienes que escribir "Guallaby" :]';
         setCumpleCondicion(false);
+        refAnimBtn3.current.classList.add('animBtn3Incorrecto');
+        setTimeout(()=>{
+          if(refAnimBtn3.current === null) {
+            console.log('refAnimBtn3 null');
+          }else if(refAnimBtn3.current !== null) {
+            refAnimBtn3.current.classList.remove('animBtn3Incorrecto');
+          }
+        },900);
       };
+
       setEstadoUEBtn3(false);
     }
   }, [estadoUEBtn3, resBtn3]);
@@ -110,9 +143,19 @@ function DiferentesAnim(){
   const [ estadoUEBtn4, setEstadoUEBtn4 ] = useState(false);
   const [ estadoResBtn4, setEstadoResBtn4 ] = useState(false);
 
+  const refAnimBtn4 = useRef(null);
+
   const btnIzq4 = () => {
     setEstadoUEBtn4(true);
     setEstadoResBtn4(regexSoloNumYSpaBla.test(inputAlmacenado.current.value));
+    refAnimBtn4.current.classList.add('animBtn4');
+    setTimeout(() => {
+      if(refAnimBtn4.current === null) {
+        console.log('refAnimBtn4 null');
+      }else if(refAnimBtn4.current !== null) {
+        refAnimBtn4.current.classList.remove('animBtn4');
+      }
+    }, 2000);
   };
 
   useEffect(() => {
@@ -135,9 +178,19 @@ function DiferentesAnim(){
   const [ estadoUEBtn5, setEstadoUEBtn5 ] = useState(false);
   const [ estadoResBtn5, setEstadoResBtn5 ] = useState(false);
 
+  const refAnimBtn5 = useRef(null);
+
   const btnIzq5 = () => {
     setEstadoUEBtn5(true);
     setEstadoResBtn5(regexSoloLetYSpaBla.test(inputAlmacenado.current.value));
+    refAnimBtn5.current.classList.add('animBtn5');
+    setTimeout(()=>{
+      if(refAnimBtn5.current === null) {
+        console.log('refAnimBtn5 null');
+      }else if(refAnimBtn5 !== null) {
+        refAnimBtn5.current.classList.remove('animBtn5');
+      }
+    },900);
   };
 
   useEffect(() => {
@@ -476,13 +529,12 @@ const handleClose = (event, reason) => {
                       className="estiloBtnDifAnim col-12"
                       onClick={btnIzq1}>
                       <div className="conTxtBtn">
-                        <text>Botón N°1</text>
+                        <label>Botón N°1</label>
                       </div>
                       <div className="contAnimBtn1">
                         <div
                           className=""
                           ref={refAnimBtn1}>
-                          
                         </div>
                       </div>
                     </button>
@@ -502,15 +554,10 @@ const handleClose = (event, reason) => {
                   <div className="contBtn">
                     <button
                       className="estiloBtnDifAnim col-12"
-                      onClick={btnIzq2}>
+                      onClick={btnIzq2}
+                      ref={refAnimBtn2}>
                       <div className="conTxtBtn">
-                        <text>Botón N°2</text>
-                      </div>
-                      <div className="contAnimBtn2">
-                        <div
-                          className="">
-                          
-                        </div>
+                        <label>Botón N°2</label>
                       </div>
                     </button>
                   </div>
@@ -533,16 +580,11 @@ const handleClose = (event, reason) => {
                 <div className="contBotones col-5">
                   <div className="contBtn">
                     <button
-                      className="estiloBtnDifAnim col-12"
-                      onClick={btnIzq3}>
+                      className="estiloBtnDifAnim animBtn3 col-12"
+                      onClick={btnIzq3}
+                      ref={refAnimBtn3}>
                       <div className="conTxtBtn">
-                        <text>Botón N°3</text>
-                      </div>
-                      <div className="contAnimBtn3">
-                        <div
-                          className="">
-                          
-                        </div>
+                        <label>Botón N°3</label>
                       </div>
                     </button>
                   </div>
@@ -564,15 +606,10 @@ const handleClose = (event, reason) => {
                   <div className="contBtn">
                     <button
                       className="estiloBtnDifAnim col-12"
-                      onClick={btnIzq4}>
-                      <div className="conTxtBtn">
-                        <text>Botón N°4</text>
-                      </div>
-                      <div className="contAnimBtn4">
-                        <div
-                          className="">
-                          
-                        </div>
+                      onClick={btnIzq4}
+                      ref={refAnimBtn4}>
+                      <div className="conTxtBtn ">
+                        <label>Botón N°4</label>
                       </div>
                     </button>
                   </div>
@@ -590,15 +627,10 @@ const handleClose = (event, reason) => {
                   <div className="contBtn">
                     <button
                       className="estiloBtnDifAnim col-12"
-                      onClick={btnIzq5}>
+                      onClick={btnIzq5}
+                      ref={refAnimBtn5}>
                       <div className="conTxtBtn">
-                        <text>Botón N°5</text>
-                      </div>
-                      <div className="contAnimBtn5">
-                        <div
-                          className="">
-                          
-                        </div>
+                        <label>Botón N°5</label>
                       </div>
                     </button>
                   </div>
@@ -616,13 +648,7 @@ const handleClose = (event, reason) => {
                       className="estiloBtnDifAnim col-12"
                       onClick={btnIzq6}>
                       <div className="conTxtBtn">
-                        <text>Botón N°6</text>
-                      </div>
-                      <div className="contAnimBtn6">
-                        <div
-                          className="">
-                          
-                        </div>
+                        <label>Botón N°6</label>
                       </div>
                     </button>
                   </div>
