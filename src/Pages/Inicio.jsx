@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import LogoBootstrap from '../Img/bootstrap-5Logo.svg';
 import LogoHTML from '../Img/html5Logo.png';
 import LogoJS from '../Img/javaScriptLogo.png';
@@ -68,20 +68,12 @@ function Inicio(){
           </div>
         </div>
       </div>  
-
-      <div className="col-12">
-        <img
-          className="gifRandom"
-          src={GifRandom}
-          alt="Gif Random" />
-      </div>
-
       <div className="campoProyectos col-12">
         <h1>Mis Proyectos</h1>
-        <div className="contenedorProtectos col-12 col-sm-8 col-md-8 col-lg-6 col-xl-12 col-xxl-10">
-          <div className="contenedorImagenesProy col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4">
+        <div className="contenedorProtectos col-12 col-sm-8 col-md-8 col-lg-10 col-xl-12 col-xxl-10">
+          <div className="contenedorImagenesProy col-12">
             <Link
-              className="proyectoActivado dividirPartesIguales col-12"
+              className="proyectoActivado dividirPartesIguales col-12 col-lg-6 col-xl-4 col-xxl-4"
               to= "Pages/ProyectosRND">
                 <div className="proyectoN1">
                   <label className="h3">Proyecto N°1</label>
@@ -108,7 +100,7 @@ function Inicio(){
                 </div>
             </Link>
             <Link 
-              className="proyectoActivado dividirPartesIguales col-12"
+              className="proyectoActivado dividirPartesIguales col-12 col-lg-6 col-xl-4 col-xxl-4"
               to= "Pages/TarjetaRND">
                 <div className="proyectoN2">
                   <label className="h3">Proyecto N°2</label>
@@ -134,10 +126,8 @@ function Inicio(){
                   </label>
                 </div>
             </Link>
-          </div>
-          <div className="contenedorImagenesProy col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4">
             <Link 
-              className="proyectoActivado dividirPartesIguales col-12"
+              className="proyectoActivado dividirPartesIguales col-12 col-lg-6 col-xl-4 col-xxl-4"
               to= "Pages/PiedraPapelTijera">
                 <div className="proyectoN3">
                   <label className="h3">Proyecto N°3</label>
@@ -164,7 +154,7 @@ function Inicio(){
                 </div>
             </Link>
             <Link 
-              className="proyectoActivado dividirPartesIguales col-12"
+              className="proyectoActivado dividirPartesIguales col-12 col-lg-6 col-xl-4 col-xxl-4"
               to= "Pages/DiferentesAnim">
                 <div className="proyectoN4">
                   <label className="h3">Proyecto N°4</label>
@@ -190,10 +180,8 @@ function Inicio(){
                   </label>
                 </div>
             </Link>
-          </div>
-          <div className="contenedorImagenesProy col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4">
             <Link
-              className="proyectoDesactivado dividirPartesIguales col-12">
+              className="proyectoDesactivado dividirPartesIguales col-12 col-lg-6 col-xl-4 col-xxl-4">
                 <div className="proyectoN5">
                   <label className="h3">Proyecto N°5</label>
                   <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste qui quas laudantium dignissimos perspiciatis. Nisi architecto, perferendis animi assumenda, ipsum quo, quis labore dolore blanditiis accusantium odio quas quia at?</label>
@@ -201,7 +189,7 @@ function Inicio(){
                 </div>
             </Link>
             <Link
-              className="proyectoDesactivado dividirPartesIguales col-12">
+              className="proyectoDesactivado dividirPartesIguales col-12 col-lg-6 col-xl-4 col-xxl-4">
                 <div className="proyectoN6">
                   <label className="h3">Proyecto N°6</label>
                   <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste qui quas laudantium dignissimos perspiciatis. Nisi architecto, perferendis animi assumenda, ipsum quo, quis labore dolore blanditiis accusantium odio quas quia at?</label>

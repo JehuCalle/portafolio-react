@@ -23,6 +23,7 @@
 /* HABILIDADES HABILIDADES HABILIDADES HABILIDADES HABILIDADES HABILIDADES HABILIDADES HABILIDADES HABILIDADES HABILIDADES */
 
 .contenedorHabilidades{
+  margin: 0px 0px 40px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,11 +63,6 @@
   width: 35%;
   background-color: rgb(77, 77, 77);
 }
-
-.gifRandom {
-  width: 100%;
-}
-
 /* PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS */
 
 .campoProyectos {
@@ -75,7 +71,6 @@
   justify-content: center;
   align-items: center;
 }
-
 .contenedorProtectos {
   display: flex;
   flex-wrap: wrap;
@@ -89,7 +84,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: rgb(0, 36, 36);
+  background-color: rgb(3, 26, 26);
   border: 10px double red;
   border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -108,7 +103,7 @@
 }
 .proyectoActivado {
   color: rgb(141, 255, 255);
-  background-color: rgb(0, 17, 17);
+  background-color: rgb(1, 9, 20);
   border: 5px solid rgb(1, 255, 255);
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -121,7 +116,6 @@
 }
 .proyectoDesactivado {
   color: rgb(141, 255, 255);
-  background-color: rgb(0, 17, 17);
   border: 5px solid rgb(1, 255, 255);
   border-radius: 10px;
   opacity: 30%;
@@ -132,54 +126,48 @@
   width: 100% ;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  background-color: red;
 }
 .proyectoN2 {
   height: 280px;
   width: 100% ;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  background-color: rgb(36, 124, 109);
 }
 .proyectoN3 {
   height: 280px;
   width: 100% ;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  background-color: rgb(14, 100, 116);
 }
 .proyectoN4 {
   height: 280px;
   width: 100% ;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  background-color: rgb(71, 175, 170);
 }
 .proyectoN5 {
   height: 280px;
   width: 100% ;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  background-color: rgb(138, 1, 1);
 }
 .proyectoN6 {
   height: 280px;
   width: 100% ;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  background-color: rgb(61, 21, 21);
 }
 
 .imgLogoProy {

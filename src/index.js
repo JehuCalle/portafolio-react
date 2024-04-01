@@ -10,6 +10,7 @@ import '@fontsource/roboto/700.css';
 
 
 import './index.css';
+import './App.css';
 import App from './App';
 
 import { BrowserRouter } from "react-router-dom";
