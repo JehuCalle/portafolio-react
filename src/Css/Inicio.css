@@ -120,6 +120,14 @@
   border-radius: 10px;
   opacity: 30%;
 }
+.miniContP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.miniContPImg {
+  margin: 0px 10px 0px 0px;
+}
 
 .proyectoN1 {
   height: 280px;

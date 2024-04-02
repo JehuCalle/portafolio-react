@@ -41,10 +41,10 @@
   align-items: center;
 }
 .tamañoGrandeContCuerpo {
-  height: 737px;
+  height: 883px;
 }
 .tamañoChicoContCuerpo {
-  height: 400px;
+  height: 552px;
 }
 .contenedorTarjeta {
   display: flex;

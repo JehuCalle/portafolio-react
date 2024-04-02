@@ -664,7 +664,7 @@ const handleClose = (event, reason) => {
 
           {/* CENTRO CENTRO CENTRO CENTRO CENTRO */}
           <div className="contAnimCen col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
-            <label className="tituloAlerMUI col-6 col-sm-4"> ALERTAS CON MUI </label>
+            <label className="tituloAlerMUI col-6 col-md-7"> ALERTAS CON MUI CORE</label>
             <div className="contCentro col-11">
               <form
                 className="estiloForm col-12"
@@ -755,7 +755,7 @@ const handleClose = (event, reason) => {
 
           {/* DERECHA DERECHA DERECHA DERECHA DERECHA */}
           <div className=" col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 contAnimDer col-xxl-3">
-            <label className="tituloAlerMUI col-6 col-sm-5"> ALERTAS CON MUI </label>
+            <label className="tituloAlerMUI col-6 col-md-7"> ALERTAS CON MUI CORE</label>
             <div className="contBtnDifAnim">
               <input
                 className="col-8"

@@ -7,7 +7,6 @@ import LogoReact from '../Img/reactLogo2.png';
 import LogoC from '../Img/cLogo.png';
 import LogoJava from '../Img/javaLogo.png';
 
-import GifRandom from '../Gif/animacion.gif';
 
 import { Link } from "react-router-dom";
 
@@ -77,26 +76,28 @@ function Inicio(){
               to= "Pages/ProyectosRND">
                 <div className="proyectoN1">
                   <label className="h3">Proyecto N°1</label>
-                  <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste qui quas laudantium dignissimos perspiciatis. Nisi architecto, perferendis animi assumenda, ipsum quo, quis labore dolore blanditiis accusantium odio quas quia at?</label>
-                  <label>
-                    <img
-                      className="imgLogoProy" 
-                      alt="A"
-                      src={LogoHTML}/>
-                    <img
-                      className="imgLogoProy" 
-                      alt="A"
-                      src={LogoCSS}/>
-                    <img
-                      className="imgLogoProy" 
-                      alt="A"
-                      src={LogoJS}/>
-                    <img
-                      className="imgLogoProy" 
-                      alt="A"
-                      src={LogoReact}/>
-                    XXXXXXX, 2023 
-                  </label>
+                  <label>Apartado donde se puede establece un color randon a un texto usando un boton, jugar al cara o sello, seleccionar e ingresar datos para crear un gato, consumir una API para agregar fotos y gifs y por ultimo se simula un chat con 2 usuarios.</label>
+                  <div className="miniContP col-12">
+                    <div className="miniContPImg">
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoHTML}/>
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoCSS}/>
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoJS}/>
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoReact}/>
+                    </div>
+                    <label>2023 </label>
+                  </div>
                 </div>
             </Link>
             <Link 
@@ -104,26 +105,28 @@ function Inicio(){
               to= "Pages/TarjetaRND">
                 <div className="proyectoN2">
                   <label className="h3">Proyecto N°2</label>
-                  <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste qui quas laudantium dignissimos perspiciatis. Nisi architecto, perferendis animi assumenda, ipsum quo, quis labore dolore blanditiis accusantium odio quas quia at?</label>
-                  <label>
-                    <img
-                      className="imgLogoProy" 
-                      alt="A"
-                      src={LogoHTML}/>
-                    <img
-                      className="imgLogoProy" 
-                      alt="A"
-                      src={LogoCSS}/>
-                    <img
-                      className="imgLogoProy" 
-                      alt="A"
-                      src={LogoJS}/>
-                    <img
-                      className="imgLogoProy" 
-                      alt="A"
-                      src={LogoReact}/>
-                    XXXXXXX, 2023 
-                  </label>
+                  <label>Apartado donde se simula un triptico usando css.</label>
+                  <div className="miniContP col-12">
+                    <div className="miniContPImg">
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoHTML}/>
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoCSS}/>
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoJS}/>
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoReact}/>
+                    </div>
+                    <label>2023 </label>
+                  </div>
                 </div>
             </Link>
             <Link 
@@ -131,26 +134,28 @@ function Inicio(){
               to= "Pages/PiedraPapelTijera">
                 <div className="proyectoN3">
                   <label className="h3">Proyecto N°3</label>
-                  <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste qui quas laudantium dignissimos perspiciatis. Nisi architecto, perferendis animi assumenda, ipsum quo, quis labore dolore blanditiis accusantium odio quas quia at?</label>
-                  <label>
-                    <img
-                      className="imgLogoProy" 
-                      alt="A"
-                      src={LogoHTML}/>
-                    <img
-                      className="imgLogoProy" 
-                      alt="A"
-                      src={LogoCSS}/>
-                    <img
-                      className="imgLogoProy" 
-                      alt="A"
-                      src={LogoJS}/>
-                    <img
-                      className="imgLogoProy" 
-                      alt="A"
-                      src={LogoReact}/>
-                    XXXXXXX, 2023 
-                  </label>
+                  <label>Apartado para jugar a piedra, papel o tijera, si te quedas sin vidas pierdes.</label>
+                  <div className="miniContP col-12">
+                    <div className="miniContPImg">
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoHTML}/>
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoCSS}/>
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoJS}/>
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoReact}/>
+                    </div>
+                    <label>2023 </label>
+                  </div>
                 </div>
             </Link>
             <Link 
@@ -158,33 +163,35 @@ function Inicio(){
               to= "Pages/DiferentesAnim">
                 <div className="proyectoN4">
                   <label className="h3">Proyecto N°4</label>
-                  <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste qui quas laudantium dignissimos perspiciatis. Nisi architecto, perferendis animi assumenda, ipsum quo, quis labore dolore blanditiis accusantium odio quas quia at?</label>
-                  <label>
-                    <img
-                      className="imgLogoProy" 
-                      alt="A"
-                      src={LogoHTML}/>
-                    <img
-                      className="imgLogoProy" 
-                      alt="A"
-                      src={LogoCSS}/>
-                    <img
-                      className="imgLogoProy" 
-                      alt="A"
-                      src={LogoJS}/>
-                    <img
-                      className="imgLogoProy" 
-                      alt="A"
-                      src={LogoReact}/>
-                    XXXXXXX, 2023 
-                  </label>
+                  <label>Apartado en donde primero se tiene un campo con botones con animaciones vanilla, luego un formulario con alertas usando MUI Core, y después otro campo pero con botones y alertas de MUI Core y en general se validan los datos ingresados usando Regex</label>
+                  <div className="miniContP col-12">
+                    <div className="miniContPImg">
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoHTML}/>
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoCSS}/>
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoJS}/>
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoReact}/>
+                    </div>
+                    <label>30 Marzo 2024 </label>
+                  </div>
                 </div>
             </Link>
             <Link
               className="proyectoDesactivado dividirPartesIguales col-12 col-lg-6 col-xl-4 col-xxl-4">
                 <div className="proyectoN5">
                   <label className="h3">Proyecto N°5</label>
-                  <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste qui quas laudantium dignissimos perspiciatis. Nisi architecto, perferendis animi assumenda, ipsum quo, quis labore dolore blanditiis accusantium odio quas quia at?</label>
+                  <label>Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente</label>
                   <label> XXXXXXX, XXXX </label>
                 </div>
             </Link>
@@ -192,7 +199,7 @@ function Inicio(){
               className="proyectoDesactivado dividirPartesIguales col-12 col-lg-6 col-xl-4 col-xxl-4">
                 <div className="proyectoN6">
                   <label className="h3">Proyecto N°6</label>
-                  <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste qui quas laudantium dignissimos perspiciatis. Nisi architecto, perferendis animi assumenda, ipsum quo, quis labore dolore blanditiis accusantium odio quas quia at?</label>
+                  <label>Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente</label>
                   <label> XXXXXXX, XXXX </label>
                 </div>
             </Link>

@@ -8,7 +8,7 @@
   height: 925px;
 }
 .cuerpoAlturaChico {
-  height: 560px;
+  height: 647px;
 }
 
 .contContenedores {
@@ -254,4 +254,31 @@
 .tamañoImgAlertaPerdiste {
   height: 300px;
   width: 300px;
+}
+
+.pierdeVidaE {
+  animation-name: pierdeVidaE;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+@keyframes pierdeVidaE {
+  50% {
+    box-shadow: 0 0 20px red;
+    border-top: 5px ridge red;
+    border-left: 5px ridge red;
+    border-right: 5px ridge red;
+  }
+}
+.pierdeVidaP {
+  animation-name: pierdeVidaP;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+@keyframes pierdeVidaP {
+  50% {
+    box-shadow: 0 0 20px red;
+    border-left: 5px ridge red;
+    border-right: 5px ridge red;
+    border-bottom: 5px ridge red;
+  }
 }

@@ -1,3 +1,4 @@
+
 .contContBotones {
   display: flex;
   justify-content: center;
@@ -211,11 +212,12 @@
 
 .cuerpoAnim {
   width: 100%;
+  min-height: 980px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(73, 121, 121);
+  background-color: rgb(5, 66, 66);
 }
 
 .contContCont {

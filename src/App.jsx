@@ -18,7 +18,7 @@ function App() {
       <div className='contenedor-cuerpo'>
         <div className=''>
           <Routes>
-            <Route path ="/portafolio-react" element = {<BarraNav />} >
+            <Route path ="/portafolio-react" element = {<BarraNav/>} >
               <Route path="/portafolio-react" element={<Inicio />} />
               <Route path="Pages/SobreMi" element={<SobreMi />} />
               <Route path="Pages/Contacto" element={<Contacto/>} />

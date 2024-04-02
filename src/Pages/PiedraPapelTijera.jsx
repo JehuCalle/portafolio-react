@@ -42,6 +42,9 @@ function PiedraPapelTijera() {
 
   const [ idDelBoton, setIdDelBoton ] = useState("");
 
+  const contVidasEnemigo = useRef(null);
+  const contVidasPlayer = useRef(null);
+
 
   const random = (id) => {
     const calculo = Math.floor(Math.random() * 3) + 1;
@@ -66,6 +69,8 @@ function PiedraPapelTijera() {
 
 
   function CambioVidasEnemigo() {
+    contVidasEnemigo.current.classList.add('pierdeVidaE');
+
     //preVidas OBTIENE EL VALOR DE VidasEnemigo PORQUE SE ESTÁ USANDO setVidasEnemigos
     setVidasEnemigos((prevVidasEnemigo) => {
       const nuevaVidaEnemigo = prevVidasEnemigo - 1;
@@ -79,12 +84,21 @@ function PiedraPapelTijera() {
         divAlertaGanar.current.classList.remove("ocultar");
       }
       console.log("Vida Actual Enemigo: " + nuevaVidaEnemigo);
+      setTimeout(()=>{
+        if(contVidasEnemigo.current === null) {
+          console.log('contVidasEnemigo null');
+        }else if(contVidasEnemigo.current !== null) {
+          contVidasEnemigo.current.classList.remove('pierdeVidaE');
+        }
+      },300);
       return nuevaVidaEnemigo;
     });
   };
 
 
   function CambioVidasPlayer(){
+    contVidasPlayer.current.classList.add('pierdeVidaP');
+
     //preVidas OBTIENE EL VALOR DE VidasEnemigo PORQUE SE ESTÁ USANDO setVidasEnemigos
     setVidasPlayer((preVidasPlayer) => {
       const nuevaVidaPlayer = preVidasPlayer - 1;
@@ -98,6 +112,13 @@ function PiedraPapelTijera() {
         divAlertaPerder.current.classList.remove("ocultar");
       };
       console.log("Vida Actual Player: "+ nuevaVidaPlayer);
+      setTimeout(()=>{
+        if(contVidasPlayer.current === null) {
+          console.log('contVidasPlayer null')
+        }else if(contVidasPlayer !== null) {
+          contVidasPlayer.current.classList.remove('pierdeVidaP');
+        }
+      },300);
       return nuevaVidaPlayer;
     });
   };
@@ -187,7 +208,8 @@ function PiedraPapelTijera() {
       <div className="contContenedores col-12 col-sm-12 col-md-12 col-lg-11 col-xl-11 col-xxl-10">
         <div className="contenedorCentro col-12 col-sm-12 col-md-12 col-lg-11 col-xl-10 col-xxl-12">
           <div
-            className="contVidasEnemigo">
+            className="contVidasEnemigo"
+            ref={contVidasEnemigo}>
               <label>VIDAS:</label>
               <img
                 className="tamañoVidas"
@@ -287,7 +309,8 @@ function PiedraPapelTijera() {
               alt="TijeraPlayer"/>
           </div>
           <div
-            className="contVidasPlayer">
+            className="contVidasPlayer"
+            ref={contVidasPlayer}>
             <label>VIDAS:</label>
             <img
               className="tamañoVidas"
