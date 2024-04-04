@@ -78,7 +78,7 @@ function TarjetaRND(){
             alt="LogoNoHaceNada">
           </img>
         </div>
-        <div className="titulo col-9 col-sm-10 col-md-10 col-lg-11 col-xl-11 col-xxl-11">TITULO TITULO</div>
+        <label className="titulo col-9 col-sm-10 col-md-10 col-lg-11 col-xl-11 col-xxl-11">TRIPTICO EL GATITO NO HACE NADA</label>
       </div>
       <div className={`contenedorCuerpo d-flex flex-column ${tamañomini(window.innerWidth) ? 'tamañoChicoContCuerpo' : 'tamañoGrandeContCuerpo'}`}>
         <div className={ `contenedorTarjeta ${tamañomini(window.innerWidth) ? 'tañamoChicoContTarjeta' : 'tamañoGrandeContTarjeta'}   col-12 col-sm-10 col-md-12 col-lg-11 col-xl-9 col-xxl-9` }>

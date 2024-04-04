@@ -4,21 +4,38 @@
   box-sizing: border-box;
 }
 
-body {
-  color: wheat;
-  background-color: rgb(0, 10, 15);
-}
-
 .contenedor-cuerpo {
   width: 100%;
   min-height: 95vh;
   margin: 0px;
   padding: 0px;
   background-color: rgb(0, 33, 49);
+  position: relative;
 }
 
 .footer-app {
+  height: 140px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  color: rgb(0, 54, 54);
+  background-color: rgb(0, 124, 124);
+}
+.contFoot {
   padding: 10px;
-  color: rgb(0, 160, 160);
-  background-color: rgb(198, 255, 255);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  color: rgb(0, 54, 54);
+  background-color: rgb(0, 124, 124);
+}
+.miniContFoot {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
 }

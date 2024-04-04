@@ -49,10 +49,6 @@ function BarraNav(){
               </Link>
               <Link
                 className='botonDesplegable margin0'
-                to="Pages/SobreMi">Sobre Mi
-              </Link>
-              <Link
-                className='botonDesplegable margin0'
                 to="Pages/Contacto">Contacto
               </Link>
               </ul>
@@ -76,10 +72,6 @@ function BarraNav(){
           <Link
             className='BotonCambioPag'
             to= "/portafolio-react">Inicio
-          </Link>
-          <Link
-            className='BotonCambioPag'
-            to="Pages/SobreMi">Sobre Mi
           </Link>
           <Link
             className='BotonCambioPag'

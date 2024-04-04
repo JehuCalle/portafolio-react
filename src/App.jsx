@@ -20,7 +20,6 @@ function App() {
           <Routes>
             <Route path ="/portafolio-react" element = {<BarraNav/>} >
               <Route path="/portafolio-react" element={<Inicio />} />
-              <Route path="Pages/SobreMi" element={<SobreMi />} />
               <Route path="Pages/Contacto" element={<Contacto/>} />
               <Route path="Pages/ProyectosRND" element={<ProyectosRND/>} />
               <Route path="Pages/TarjetaRND" element={<TarjetaRND/>} />
@@ -31,7 +30,20 @@ function App() {
         </div>
       </div>
       <footer className='footer-app'>
-        <label>paralelo-footer</label>
+        <div className='contFoot col-12'>
+          <div
+            className="miniContFoot col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+            
+          </div>
+          <div
+            className="miniContFoot col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+            
+          </div>
+          <div
+            className="miniContFoot col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+            <label>jehucallecontacto@gmail.com</label>
+          </div>
+        </div>
       </footer>
     </div>
   );

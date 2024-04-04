@@ -26,14 +26,14 @@ function Inicio(){
       <div className="quienSoyCont col-11 col-sm-9 col-md-9 col-lg-8 col-xl-7 col-xxl-6">
         
         <label className="textoSeparado">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae qui facere distinctio autem rerum fugit iure molestias praesentium, amet eius, commodi ipsam quia optio neque itaque vel labore suscipit dolorum!
+          Mi nombre es Jehú Calle, vivo en Chile, en la región de Ñuble, actualmente mi objetivo es especializarme en el desarrollo front-end para luego aprender a desarrollar en back-end y ser un desarrollador full-stack.
         </label>
       </div>
 
       <div className="contenedorHabilidades">
         <h1>Habilidades en</h1>
-        <div className="contenedorImagenesHab col-11 col-sm-9 col-md-8 col-lg-9 col-xl-8 col-xxl-8">
-          <div className="col-12 col-sm-12 col-md-11 col-lg-7 col-xl-7 col-xxl-7">
+        <div className="contenedorImagenesHab col-11 col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-6">
+          <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <img
               className="logoBootstrap"
               src={LogoBootstrap}
@@ -50,20 +50,10 @@ function Inicio(){
               className="logoCSS"
               src={LogoCSS}
               alt="CSS logo" />
-          </div>
-          <div className="col-8 col-sm-8 col-md-7 col-lg-5 col-xl-5 col-xxl-5">
             <img
               className="logoReact"
               src={LogoReact}
               alt="React logo" />
-            <img
-              className="logoC"
-              src={LogoC}
-              alt="C# logo" />
-            <img
-              className="logoJava"
-              src={LogoJava}
-              alt="Java logo" />
           </div>
         </div>
       </div>  
@@ -209,8 +199,8 @@ function Inicio(){
 
       <div className="contenedorHerramientas col-12">
         <h1>Herramientas que utilizo</h1>
-        <div className="contenedorImagenesHerr col-8 col-sm-6 col-md-6 col-lg-6 col-xl-7 col-xxl-5">
-          <div className="col-12 col-sm-12 col-md-11 col-lg-7 col-xl-7 col-xxl-7">
+        <div className="contenedorImagenesHerr col-8 col-sm-7 col-md-6 col-lg-5 col-xl-5 col-xxl-4">
+          <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <img
               className="logoVisualCode"
               src={LogoVisualCode}
@@ -223,16 +213,6 @@ function Inicio(){
               className="logoGitHubDesk"
               src={LogoGitHubDesk}
               alt="GitHub Desktop logo" />
-          </div>
-          <div className="col-8 col-sm-8 col-md-7 col-lg-5 col-xl-5 col-xxl-5">
-            <img
-              className="logoAndroidStudio"
-              src={LogoAndroidStudio}
-              alt="Android Studio logo" />
-            <img
-              className="logoUnity"
-              src={LogoUnity}
-              alt="Unity logo" />
           </div>
         </div>
       </div>

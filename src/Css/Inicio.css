@@ -40,28 +40,19 @@
 }
 .logoBootstrap {
   padding: 10px 10px 10px 10px;
-  width: 25%;
+  width: 20%;
 }
 .logoHTML{
-  width: 25%;
+  width: 20%;
 }
 .logoJS {
-  width: 25%;
+  width: 20%;
 }
 .logoCSS {
-  width: 25%;
+  width: 20%;
 }
-
 .logoReact {
-  width: 30%;
-}
-.logoC {
-  width: 35%;
-  background-color: rgb(77, 77, 77);
-}
-.logoJava {
-  width: 35%;
-  background-color: rgb(77, 77, 77);
+  width: 20%;
 }
 /* PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS */
 
@@ -186,6 +177,7 @@
 /* HERRAMIENTAS HERRAMIENTAS HERRAMIENTAS HERRAMIENTAS HERRAMIENTAS HERRAMIENTAS HERRAMIENTAS HERRAMIENTAS */
 
 .contenedorHerramientas{
+  margin: 0px 0px 30px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -206,20 +198,9 @@
   margin: 0px 5px 0px 5px;
 }
 .logoGitHub {
-  width: 32%;
+  width: 33%;
   padding: 6px;
 }
 .logoGitHubDesk {
-  width: 32%;
-}
-
-.logoAndroidStudio {
-  width: 50%;
-  padding: 6px;
-  background-color: rgb(77, 77, 77);
-}
-.logoUnity {
-  width: 50%;
-  padding: 6px;
-  background-color: rgb(77, 77, 77);
+  width: 33%;
 }
