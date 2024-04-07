@@ -107,6 +107,12 @@
   justify-content: center;
   align-items: center;
   border: 5px double red;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  background-color: rgb(4, 28, 43);
 }
 .piedra1 {
   height: 250px;
@@ -115,6 +121,12 @@
   justify-content: center;
   align-items: center;
   border: 5px double red;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  background-color: rgb(4, 28, 43);
 }
 .papel1 {
   height: 250px;
@@ -123,6 +135,12 @@
   justify-content: center;
   align-items: center;
   border: 5px double red;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  background-color: rgb(4, 28, 43);
 }
 .tijera1 {
   height: 250px;
@@ -131,6 +149,12 @@
   justify-content: center;
   align-items: center;
   border: 5px double red;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  background-color: rgb(4, 28, 43);
 }
 
 /* PIEDRA PAPEL TIJERA 2 */

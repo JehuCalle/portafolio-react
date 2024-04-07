@@ -89,9 +89,6 @@
   align-items: center;
   color: rgb(0, 19, 27);
 }
-.dividirPartesIguales label {
-  cursor: pointer;
-}
 .proyectoActivado {
   color: rgb(141, 255, 255);
   background-color: rgb(1, 9, 20);
@@ -102,6 +99,9 @@
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
+.proyectoActivado label {
+  cursor: pointer;
+}
 .proyectoActivado:hover {
   opacity: 50%;
 }
@@ -110,6 +110,7 @@
   border: 5px solid rgb(1, 255, 255);
   border-radius: 10px;
   opacity: 30%;
+  cursor: default;
 }
 .miniContP {
   display: flex;
@@ -195,7 +196,6 @@
 .logoVisualCode {
   width: 30%;
   padding: 8px;
-  margin: 0px 5px 0px 5px;
 }
 .logoGitHub {
   width: 33%;
@@ -203,4 +203,41 @@
 }
 .logoGitHubDesk {
   width: 33%;
+}
+
+.contNota {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: fixed;
+  bottom: 60px;
+  right: 10px;
+  pointer-events: none; /*PARA QUE EL CURSON IGNORE ESTE CAMPO Y PERMITA PRESIONAR A TRAVES DE ESTE */
+}
+.btnNota {
+  margin-right: 0px;
+  margin-bottom: 0px;
+  pointer-events: auto; /* PARA QUE EL CURSOR DETECTE ESTE CAMPO Y PUEDA PRESIONAR EL EVENTO */
+}
+.nota {
+  background-color: rgb(2, 26, 26);
+  border: 5px outset aqua;
+  border-radius: 10px;
+  padding: 0px 20px 0px 0px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  pointer-events: auto; /* PARA QUE EL CURSOR LO DETECTE */
+}
+.animNota {
+  animation-name: NotaAnim;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards; 
+}
+@keyframes NotaAnim {
+  100% {
+    opacity: 0%;
+  }
 }

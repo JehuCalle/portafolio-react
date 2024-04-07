@@ -20,6 +20,19 @@ import '../Css/Inicio.css';
 
 function Inicio(){
 
+  const notaRef = useRef(null);
+
+  const cerrarNota = () => {
+    notaRef.current.classList.add('animNota');
+    setTimeout(()=>{
+      if(notaRef.current === null) {
+        console.log('notaRef null');
+      }else if(notaRef.current !== null) {
+        notaRef.current.classList.add('d-none');
+      };
+    },550)
+  };
+
   return(
     <div className="contenedorDivs">
       <h1 className="testTitulo">Quien soy</h1>
@@ -181,7 +194,7 @@ function Inicio(){
               className="proyectoDesactivado dividirPartesIguales col-12 col-lg-6 col-xl-4 col-xxl-4">
                 <div className="proyectoN5">
                   <label className="h3">Proyecto N°5</label>
-                  <label>Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente</label>
+                  <label>Proximamente experimentando con shaders Proximamente experimentando con shaders Proximamente experimentando con shaders Proximamente experimentando con shaders Proximamente experimentando con shaders Proximamente experimentando con shaders</label>
                   <label> XXXXXXX, XXXX </label>
                 </div>
             </Link>
@@ -215,6 +228,16 @@ function Inicio(){
               alt="GitHub Desktop logo" />
           </div>
         </div>
+      </div>
+      <div
+        className="contNota col-4 col-sm-3 col-md-3 col-lg-2 col-xxl-2"
+        ref={notaRef}>
+        <button
+          className="btnNota"
+          onClick={cerrarNota}>
+            X
+        </button>
+        <label className="nota">Por favor, no refrescar los apartados que no sean este. (Se está intentando solucionar el bug 🙇)</label>
       </div>
     </div>
   );
