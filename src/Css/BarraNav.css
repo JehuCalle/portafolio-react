@@ -84,6 +84,28 @@ a {
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
 }
+.gitHubNav:hover {
+  animation-name: GitHubNavANIM1;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+@keyframes GitHubNavANIM1 {
+  100% {
+    background-color: rgb(255, 255, 255);
+  }
+}
+.gitHubNav:not(:hover) {
+  animation-name: GitHubNavANIM2;
+  animation-duration: 0.2s;
+}
+@keyframes GitHubNavANIM2 {
+  0% {
+    background-color: rgb(255, 255, 255);
+  }
+  100% {
+    background-color: rgb(109, 109, 109);
+  }
+}
 
 .BotonCambioPag {
   margin: 0px 3px 0px 3px;

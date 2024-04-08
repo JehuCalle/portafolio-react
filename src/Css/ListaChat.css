@@ -24,7 +24,7 @@
 }
 .contenedorHistorial {
   width: 280px;
-  min-height: 400px;
+  height: 400px;
   background-color: rgb(34, 90, 90);
   overflow-y: scroll;
   border: 6px double rgb(4, 39, 39);
