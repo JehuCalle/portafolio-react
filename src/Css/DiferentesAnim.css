@@ -96,7 +96,7 @@
 }
 @keyframes Btn3AnimCorr {
   50% {
-    box-shadow: 0 0 20px rgb(0, 255, 170);
+    box-shadow: 0px 0px 20px rgb(0, 255, 170);
   }
 }
 .animBtn3Incorrecto {
