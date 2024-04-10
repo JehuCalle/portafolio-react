@@ -34,12 +34,26 @@ function CaraOSello({ enviar, cara, sello, resultadoCalculo, respuesta, historia
     }
   }, [mountedHist]);
 
+
   const agregarMarg = tamaño => {
     return( tamaño < 992 )
   }
 
+  const [ claseMargenSup, setClaseMargenSup ] = useState(agregarMarg(window.innerWidth) ? 'margenSup' : '');
+
+  useEffect(()=>{
+    const cambioDeTamaño = () => {
+      setClaseMargenSup(agregarMarg(window.innerWidth) ? 'margenSup' : '');
+    }
+    window.addEventListener('resize', cambioDeTamaño);
+
+    return () => {
+      window.removeEventListener('resize', cambioDeTamaño);
+    };
+  },[])
+
   return(
-    <div className={`cara-o-sello ${agregarMarg(window.innerWidth) ? 'margenSup' : ''} col-12 col-lg-6`}>
+    <div className={`cara-o-sello ${claseMargenSup} col-12 col-lg-6`}>
       <div className="contenedor-respuestas col-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
         <div className='contenedor-imputs'>
           <label>Nombre </label>

@@ -202,9 +202,35 @@ function PiedraPapelTijera() {
     return(capTamaño <= 575);
   }
 
+  const [ claseCuerpo, setClaseCuerpo ] = useState(grandeOChico(window.innerWidth) ? 'cuerpoAlturaChico' : 'cuerpoAlturaGrande');
+  const [ claseCont1, setClaseCont1 ] = useState(grandeOChico(window.innerWidth) ? 'cont1AlturaChico' : 'cont1AlturaGrande');
+  const [ claseElementosCont, setClaseElementosCont ] = useState(grandeOChico(window.innerWidth) ? 'eleccionCont1Chiquito' : '');
+  const [ claseCont3, setClaseCont3 ] = useState(grandeOChico(window.innerWidth) ? 'cont3AlturaChico' : 'cont3AlturaGrande');
+  const [ clasePiPaTi2, setClasePiPaTi2 ] = useState(grandeOChico(window.innerWidth) ? 'piePapTij2Chiquito' : '');
+  const [ claseAlertaGanar, setClaseAlertaGanar ] = useState(grandeOChico(window.innerWidth) ? 'alertaGanarChico' : 'alertaGanarGrande');
+  const [ claseAlertaPerder, setClaseAlertaPerder ] = useState(grandeOChico(window.innerWidth) ? 'alertaPerderChico' : 'alertaPerderGrande');
+
+
+  useEffect(()=> {
+    const cambioDeTamaño = () => {
+      setClaseCuerpo(grandeOChico(window.innerWidth) ? 'cuerpoAlturaChico' : 'cuerpoAlturaGrande');
+      setClaseCont1(grandeOChico(window.innerWidth) ? 'cont1AlturaChico' : 'cont1AlturaGrande');
+      setClaseElementosCont(grandeOChico(window.innerWidth) ? 'eleccionCont1Chiquito' : '');
+      setClaseCont3(grandeOChico(window.innerWidth) ? 'cont3AlturaChico' : 'cont3AlturaGrande');
+      setClasePiPaTi2(grandeOChico(window.innerWidth) ? 'piePapTij2Chiquito' : '');
+      setClaseAlertaGanar(grandeOChico(window.innerWidth) ? 'alertaGanarChico' : 'alertaGanarGrande');
+      setClaseAlertaPerder(grandeOChico(window.innerWidth) ? 'alertaPerderChico' : 'alertaPerderGrande');
+    };
+
+    window.addEventListener('resize', cambioDeTamaño);
+
+    return () => {
+      window.removeEventListener('resize', cambioDeTamaño);
+    };
+  },[])
 
   return(
-    <div className={`cuerpo ${grandeOChico(window.innerWidth) ? 'cuerpoAlturaChico' : 'cuerpoAlturaGrande'}`}>
+    <div className={`cuerpo ${claseCuerpo}`}>
       <div className="contContenedores col-12 col-sm-12 col-md-12 col-lg-11 col-xl-11 col-xxl-10">
         <div className="contenedorCentro col-12 col-sm-12 col-md-12 col-lg-11 col-xl-10 col-xxl-12">
           <div
@@ -218,8 +244,8 @@ function PiedraPapelTijera() {
           </div>
           
 
-          <div className={`cont1 col-10 ${grandeOChico(window.innerWidth) ? 'cont1AlturaChico' : 'cont1AlturaGrande'}`}>
-            <div className={`contenedorIzquierda ${grandeOChico(window.innerWidth) ? 'eleccionCotn1Chiquito' : ''}`}>
+          <div className={`cont1 col-10 ${claseCont1}`}>
+            <div className={`contenedorIzquierda ${claseElementosCont}`}>
               <div
                 className="divImagenIzq ocultar"
                 ref={divImagenIzq}>
@@ -233,7 +259,7 @@ function PiedraPapelTijera() {
 
 
             <div
-              className={`neutro ${grandeOChico(window.innerWidth) ? 'eleccionCotn1Chiquito' : ''}`}
+              className={`neutro ${claseElementosCont}`}
               ref={neutro}>
               <img
                 className="tamañoIMG"
@@ -241,7 +267,7 @@ function PiedraPapelTijera() {
                 alt="RandomPiPaTi"/>
             </div>
             <div
-              className={`piedra1 ${grandeOChico(window.innerWidth) ? 'eleccionCotn1Chiquito' : ''} ocultar`}
+              className={`piedra1 ${claseElementosCont} ocultar`}
               ref={piedra1}>
               <img
                 className="tamañoIMG"
@@ -249,7 +275,7 @@ function PiedraPapelTijera() {
                 alt="PiedraBot"/>
             </div>
             <div
-              className={`papel1 ${grandeOChico(window.innerWidth) ? 'eleccionCotn1Chiquito' : ''} ocultar`}
+              className={`papel1 ${claseElementosCont} ocultar`}
               ref={papel1}>
               <img
                 className="tamañoIMG"
@@ -257,7 +283,7 @@ function PiedraPapelTijera() {
                 alt="PapelBot"/>
             </div>
             <div
-              className={`tijera1 ${grandeOChico(window.innerWidth) ? 'eleccionCotn1Chiquito' : ''} ocultar`}
+              className={`tijera1 ${claseElementosCont} ocultar`}
               ref={tijera1}>
               <img
                 className="tamañoIMG"
@@ -266,7 +292,7 @@ function PiedraPapelTijera() {
             </div>
 
 
-            <div className={`contenedorDerecha ${grandeOChico(window.innerWidth) ? 'eleccionCotn1Chiquito' : ''}`}>
+            <div className={`contenedorDerecha ${claseElementosCont}`}>
               <div
                 className="divImagenDer ocultar"
                 ref={divImagenDer}>
@@ -285,24 +311,24 @@ function PiedraPapelTijera() {
             ref={divEmpate}>
             <label>EMPATE</label>
           </div>
-          <div className={`cont3 ${grandeOChico(window.innerWidth) ? 'cont3AlturaChico' : 'cont3AlturaGrande'}`}>
+          <div className={`cont3 ${claseCont3}`}>
             <BtnPiePapTijRnd
               id="idPiedra2"
-              classNameBTN={`piedra2 ${grandeOChico(window.innerWidth) ? 'piePapTij2Chiquito' : ''}`}
+              classNameBTN={`piedra2 animPiPaTi ${clasePiPaTi2}`}
               onClick={(id) => random(id)}
               classNameIMG="tamañoIMG"
               src={PiedraPlayer}
               alt="PiedraPlayer"/>
             <BtnPiePapTijRnd
               id="idPapel2"
-              classNameBTN={`papel2 ${grandeOChico(window.innerWidth) ? 'piePapTij2Chiquito' : ''}`}
+              classNameBTN={`papel2 animPiPaTi ${clasePiPaTi2}`}
               onClick={(id) => random(id)}
               classNameIMG="tamañoIMG"
               src={PapelPlayer}
               alt="PapelPlayer"/>
             <BtnPiePapTijRnd
               id="idTijera2"
-              classNameBTN={`tijera2 ${grandeOChico(window.innerWidth) ? 'piePapTij2Chiquito' : ''}`}
+              classNameBTN={`tijera2 animPiPaTi ${clasePiPaTi2}`}
               onClick={(id) => random(id)}
               classNameIMG="tamañoIMG"
               src={TijeraPlayer}
@@ -321,7 +347,7 @@ function PiedraPapelTijera() {
 
 
         <div
-          className={`alertaGanar col-12 col-sm-12 col-md-12 col-lg-11 col-xl-10 col-xxl-12 ocultar ${grandeOChico(window.innerWidth) ? 'alertaGanarChico' : 'alertaGanarGrande'}`}
+          className={`alertaGanar col-12 col-sm-12 col-md-12 col-lg-11 col-xl-10 col-xxl-12 ocultar ${claseAlertaGanar}`}
           ref={divAlertaGanar}>
           <label>Has derrotado al enemigo </label>
           <img
@@ -334,7 +360,7 @@ function PiedraPapelTijera() {
           </button>
         </div>
         <div
-          className={`alertaPerder col-12 col-sm-12 col-md-12 col-lg-11 col-xl-10 col-xxl-12 ocultar ${grandeOChico(window.innerWidth) ? 'alertaPerderChico' : 'alertaPerderGrande'}`}
+          className={`alertaPerder col-12 col-sm-12 col-md-12 col-lg-11 col-xl-10 col-xxl-12 ocultar ${claseAlertaPerder}`}
           ref={divAlertaPerder}>
           <label>Te has quedado sin vidas</label>
           <img

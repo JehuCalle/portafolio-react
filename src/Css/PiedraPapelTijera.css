@@ -29,7 +29,7 @@
   text-align: center;
   height: 100%;
 }
-.eleccionCotn1Chiquito {
+.eleccionCont1Chiquito {
   height: 170px !important;
 }
 
@@ -78,7 +78,7 @@
 }
 
 
-/* PIEDRA PAPEL TIJERA 1 */
+/* PIEDRA PAPEL TIJERA CONT 1 */
 .cont1 {
   width: 100%;
   display: flex;
@@ -157,7 +157,7 @@
   background-color: rgb(4, 28, 43);
 }
 
-/* PIEDRA PAPEL TIJERA 2 */
+/* PIEDRA PAPEL TIJERA CONT 2 */
 .cont2 {
   display: flex;
   justify-content: center;
@@ -165,7 +165,7 @@
   position: absolute;
 }
 
-/* PIEDRA PAPEL TIJERA 3 */
+/* PIEDRA PAPEL TIJERA CONT 3 */
 .cont3 {
   width: 100%;
   display: flex;
@@ -211,10 +211,34 @@
   align-items: center;
   background-color: rgb(3, 46, 46);
 }
-
 .piePapTij2Chiquito {
   height: 150px;
 }
+
+.animPiPaTi {
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+}
+@keyframes AnimPiPaTi {
+  50%{
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+  100%{
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+}
+.animPiPaTi:hover {
+  animation-name: AnimPiPaTi;
+}
+
 
 
 .contenedorDerecha {

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import Logo from '../Img/NoHaceNadaChiquito.png';
 /*
@@ -63,11 +63,28 @@ function TarjetaRND(){
       contadorOrdenBtn -=1;
       console.log(contadorOrdenBtn);
     };
-  } 
+  }
+
 
   const tamañomini = valor => {
     return (valor <= 767);
   }
+
+  const [ claseCuerpo, setClaseCuerpo ] = useState(tamañomini(window.innerWidth) ? 'tamañoChicoContCuerpo' : 'tamañoGrandeContCuerpo');
+  const [ claseTarjeta, setClaseTarjeta ] = useState(tamañomini(window.innerWidth) ? 'tañamoChicoContTarjeta' : 'tamañoGrandeContTarjeta');
+
+  useEffect(()=>{
+    const cambiarTamaño = () => {
+      setClaseCuerpo(tamañomini(window.innerWidth) ? 'tamañoChicoContCuerpo' : 'tamañoGrandeContCuerpo');
+      setClaseTarjeta(tamañomini(window.innerWidth) ? 'tañamoChicoContTarjeta' : 'tamañoGrandeContTarjeta');
+    };
+
+    window.addEventListener('resize', cambiarTamaño);
+
+    return () => {
+      window.removeEventListener('resize', cambiarTamaño);
+    }
+  },[])
 
   return(
     <div>
@@ -80,8 +97,8 @@ function TarjetaRND(){
         </div>
         <label className="titulo col-9 col-sm-10 col-md-10 col-lg-11 col-xl-11 col-xxl-11">TRIPTICO EL GATITO NO HACE NADA</label>
       </div>
-      <div className={`contenedorCuerpo d-flex flex-column ${tamañomini(window.innerWidth) ? 'tamañoChicoContCuerpo' : 'tamañoGrandeContCuerpo'}`}>
-        <div className={ `contenedorTarjeta ${tamañomini(window.innerWidth) ? 'tañamoChicoContTarjeta' : 'tamañoGrandeContTarjeta'}   col-12 col-sm-10 col-md-12 col-lg-11 col-xl-9 col-xxl-9` }>
+      <div className={`contenedorCuerpo d-flex flex-column ${claseCuerpo}`}>
+        <div className={ `contenedorTarjeta ${claseTarjeta}   col-12 col-sm-10 col-md-12 col-lg-11 col-xl-9 col-xxl-9` }>
           <div className="imagenes col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
             <img
               className="tamañoTarjetaIMG primerDiv"
