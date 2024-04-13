@@ -39,7 +39,7 @@ function Inicio(){
       <div className="quienSoyCont col-11 col-sm-9 col-md-9 col-lg-8 col-xl-7 col-xxl-6">
         
         <label className="textoSeparado">
-          Mi nombre es Jehú Calle, vivo en Chile, en la región de Ñuble, actualmente mi objetivo es especializarme en el desarrollo front-end para luego aprender a desarrollar en back-end y ser un desarrollador full-stack.
+          Mi nombre es Jehú Calle, vivo en Chile, en la región de Ñuble, actualmente mi objetivo es especializarme en el desarrollo front-end para luego aprender a desarrollar en back-end y ser un desarrollador full-stack y luego de ser un desarrollador full-stack, me gustaría aprender otros lenguajes de programación para incrementar mis conocimientos en programación.
         </label>
       </div>
 
