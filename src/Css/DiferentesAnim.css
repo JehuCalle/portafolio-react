@@ -19,10 +19,11 @@
   -moz-border-radius: 8px !important;
   -ms-border-radius: 8px !important;
   -o-border-radius: 8px !important;
-  overflow-x: hidden;
+  overflow: hidden;
   cursor: pointer;
   text-transform: none !important;
   position: relative;
+  scrollbar-width:none;
 }
 .contBtn {
   height: 63px;
