@@ -9,6 +9,7 @@ import ProyectosRND from './Pages/ProyectosRND.jsx';
 import TarjetaRND from './Pages/TarjetaRND.jsx';
 import PiedraPapelTijera from './Pages/PiedraPapelTijera.jsx';
 import DiferentesAnim from './Pages/DiferentesAnim.jsx';
+import ExperimentoConBD from './Pages/ExperimentoConBD.jsx';
 
 import { Routes, Route} from 'react-router-dom';
 
@@ -26,6 +27,7 @@ function App() {
               <Route path="Pages/TarjetaRND" element={<TarjetaRND/>} />
               <Route path="Pages/PiedraPapelTijera" element={<PiedraPapelTijera/>} />
               <Route path="Pages/DiferentesAnim" element={<DiferentesAnim/>} />
+              <Route path="Pages/ExperimentoConBD" element={<ExperimentoConBD/>} />
             </Route>
           </Routes>
         </div>

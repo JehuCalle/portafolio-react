@@ -1,0 +1,11 @@
+.cuerpoBD {
+  display: flex;
+}
+
+.testet1 {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(90deg, red 10%, aqua 90%);
+}
