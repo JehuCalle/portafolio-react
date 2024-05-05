@@ -115,6 +115,7 @@
   border-radius: 10px;
   opacity: 30%;
   cursor: default;
+  pointer-events: none;
 }
 .miniContP {
   display: flex;
