@@ -1,0 +1,332 @@
+.cuerpo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.cuerpoAlturaGrande {
+  height: 925px;
+}
+.cuerpoAlturaChico {
+  height: 647px;
+}
+
+.contContenedores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.contenedorIzquierda {
+  height: 250px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.divImagenIzq {
+  text-align: center;
+  height: 100%;
+}
+.eleccionCont1Chiquito {
+  height: 170px !important;
+}
+
+.contenedorCentro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.contVidasEnemigo {
+  height: 37px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(92, 0, 0);
+  border-top: 5px ridge aqua;
+  border-left: 5px ridge aqua;
+  border-right: 5px ridge aqua;
+  border-radius: 10px 10px 0px 0px;
+  -webkit-border-radius: 10px 10px 0px 0px;
+  -moz-border-radius: 10px 10px 0px 0px;
+  -ms-border-radius: 10px 10px 0px 0px;
+  -o-border-radius: 10px 10px 0px 0px;
+}
+.contVidasPlayer {
+  height: 37px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(92, 0, 0);
+  border-left: 5px ridge aqua;
+  border-right: 5px ridge aqua;
+  border-bottom: 5px ridge aqua;
+  border-radius: 0px 0px 10px 10px;
+  -webkit-border-radius: 0px 0px 10px 10px;
+  -moz-border-radius: 0px 0px 10px 10px;
+  -ms-border-radius: 0px 0px 10px 10px;
+  -o-border-radius: 0px 0px 10px 10px;
+}
+.tamañoVidas{
+  height: 100%;
+}
+
+
+/* PIEDRA PAPEL TIJERA CONT 1 */
+.cont1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(3, 97, 97);
+  border-top: 5px ridge aqua;
+  border-left: 5px ridge aqua;
+  border-right: 5px ridge aqua;
+  border-radius: 30px 30px 0px 0px;
+  -webkit-border-radius: 30px 30px 0px 0px;
+  -moz-border-radius: 30px 30px 0px 0px;
+  -ms-border-radius: 30px 30px 0px 0px;
+  -o-border-radius: 30px 30px 0px 0px;
+}
+.cont1AlturaGrande {
+  height: 400px;
+}
+.cont1AlturaChico {
+  height: 260px;
+}
+.neutro {
+  height: 250px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px double red;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  background-color: rgb(4, 28, 43);
+}
+.piedra1 {
+  height: 250px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px double red;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  background-color: rgb(4, 28, 43);
+}
+.papel1 {
+  height: 250px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px double red;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  background-color: rgb(4, 28, 43);
+}
+.tijera1 {
+  height: 250px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px double red;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  background-color: rgb(4, 28, 43);
+}
+
+/* PIEDRA PAPEL TIJERA CONT 2 */
+.cont2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+/* PIEDRA PAPEL TIJERA CONT 3 */
+.cont3 {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(4, 66, 66);
+  border-radius: 0px 0px 30px 30px;
+  border-left: 5px ridge aqua;
+  border-right: 5px ridge aqua;
+  border-bottom: 5px ridge aqua;
+  -webkit-border-radius: 0px 0px 30px 30px;
+  -moz-border-radius: 0px 0px 30px 30px;
+  -ms-border-radius: 0px 0px 30px 30px;
+  -o-border-radius: 0px 0px 30px 30px;
+}
+.cont3AlturaGrande {
+  height: 400px;
+}
+.cont3AlturaChico {
+  height: 212px;
+}
+.piedra2 {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(1, 155, 155);
+}
+.papel2 {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(43, 90, 90);
+}
+.tijera2 {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(3, 46, 46);
+}
+.piePapTij2Chiquito {
+  height: 150px;
+}
+
+.animPiPaTi {
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+}
+@keyframes AnimPiPaTi {
+  50%{
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+  100%{
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+}
+.animPiPaTi:hover {
+  animation-name: AnimPiPaTi;
+}
+
+
+
+.contenedorDerecha {
+  height: 250px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.divImagenDer {
+  text-align: center;
+  height: 100%;
+}
+
+/* RND RND RND RND RND RND RND RND RND RND RND*/
+
+.ocultar {
+  display: none !important;
+}
+
+.tamañoIMG {
+  height: 86%;
+  width: 100%;
+}
+
+/* ALERTA ALERTA ALERTA ALERTA ALERTA ALERTA */
+
+.alertaGanar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color:rgb(3, 46, 46);
+}
+.alertaGanarGrande {
+  height: 800px;
+}
+.alertaGanarChico {
+  height: 472px;
+}
+.tamañoImgAlertaGanaste {
+  height: 300px;
+  width: 300px;
+}
+
+.alertaPerder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color:rgb(3, 46, 46);
+}
+.alertaPerderGrande {
+  height: 800px;
+}
+.alertaPerderChico {
+  height: 472px;
+}
+.tamañoImgAlertaPerdiste {
+  height: 300px;
+  width: 300px;
+}
+
+.pierdeVidaE {
+  animation-name: pierdeVidaE;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+@keyframes pierdeVidaE {
+  50% {
+    box-shadow: 0 0 20px red;
+    border-top: 5px ridge red;
+    border-left: 5px ridge red;
+    border-right: 5px ridge red;
+  }
+}
+.pierdeVidaP {
+  animation-name: pierdeVidaP;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+@keyframes pierdeVidaP {
+  50% {
+    box-shadow: 0 0 20px red;
+    border-left: 5px ridge red;
+    border-right: 5px ridge red;
+    border-bottom: 5px ridge red;
+  }
+}

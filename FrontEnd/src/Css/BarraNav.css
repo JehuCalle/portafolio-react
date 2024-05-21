@@ -1,0 +1,126 @@
+a {
+  text-decoration: none;
+}
+
+.contBarraMovil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 19, 27);
+}
+
+.contBotonesDesplegables {
+  display: flex;
+  justify-content: flex-end;
+}
+.botonDrop {
+  height: 45px;
+  width: 80px;
+}
+.contBotonesFix {
+  min-width: 0 !important;
+  background: transparent;
+  border: 5px solid aqua;
+}
+.botonDesplegable {
+  height: 50px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(141, 255, 255);
+  background-color: rgb(0, 17, 17);
+}
+.botonDesplegable:hover {
+  background-color: rgb(0, 31, 31);
+}
+.padding0 {
+  padding: 0px !important;
+}
+.margin0 {
+  margin: 0px !important;
+}
+
+.contImgBarra {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgb(0, 19, 27);
+}
+
+.col-ImgBarraNav {
+  width: 4.33333333%;
+}
+
+.contenedor-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.imagenBarra {
+  height: 60px;
+  margin: 5px 10px 5px 10px;
+  border: 2px solid rgb(1, 255, 255);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.btnGitHubNav {
+  cursor: pointer;
+}
+.btnGitHubNav img {
+  cursor: pointer;
+}
+.gitHubNav {
+  height: 40px;
+  width: 40px;
+  background-color: rgb(109, 109, 109);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+.gitHubNav:hover {
+  animation-name: GitHubNavANIM1;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+@keyframes GitHubNavANIM1 {
+  100% {
+    box-shadow: 0px 0px 15px white;
+    background-color: rgb(255, 255, 255);
+  }
+}
+.gitHubNav:not(:hover) {
+  animation-name: GitHubNavANIM2;
+  animation-duration: 0.2s;
+}
+@keyframes GitHubNavANIM2 {
+  0% {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 15px white;
+  }
+  100% {
+    background-color: rgb(109, 109, 109);
+    box-shadow: 0px 0px 0px white;
+  }
+}
+
+.BotonCambioPag {
+  margin: 0px 3px 0px 3px;
+  padding: 6px 3px 6px 3px;
+  display: flex;
+  align-items: center;
+  color: rgb(141, 255, 255);
+  background-color: rgb(0, 17, 17);
+  border: 3px solid rgb(1, 255, 255);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
