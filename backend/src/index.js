@@ -4,8 +4,8 @@ const app = require('./app');
 require('./database')
 
 async function main() {
-  await app.listen(4000);
-  console.log('4000');
+  await app.listen(app.get('port'));
+  console.log('puerto: ', app.get('port'));
 }
 
 main();
