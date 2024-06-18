@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portafolio-react/static/css/main.fa6f2dcb.css",
-    "main.js": "/portafolio-react/static/js/main.20b2a57c.js",
+    "main.css": "/portafolio-react/static/css/main.1ad41896.css",
+    "main.js": "/portafolio-react/static/js/main.44162f2e.js",
     "static/media/PaB.png": "/portafolio-react/static/media/PaB.138c5a54032180074923.png",
     "static/media/PaP.png": "/portafolio-react/static/media/PaP.3fd160775e41701b966e.png",
     "static/media/NoHaceNadaHD.png": "/portafolio-react/static/media/NoHaceNadaHD.84dfc03e00cdc5839181.png",
@@ -17,14 +17,11 @@
     "static/media/Vidas3.png": "/portafolio-react/static/media/Vidas3.504200ed85a098b3e2a1.png",
     "static/media/GatoTriste.jpg": "/portafolio-react/static/media/GatoTriste.90af2a0fc05e16bd1bcd.jpg",
     "static/media/MostrarPass.png": "/portafolio-react/static/media/MostrarPass.8b52948ef180bd8a4b02.png",
-    "static/media/cLogo.png": "/portafolio-react/static/media/cLogo.456d41f630085700b5d8.png",
     "static/media/GatoGanaste.jpg": "/portafolio-react/static/media/GatoGanaste.c2f9986b6b2f7757db7c.jpg",
-    "static/media/androidStudioLogo.png": "/portafolio-react/static/media/androidStudioLogo.a7f35426ae4f8ad051cf.png",
     "static/media/OcultarPass.png": "/portafolio-react/static/media/OcultarPass.b0ed4bedc3dfe37f364a.png",
     "static/media/githubLogo.png": "/portafolio-react/static/media/githubLogo.9e0a1ad5b7392718f7bd.png",
     "static/media/NoHaceNadaChiquito.png": "/portafolio-react/static/media/NoHaceNadaChiquito.3566c73b539ed4a89d88.png",
     "static/media/GatoPerdiste.png": "/portafolio-react/static/media/GatoPerdiste.e410bef47f7a0800762d.png",
-    "static/media/unityLogo.png": "/portafolio-react/static/media/unityLogo.892640e499a8b5f5098d.png",
     "static/media/gato-normal.jpg": "/portafolio-react/static/media/gato-normal.30dc87793a3aa37b48be.jpg",
     "static/media/roboto-latin-500-normal.woff2": "/portafolio-react/static/media/roboto-latin-500-normal.f25d774ecfe0996f8eb5.woff2",
     "static/media/roboto-latin-700-normal.woff2": "/portafolio-react/static/media/roboto-latin-700-normal.227c93190fe7f82de3f8.woff2",
@@ -46,7 +43,6 @@
     "static/media/roboto-latin-ext-700-normal.woff2": "/portafolio-react/static/media/roboto-latin-ext-700-normal.ed67ad54b1a8f5d21150.woff2",
     "static/media/roboto-latin-ext-500-normal.woff2": "/portafolio-react/static/media/roboto-latin-ext-500-normal.9165081d10e1ba601384.woff2",
     "static/media/roboto-latin-ext-300-normal.woff2": "/portafolio-react/static/media/roboto-latin-ext-300-normal.dc7dcec8e3f654e0ed63.woff2",
-    "static/media/javaLogo.png": "/portafolio-react/static/media/javaLogo.ae4aeb93738ebdf70858.png",
     "static/media/roboto-latin-ext-400-normal.woff": "/portafolio-react/static/media/roboto-latin-ext-400-normal.662bc4c2c037bb0bd529.woff",
     "static/media/javaScriptLogo.png": "/portafolio-react/static/media/javaScriptLogo.dafbcd7fb56fcfce553c.png",
     "static/media/roboto-latin-ext-300-normal.woff": "/portafolio-react/static/media/roboto-latin-ext-300-normal.182712ab85f1472cdb2f.woff",
@@ -88,11 +84,11 @@
     "static/media/roboto-greek-ext-400-normal.woff": "/portafolio-react/static/media/roboto-greek-ext-400-normal.f708607d2a7290fb8bfa.woff",
     "static/media/roboto-greek-ext-700-normal.woff": "/portafolio-react/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
     "static/media/bootstrap-5Logo.svg": "/portafolio-react/static/media/bootstrap-5Logo.98585727bcfe0b1555649ec9bbab236c.svg",
-    "main.fa6f2dcb.css.map": "/portafolio-react/static/css/main.fa6f2dcb.css.map",
-    "main.20b2a57c.js.map": "/portafolio-react/static/js/main.20b2a57c.js.map"
+    "main.1ad41896.css.map": "/portafolio-react/static/css/main.1ad41896.css.map",
+    "main.44162f2e.js.map": "/portafolio-react/static/js/main.44162f2e.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa6f2dcb.css",
-    "static/js/main.20b2a57c.js"
+    "static/css/main.1ad41896.css",
+    "static/js/main.44162f2e.js"
   ]
 }
