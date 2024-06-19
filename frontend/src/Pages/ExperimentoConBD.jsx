@@ -7,6 +7,8 @@ import EditarInfoMongoDB from "../Componentes/EditarInfoMongoDB.jsx";
 
 function ExperimentoConBD (){
 
+  const [textoLbl, setTextoLbl] =useState('Cargando...')
+
   //PRIMERA PARTE
   const refTexto = useRef(null);
   const [ texto, setTexto ] = useState('');
@@ -16,6 +18,7 @@ function ExperimentoConBD (){
   const [ numeros, setNumeros ] = useState('');
   const refEmail = useRef(null);
   const [ email, setEmail ] = useState('');
+  const validarEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   //SEGUNDA PARTE
   const [ primerCheck, setPrimerCheck ] = useState(false);
   const [ segundoCheck, setSegundoCheck ] = useState(false);
@@ -50,7 +53,11 @@ function ExperimentoConBD (){
     setNumeros(refNumeros.current.valueAsNumber);
   };
   const emailCaptura = (e) => {
-    setEmail(refEmail.current.value);
+    if(validarEmail.test(refEmail.current.value) === true){
+      setEmail(refEmail.current.value);
+    }else if(validarEmail.test(refEmail.current.value) === false){
+      setEmail('');
+    }
   };
   // SELECCION CHECKBOX
   const primerCheckCaptura = (e) => {
@@ -95,10 +102,25 @@ function ExperimentoConBD (){
     VER USUARIO - VER USUARIO - VER USUARIO - VER USUARIO - VER USUARIO - VER USUARIO - VER USUARIO - VER USUARIO - 
      VER USUARIO - VER USUARIO - VER USUARIO - VER USUARIO - VER USUARIO - VER USUARIO - VER USUARIO - VER USUARIO - */
   const [ usuariosList, setUsuariosList ] = useState([])
+  const [ estadoBD, setEstadoBD ] = useState('');
 
   const obtenerUsuarios = async (e) => {
-    const resultado = await axios.get('http://localhost:3000/api/users');
-    setUsuariosList(resultado.data);
+    try {
+      const resultado = await axios.get('http://localhost:3000/api/users');
+      if(resultado.status === 200){
+        setEstadoBD(true);
+        console.log(1);
+        setUsuariosList(resultado.data);
+      }else{
+        console.log(2.1);
+        setEstadoBD(false);
+        setTextoLbl('La base de datos no se encuentra disponible, lamento las molestias 🙇‍♂️');
+      }
+    } catch (error) {
+      console.log(2.2);
+      setEstadoBD(false);
+      setTextoLbl('La base de datos no se encuentra disponible, lamento las molestias 🙇‍♂️');
+    }
   };
 
   useEffect(()=>{
@@ -107,6 +129,7 @@ function ExperimentoConBD (){
         obtenerUsuarios();
       } catch (error) {
         console.error("ERROR LISTA USUARIOS");
+        console.log("ERROR LISTA USUARIOS");
       };
     };
     fetchUsuarios();
@@ -140,6 +163,13 @@ function ExperimentoConBD (){
           listaInp[cont].classList.add('vacio');
         };
       };
+      if(email !== ''){
+        listaInp[3].classList.remove('vacio');
+        listaInp[3].classList.add('lleno');
+      }else if(email ===''){
+        listaInp[3].classList.remove('lleno');
+        listaInp[3].classList.add('vacio');
+      }
       if(archivos !== ''){
         listaInp[6].classList.remove('vacio');
         listaInp[6].classList.add('lleno');
@@ -487,6 +517,9 @@ function ExperimentoConBD (){
   }
   return(
     <div className="cuerpoBD col-12">
+      <div className={`estadoBD ${estadoBD ? 'd-none' : ''}`}>
+        <label className="lblEstadoBD">{textoLbl}</label>
+      </div>
       <div className={`contAlertaBD ${estadoTxtAlerta} ${estadoAnimAlerta}`} ref={refAlerta}>
         <label>{txtAlerta}</label>
       </div>
@@ -500,7 +533,8 @@ function ExperimentoConBD (){
               <input ref={refTexto} onChange={textoCaptura} type="text" placeholder="Cualquier texto :]"/>
               <input ref={refPass} onChange={passCaptura} type="password" placeholder="Contraseña :]"/>
               <input ref={refNumeros} onChange={numerosCaptura} type="number" placeholder="Solo numeros :]"/>
-              <input ref={refEmail} onChange={emailCaptura} type="email" placeholder="Email :]"/>
+              <input className="inputTooltip" ref={refEmail} onChange={emailCaptura} type="email" placeholder="Email :]"/>
+              <span className="textoTooltip">aaaaaaaaa</span>
             </div>
             <div className="col-12 miniContFormBD">
               <label className="col-12">Selecciona las que quieras :]</label>

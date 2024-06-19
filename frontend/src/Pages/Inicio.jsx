@@ -187,11 +187,11 @@ function Inicio(){
                 </div>
             </Link>
             <Link
-              className="proyectoDesactivado dividirPartesIguales col-12 col-lg-6 col-xl-4 col-xxl-4"
+              className="proyectoActivado dividirPartesIguales col-12 col-lg-6 col-xl-4 col-xxl-4"
               to= "Pages/ExperimentoConBD">
                 <div className="proyectoN5">
                   <label className="h3">Proyecto N°5</label>
-                  <label>Apartado en donde se envian y reciben datos de dos bases de datos, en la primera base de datos se utiliza MongoDB para utilizarla 24/7 y en la segunda base de datos se utiliza MySQL para utilizarla solo cuando la base de datos esté activa.</label>
+                  <label>Apartado en donde se envian y reciben datos de dos bases de datos, en la primera base de datos se utiliza MongoDB que es NoSQL y en la segunda base de datos se utiliza MySQL que es SQL.</label>
                   <label> XXXXXXX, XXXX </label>
                 </div>
             </Link>

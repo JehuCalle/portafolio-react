@@ -3,7 +3,25 @@
   flex-wrap: wrap;
 }
 
-.contAlertaBD{
+.estadoBD {
+  height: 94%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient( 0deg, rgba(0, 18, 26, 0.712) 20%, rgba(0, 113, 145, 0.568) 70%);
+  background-color: rgba(0, 14, 19, 0.767);
+  position: absolute;
+  z-index: 1000;
+}
+.lblEstadoBD {
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  line-height: 3.5rem;
+}
+
+.contAlertaBD {
   width: 200px;
   height: 50px;
   display: flex;
@@ -19,17 +37,17 @@
   -o-border-radius: 10px;
   left: -220px;
 }
-.alertaBien{
+.alertaBien {
   background-color: rgb(0, 110, 50) !important;
   border: 5px solid rgb(0, 61, 36) !important;
   box-shadow: 0px 0px 20px rgb(0, 110, 50) !important;
 }
-.alertaMal{
+.alertaMal {
   background-color: red !important;
   border: 5px solid rgb(39, 7, 7) !important;
   box-shadow: 0px 0px 20px red !important;
 }
-.animAlertaBD{
+.animAlertaBD {
   animation-name: test1;
   animation-duration: 2s;
 }
@@ -73,6 +91,31 @@
   align-items: center;
   align-content: space-around;
   justify-content: center;
+}
+.inputTooltip {
+  position: relative;
+  display: inline-block;
+}
+.textoTooltip {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Posición del tooltip */
+  left: 50%;
+  margin-left: -80px; /* Ajuste del centro del tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.inputTooltip:hover .textoTooltip {
+  position: absolute;
+  visibility: visible;
+  opacity: 1;
 }
 .miniContFormBD {
   display: flex;
