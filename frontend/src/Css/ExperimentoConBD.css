@@ -92,37 +92,62 @@
   align-content: space-around;
   justify-content: center;
 }
-.inputTooltip {
-  position: relative;
-  display: inline-block;
-}
-.textoTooltip {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%; /* Posición del tooltip */
-  left: 50%;
-  margin-left: -80px; /* Ajuste del centro del tooltip */
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-.inputTooltip:hover .textoTooltip {
-  position: absolute;
-  visibility: visible;
-  opacity: 1;
-}
 .miniContFormBD {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
+}
+.contInputYTooltipFrom {
+  display: inline-block;
+  position: relative;
+}
+.inputTooltip {
+  position: relative;
+}
+.textoTooltip {
+  padding: 0px 3px 0px 3px;
+  width:190px;
+  background-color: #555;
+  text-align: center;
+  border: 5px double rgb(0, 0, 0);
+  border-radius: 14px;
+  position: absolute;
+  z-index: 1;
+  left: 100%;
+  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -ms-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+}
+.textoTooltipOc {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+.textTooltipVi {
+  position: absolute;
+  visibility: visible;
+  opacity: 1;
+}
+.tooltipCorr {
+  background-color: #45ad00;
+  border: 5px double rgb(0, 110, 28);
+  box-shadow: 0px 0px 10px green;
+}
+.tooltipIncorr {
+  background-color: #970000;
+  border: 5px double rgb(110, 0, 0);
+  box-shadow: 0px 0px 10px rgb(128, 0, 0);
+}
+.formArchivo {
+  max-width: 100%;
 }
 .textareaFormBD {
   height: 100px;

@@ -19,6 +19,9 @@ function ExperimentoConBD (){
   const refEmail = useRef(null);
   const [ email, setEmail ] = useState('');
   const validarEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const [ tooltipViOOcForm, setTooltipViOOc ] = useState('textoTooltipOc');
+  const [ textoTooltipEmailForm, setTextoTooltipEmail ] = useState('');
+  const [ estadoTooltipForm, setEstadoTooltip ] = useState('');
   //SEGUNDA PARTE
   const [ primerCheck, setPrimerCheck ] = useState(false);
   const [ segundoCheck, setSegundoCheck ] = useState(false);
@@ -53,10 +56,19 @@ function ExperimentoConBD (){
     setNumeros(refNumeros.current.valueAsNumber);
   };
   const emailCaptura = (e) => {
+    if(e.target.value !== ''){
+      setTooltipViOOc('textTooltipVi');
+    }else if(e.target.value === ''){
+      setTooltipViOOc('textTooltipOC');
+    }
     if(validarEmail.test(refEmail.current.value) === true){
       setEmail(refEmail.current.value);
+      setEstadoTooltip('tooltipCorr');
+      setTextoTooltipEmail('Email valido :]')
     }else if(validarEmail.test(refEmail.current.value) === false){
       setEmail('');
+      setEstadoTooltip('tooltipIncorr');
+      setTextoTooltipEmail('Email no valido :[');
     }
   };
   // SELECCION CHECKBOX
@@ -109,15 +121,15 @@ function ExperimentoConBD (){
       const resultado = await axios.get('http://localhost:3000/api/users');
       if(resultado.status === 200){
         setEstadoBD(true);
-        console.log(1);
+        console.log('Conexion base de datos establecida');
         setUsuariosList(resultado.data);
       }else{
-        console.log(2.1);
+        console.log('Error conexion base de datos');
         setEstadoBD(false);
         setTextoLbl('La base de datos no se encuentra disponible, lamento las molestias 🙇‍♂️');
       }
     } catch (error) {
-      console.log(2.2);
+      console.log('Error conexion base de datos');
       setEstadoBD(false);
       setTextoLbl('La base de datos no se encuentra disponible, lamento las molestias 🙇‍♂️');
     }
@@ -138,46 +150,46 @@ function ExperimentoConBD (){
   /* CREAR USUARIO - CREAR USUARIO - CREAR USUARIO - CREAR USUARIO - CREAR USUARIO - CREAR USUARIO - CREAR USUARIO - CREAR USUARIO - 
     CREAR USUARIO - CREAR USUARIO - CREAR USUARIO - CREAR USUARIO - CREAR USUARIO - CREAR USUARIO - CREAR USUARIO - CREAR USUARIO - 
      CREAR USUARIO - CREAR USUARIO - CREAR USUARIO - CREAR USUARIO - CREAR USUARIO - CREAR USUARIO - CREAR USUARIO - CREAR USUARIO - */ 
-    const [ listaInp, setListaInp ] = useState([])
+  const [ listaInp, setListaInp ] = useState([])
 
-    const agregarInputs = () => {
-      setListaInp([
-        refTexto.current,
-        refPass.current,
-        refNumeros.current,
-        refEmail.current,
-        refFecha.current,
-        refHora.current,
-        refArchivo.current,
-        refTextTarea.current
-      ])
-    }
+  const agregarInputs = () => {
+    setListaInp([
+      refTexto.current,
+      refPass.current,
+      refNumeros.current,
+      refEmail.current,
+      refFecha.current,
+      refHora.current,
+      refArchivo.current,
+      refTextTarea.current
+    ])
+  }
 
-    const t1 = () => {
-      for(let cont = 0; cont < 8; cont++ ){
-        if(!!listaInp[cont].value === true){
-          listaInp[cont].classList.remove('vacio');
-          listaInp[cont].classList.add('lleno');
-        }else if(!!listaInp[cont].value === false){
-          listaInp[cont].classList.remove('lleno');
-          listaInp[cont].classList.add('vacio');
-        };
+  const t1 = () => {
+    for(let cont = 0; cont < 8; cont++ ){
+      if(!!listaInp[cont].value === true){
+        listaInp[cont].classList.remove('vacio');
+        listaInp[cont].classList.add('lleno');
+      }else if(!!listaInp[cont].value === false){
+        listaInp[cont].classList.remove('lleno');
+        listaInp[cont].classList.add('vacio');
       };
-      if(email !== ''){
-        listaInp[3].classList.remove('vacio');
-        listaInp[3].classList.add('lleno');
-      }else if(email ===''){
-        listaInp[3].classList.remove('lleno');
-        listaInp[3].classList.add('vacio');
-      }
-      if(archivos !== ''){
-        listaInp[6].classList.remove('vacio');
-        listaInp[6].classList.add('lleno');
-      }else if(archivos === ''){
-        listaInp[6].classList.remove('lleno');
-        listaInp[6].classList.add('vacio');
-      }
     };
+    if(email !== ''){
+      listaInp[3].classList.remove('vacio');
+      listaInp[3].classList.add('lleno');
+    }else if(email ===''){
+      listaInp[3].classList.remove('lleno');
+      listaInp[3].classList.add('vacio');
+    }
+    if(archivos !== ''){
+      listaInp[6].classList.remove('vacio');
+      listaInp[6].classList.add('lleno');
+    }else if(archivos === ''){
+      listaInp[6].classList.remove('lleno');
+      listaInp[6].classList.add('vacio');
+    };
+  };
 
   const [ estadoUEForm, setEstadoUEForm ] = useState(false); 
 
@@ -195,7 +207,7 @@ function ExperimentoConBD (){
   useEffect(()=>{
     if(estadoUEForm === true){
       t1();
-      if(!!texto && !!pass && !!numeros && !!email && (!!primerCheck || !!segundoCheck || !!tercerCheck || !!cuartoCheck) && !!opcionRadio && !!fecha && !!hora && !!archivos && !!textTarea ){
+      if(!!texto && !!pass && !!numeros && !!email && !!opcionRadio && !!fecha && !!hora && !!archivos && !!textTarea ){
         const reader = new FileReader();
   
         reader.onloadend = async () => {
@@ -229,6 +241,7 @@ function ExperimentoConBD (){
         setNumeros('');
         refEmail.current.value = '';
         setEmail('');
+        setTooltipViOOc('textTooltipOC');
         setPrimerCheck(false);
         setSegundoCheck(false);
         setTerceroCheck(false);
@@ -279,7 +292,11 @@ function ExperimentoConBD (){
 
   const [ capEmail, setCapEmail ] = useState('');
   const [ emailEd, setEmailEd ] = useState('');
+  const [ estadoEmailEd, setEstadoEmailEd ] = useState(false);
   const refCapEmail = useRef(null);//
+  const [ TooltipEmailViOOcEd, setTooltipEmailEd ] = useState('textoTooltipOc');
+  const [ estadoTooltipEmailEd, setEstadoTooltipEmailEd ] = useState('');
+  const [ txtTooltipEmailEd, setTxtTooltipEmailEd ] = useState('');
 
   const [ capPrimero, setCapPrimero ] = useState('');
   const [ capSegundo, setCapSegundo ] = useState('');
@@ -317,7 +334,22 @@ function ExperimentoConBD (){
     setNumerosEd(e.target.value);
   };
   const cambioEmailEd = (e) => {
-    setEmailEd(e.target.value);
+    if(e.target.value !== ''){
+      setTooltipEmailEd('textTooltipVi');
+    }else if(e.target.value === ''){
+      setTooltipEmailEd('textoTooltipOc');
+    }
+    if(validarEmail.test(e.target.value) === true){
+      setEmailEd(e.target.value);
+      setEstadoTooltipEmailEd('tooltipCorr');
+      setTxtTooltipEmailEd('Email valido :]');
+      setEstadoEmailEd(true);
+    }else if(validarEmail.test(e.target.value) === false){
+      setEmailEd(e.target.value);
+      setEstadoTooltipEmailEd('tooltipIncorr');
+      setTxtTooltipEmailEd('Email no valido :[');
+      setEstadoEmailEd(false)
+    };
   };
   const manejarCambioPri = () => {
     setCapPrimero(!capPrimero);
@@ -390,6 +422,8 @@ function ExperimentoConBD (){
     setPassEd('');
     setNumerosEd('');
     setEmailEd('');
+    setTooltipEmailEd('textoTooltipOc');
+    setEstadoEmailEd(false);
     setFechaEd('');
     setHoraEd('');
     setReiniciarArchivo(Date.now());
@@ -415,7 +449,7 @@ function ExperimentoConBD (){
     if(numerosEd === ''){
       setNumerosEd(capNumeros);
     };
-    if(emailEd === ''){
+    if(emailEd === '' ||   estadoEmailEd === false){
       setEmailEd(capEmail);
     };
     if(fechaEd === ''){
@@ -480,6 +514,8 @@ function ExperimentoConBD (){
       setCapPass('');
       setCapNumeros('');
       setCapEmail('');
+      setTooltipEmailEd('textoTooltipOc');
+      setEstadoEmailEd(false);
       setCapPrimero('');
       setCapSegundo('');
       setCapTercero('');
@@ -533,8 +569,10 @@ function ExperimentoConBD (){
               <input ref={refTexto} onChange={textoCaptura} type="text" placeholder="Cualquier texto :]"/>
               <input ref={refPass} onChange={passCaptura} type="password" placeholder="Contraseña :]"/>
               <input ref={refNumeros} onChange={numerosCaptura} type="number" placeholder="Solo numeros :]"/>
-              <input className="inputTooltip" ref={refEmail} onChange={emailCaptura} type="email" placeholder="Email :]"/>
-              <span className="textoTooltip">aaaaaaaaa</span>
+              <div className="contInputYTooltipFrom">
+                <input className="inputTooltip" ref={refEmail} onChange={emailCaptura} type="email" placeholder="Email :]"/>
+                <span className={`textoTooltip textoTooltipOc ${tooltipViOOcForm} ${estadoTooltipForm}`}>{textoTooltipEmailForm}</span>
+              </div>
             </div>
             <div className="col-12 miniContFormBD">
               <label className="col-12">Selecciona las que quieras :]</label>
@@ -566,7 +604,7 @@ function ExperimentoConBD (){
               <label className="col-12">Ingresa fecha, hora y archivo/s :]</label>
               <input type="date" ref={refFecha} onChange={fechaCambio}/>
               <input type="time" ref={refHora} onChange={horaCambio}/>
-              <input type="file" ref={refArchivo} onChange={archivoCambio} accept=".png, .jpeg, .jpg, .gif, .svg, .webp, .ico"/>
+              <input className="formArchivo" type="file" ref={refArchivo} onChange={archivoCambio} accept=".png, .jpeg, .jpg, .gif, .svg, .webp, .ico"/>
               <label className="col-12">{pesoArchivo}</label>
             </div>
             <label>Descripcion</label>
@@ -600,9 +638,7 @@ function ExperimentoConBD (){
                     </div>
                     <div className="col-4 miniContUser2">
                       <div className="eliminarUser">
-                        
                         <button onClick={()=>editarUsuario(user._id)}>Editar</button>
-
 
                         <button onClick={()=>eliminarUsuario(user._id)}>X</button>
                       </div>
@@ -611,8 +647,6 @@ function ExperimentoConBD (){
                         {<img className="col-8 imgTamaño" src={user.ArchivoBase64} alt="a"></img>}
                       </div>
                     </div>
-
-
                     <EditarInfoMongoDB mostrar={mostrarONo} btnCerrar={cerrarEditor}>
                       <form className="editForm">
                         <h2 className="col-12">{capTexto}</h2>
@@ -630,7 +664,11 @@ function ExperimentoConBD (){
                               <label className="col-3">Numeros:</label><input className="col-9" ref={refCapNumeros} value={numerosEd} onChange={cambioNumerosEd} type="number" placeholder={capNumeros}/>
                             </div>
                             <div className="col-5">
-                              <label className="col-3">Email:</label><input className="col-9" ref={refCapEmail} value={emailEd} onChange={cambioEmailEd} type="email" placeholder={capEmail}/>
+                              <label className="col-3">Email:</label>
+                              <div className="col-9 contInputYTooltipFrom">
+                                <input className={`col-12 inputTooltip `} ref={refCapEmail} value={emailEd} onChange={cambioEmailEd} type="email" placeholder={capEmail}/>
+                                <span className={`textoTooltip ${TooltipEmailViOOcEd} ${estadoTooltipEmailEd}`}>{txtTooltipEmailEd}</span>
+                              </div>
                             </div>
                           </div>
                           <div className=" col-12 d-flex justify-content-center">
