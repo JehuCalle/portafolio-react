@@ -1,6 +1,7 @@
 .cuerpoBD {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .estadoBD {
@@ -71,8 +72,8 @@
   text-align: center;
 }
 .estiloFormBD {
-  padding: 10px 10px 10px 10px; 
-  height: 100%;
+  max-width: 640px;
+  padding: 10px 10px 10px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -172,7 +173,13 @@
   box-shadow: 0px 0px 20px red;
 }
 
+.contBDMongoMySQL {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 .contBasesDeDatos {
+  margin: 0px 0px 15px 0px;
   padding: 0px 20px 0px 20px;
   height: 450px;
   display: flex;
@@ -180,6 +187,12 @@
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(90deg, red 10%, aqua 90%);
+  border: 10px solid rgb(0, 63, 88);
+  border-radius: 20px 0px 20px 0px;
+  -webkit-border-radius: 20px 0px 20px 0px;
+  -moz-border-radius: 20px 0px 20px 0px;
+  -ms-border-radius: 20px 0px 20px 0px;
+  -o-border-radius: 20px 0px 20px 0px;
 }
 
 .tablaEstilo {
@@ -197,10 +210,19 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
   background-image: linear-gradient(0deg, rgb(0, 77, 77) 1%, rgb(0, 19, 19) 30%);
   border: 4px solid rgb(0, 41, 37);
+}
+.contInfoUser {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.tamañoLimiInfo {
+  max-height: 145px;
+}
+.tamañoNoLimiInfo {
+  max-height: 385px;
 }
 .eliminarUser {
   width: 100%;
