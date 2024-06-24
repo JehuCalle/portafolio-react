@@ -8,10 +8,12 @@ function EditarInfoMongoDB({mostrar, btnCerrar, children}){
   return(
     <div className={MostrarOcultar}>
       <div className="modalMain">
-        <button
-          onClick={btnCerrar}>
-            X
-        </button>
+        <div className="contBtnCerrarModal col-12">
+          <button
+            onClick={btnCerrar}>
+              X
+          </button>
+        </div>
         {children}
       </div>
     </div>

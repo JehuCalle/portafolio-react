@@ -552,11 +552,15 @@ function ExperimentoConBD (){
     }
   }
 
+  const [ posicionTooltipForm, setPosicionTooltipForm ] = useState(window.innerWidth > 870 ? 'tooltipIzq' : 'tooltipAbajo');
+  const [ posicionTooltipEdit, setPosicionTooltipEdit ] = useState(window.innerWidth > 1090 ? 'tooltipIzq' : 'tooltipAbajo');
   const [ infoUserLimitONo, setInfoUserLimitONo ] = useState(window.innerWidth > 1200 ? 'tamañoLimiInfo' : 'tamañoNoLimiInfo');
 
   useEffect(()=>{
     const cambioDeTamaño = () => {
       setInfoUserLimitONo(window.innerWidth > 1200 ? 'tamañoLimiInfo' : 'tamañoNoLimiInfo');
+      setPosicionTooltipForm(window.innerWidth > 870 ? 'tooltipIzq' : 'tooltipAbajo');
+      setPosicionTooltipEdit(window.innerWidth > 1090 ? 'tooltipIzq' : 'tooltipAbajo');
     }
     window.addEventListener('resize', cambioDeTamaño);
 
@@ -569,26 +573,28 @@ function ExperimentoConBD (){
     <div className="col-12 cuerpoBD">
       <div className={`estadoBD ${estadoBD ? 'd-none' : ''}`}>
         <label className="lblEstadoBD">{textoLbl}</label>
+        <label>Este apartado lamentablemente no funciona en dispositivos mobiles, por favor ingrese desde una computadora para conectarse a la base de datos. 🙇‍♂️</label>
       </div>
       <div className={`contAlertaBD ${estadoTxtAlerta} ${estadoAnimAlerta}`} ref={refAlerta}>
         <label>{txtAlerta}</label>
       </div>
+      
       <div className="col-12 contFormBD">
         <div className="col-12 tituloFormBD">
             Formulario para probar BD
         </div>
-        <div className="col-11 col-sm-10 col-md-7 col-lg-6 col-xl-5 col-xxl-4 estiloFormBD">          
+        <div className="col-11 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4 estiloFormBD">          
           <form className="col-12 formBD">
-            <div className="col-12">
-              <div className="col-12 miniContFormBD">
+            <div className="col-12 contInputsForm espaciadoEntreInputs">
+              <div className="col-12 miniContFormBD espaciadoEntreInputs">
                 <input ref={refTexto} onChange={textoCaptura} type="text" placeholder="Cualquier texto :]"/>
                 <input ref={refPass} onChange={passCaptura} type="password" placeholder="Contraseña :]"/>
               </div>
-              <div className="col-12 miniContFormBD">
+              <div className="col-12 miniContFormBD espaciadoEntreInputs">
                 <input ref={refNumeros} onChange={numerosCaptura} type="number" placeholder="Solo numeros :]"/>
                 <div className="contInputYTooltipFrom">
                   <input className="inputTooltip" ref={refEmail} onChange={emailCaptura} type="email" placeholder="Email :]"/>
-                  <span className={`textoTooltip textoTooltipOc ${tooltipViOOcForm} ${estadoTooltipForm}`}>{textoTooltipEmailForm}</span>
+                  <span className={`textoTooltip ${posicionTooltipForm}  ${tooltipViOOcForm} ${estadoTooltipForm}`}>{textoTooltipEmailForm}</span>
                 </div>
               </div>
             </div>
@@ -676,87 +682,94 @@ function ExperimentoConBD (){
                         <label>Archivo</label>
                         {<img className="col-8 imgTamaño" src={user.ArchivoBase64} alt="a"></img>}
                       </div>
-                      <EditarInfoMongoDB mostrar={mostrarONo} btnCerrar={cerrarEditor}>
-                        <form className="editForm">
-                          <h2 className="col-12">{capTexto}</h2>
-                          <div className="col-12 contInputEdit">
-                            <div className="col-12 d-flex justify-content-evenly">
-                              <div className="col-5">
-                                <label className="col-3" >Texto:</label><input className="col-9" ref={refCapTexto} value={textoEd} onChange={cambioTextoEd} type="text" placeholder={capTexto} />  
-                              </div>
-                              <div className="col-5">
-                                <label className="col-3">Pass:</label><input className="col-9" ref={refCapPass} value={passEd} onChange={cambioPassEd} type="password" placeholder={capPass}/>
-                              </div>
-                            </div>
-                            <div className="col-12 d-flex justify-content-evenly">
-                              <div className="col-5">
-                                <label className="col-3">Numeros:</label><input className="col-9" ref={refCapNumeros} value={numerosEd} onChange={cambioNumerosEd} type="number" placeholder={capNumeros}/>
-                              </div>
-                              <div className="col-5">
-                                <label className="col-3">Email:</label>
-                                <div className="col-9 contInputYTooltipFrom">
-                                  <input className={`col-12 inputTooltip `} ref={refCapEmail} value={emailEd} onChange={cambioEmailEd} type="email" placeholder={capEmail}/>
-                                  <span className={`textoTooltip ${TooltipEmailViOOcEd} ${estadoTooltipEmailEd}`}>{txtTooltipEmailEd}</span>
-                                </div>
-                              </div>
-                            </div>
-                            <div className=" col-12 d-flex justify-content-center">
-                              <div className="col-2 d-flex justify-content-center">
-                                <label className="">Primero:</label><input className="" type="checkbox" checked={capPrimero} onChange={manejarCambioPri}/>
-                              </div>
-                              <div className="col-2 d-flex justify-content-center">
-                                <label className="">Segundo:</label><input className="" type="checkbox" checked={capSegundo} onChange={manejarCambioSeg}/>
-                              </div>
-                              <div className="col-2 d-flex justify-content-center">
-                                <label className="">Tercero:</label><input className="" type="checkbox" checked={capTercero} onChange={manejarCambioTer}/>
-                              </div>
-                              <div className="col-2 d-flex justify-content-center">
-                                <label className="">Cuarto:</label><input className="" type="checkbox" checked={capCuarto} onChange={manejarCambioCuar}/>
-                              </div>
-                            </div>
-                            <div className="col-12 d-flex justify-content-center">
-                              <div className="col-1 d-flex justify-content-center">
-                                <label className="">1</label><input className="col-3" value='1' type="radio" checked={capOpcion === '1'} onChange={estadoRadio}/>
-                              </div>
-                              <div className="col-1 d-flex justify-content-center">
-                                <label className="">2</label><input className="col-3" value='2' type="radio" checked={capOpcion === '2'} onChange={estadoRadio}/>
-                              </div>
-                              <div className="col-1 d-flex justify-content-center">
-                                <label className="">3</label><input className="col-3" value='3' type="radio" checked={capOpcion === '3'} onChange={estadoRadio}/>
-                              </div>
-                              <div className="col-1 d-flex justify-content-center">
-                                <label className="">4</label><input className="col-3" value='4' type="radio" checked={capOpcion === '4'} onChange={estadoRadio}/>
-                              </div>
-                            </div>
-                            <div className="col-12 d-flex justify-content-evenly">
-                              <div className="col-5">
-                                <label className="col-3">Fecha:</label><input className="col-9" value={fechaEd} ref={refCapFecha} onChange={cambioFechaEd} type="date"/>
-                              </div>
-                              <div className="col-3">
-                                <label className="col-5">Hora:</label><input className="col-5" value={horaEd} ref={refCapHora} onChange={cambioHoraEd} type="time"/>
-                              </div>
-                            </div>
-                            <div className="col-11">
-                              <label className="col-12">Descripcion:</label><textarea className="col-12 txTareaFormEditMDB" value={descripcionEd} ref={refCapDescripcion} onChange={cambioDescripcionEd}  rows="3" placeholder={capDescripcion}></textarea>
-                            </div>
-                            <div className="col-12 d-flex flex-wrap justify-content-center">
-                              <label className="col-12">Archivo:</label>
-                              <div className="col-12 d-flex justify-content-evenly align-items-center">
-                                <img className="imgTamaño" src={capArchivo} alt=""/>
-                                <div className="d-flex flex-column justify-content-center align-items-center">
-                                  <input ref={refCapArchivo} key={reiniciarArchivo} type="file" onChange={cambiosArchEdit} accept=".png, .jpeg, .jpg, .gif, .svg, .webp, .ico"/>
-                                  <label>{pesoArchivoEd}</label>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          
-                        </form>
-                        <button type="submit" onClick={enviarEditar}>Guardar</button>
-                      </EditarInfoMongoDB>
+
                   </div>
                 ))
               }
+
+              {/* SOLUCIONAR QUE CUANDO LA PANTALLA ES DE S10 NO SE MUESTRE LA X PARA CERRAR (DESACTIVANDO EL ALIGN-ITEM: CENTER DE 'mostrarModal' ) <= AL HACER ESO TAMBIEN HAY QUE SOLUCIONAR EL PROBLEMA QUE EL CONTENIDO DE ABAJO SE DESBORDA */}
+              <EditarInfoMongoDB mostrar={mostrarONo} btnCerrar={cerrarEditor}>
+                <form className="editForm">
+                  <h2 className="col-12">{capTexto}</h2>
+                  <div className="col-12 contInputEdit">
+                    <div className="col-12 contPrimCuaInp">
+                      <div className="col-12 d-flex justify-content-evenly flex-wrap">
+                        <div className="col-12 col-sm-8 col-md-5">
+                          <label className="col-3" >Texto:</label><input className="col-9" ref={refCapTexto} value={textoEd} onChange={cambioTextoEd} type="text" placeholder={capTexto} />  
+                        </div>
+                        <div className="col-12 col-sm-8 col-md-5">
+                          <label className="col-3">Pass:</label><input className="col-9" ref={refCapPass} value={passEd} onChange={cambioPassEd} type="password" placeholder={capPass}/>
+                        </div>
+                      </div> 
+                      <div className="col-12 d-flex justify-content-evenly flex-wrap">
+                        <div className="col-12 col-sm-8 col-md-5">
+                          <label className="col-3">Numeros:</label><input className="col-9" ref={refCapNumeros} value={numerosEd} onChange={cambioNumerosEd} type="number" placeholder={capNumeros}/>
+                        </div>
+                        <div className="col-12 col-sm-8 col-md-5 d-flex">
+                          <label className="col-3">Email:</label>
+                          <div className="col-9 contInputYTooltipFrom">
+                            <input className={`col-12 inputTooltip `} ref={refCapEmail} value={emailEd} onChange={cambioEmailEd} type="email" placeholder={capEmail}/>
+                            <span className={`textoTooltip ${posicionTooltipEdit} ${TooltipEmailViOOcEd} ${estadoTooltipEmailEd}`}>{txtTooltipEmailEd}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className=" col-12 d-flex justify-content-evenly flex-wrap">
+                      <div className="col-6 col-sm-2 d-flex justify-content-center">
+                        <label className="">Primero:</label><input className="" type="checkbox" checked={capPrimero} onChange={manejarCambioPri}/>
+                      </div>
+                      <div className="col-6 col-sm-2 d-flex justify-content-center">
+                        <label className="">Segundo:</label><input className="" type="checkbox" checked={capSegundo} onChange={manejarCambioSeg}/>
+                      </div>
+                      <div className="col-6 col-sm-2 d-flex justify-content-center">
+                        <label className="">Tercero:</label><input className="" type="checkbox" checked={capTercero} onChange={manejarCambioTer}/>
+                      </div>
+                      <div className="col-6 col-sm-2 d-flex justify-content-center">
+                        <label className="">Cuarto:</label><input className="" type="checkbox" checked={capCuarto} onChange={manejarCambioCuar}/>
+                      </div>
+                    </div>
+                    <div className="col-12 d-flex justify-content-center">
+                      <div className="col-2 col-sm-1 d-flex justify-content-center">
+                        <label className="">1</label><input className="col-3" value='1' type="radio" checked={capOpcion === '1'} onChange={estadoRadio}/>
+                      </div>
+                      <div className="col-2 col-sm-1 d-flex justify-content-center">
+                        <label className="">2</label><input className="col-3" value='2' type="radio" checked={capOpcion === '2'} onChange={estadoRadio}/>
+                      </div>
+                      <div className="col-2 col-sm-1 d-flex justify-content-center">
+                        <label className="">3</label><input className="col-3" value='3' type="radio" checked={capOpcion === '3'} onChange={estadoRadio}/>
+                      </div>
+                      <div className="col-2 col-sm-1 d-flex justify-content-center">
+                        <label className="">4</label><input className="col-3" value='4' type="radio" checked={capOpcion === '4'} onChange={estadoRadio}/>
+                      </div>
+                    </div>
+                    <div className="col-12 d-flex justify-content-evenly flex-wrap">
+                      <div className="col-12 col-sm-5">
+                        <label className="col-3">Fecha:</label><input className="" value={fechaEd} ref={refCapFecha} onChange={cambioFechaEd} type="date"/>
+                      </div>
+                      <div className="col-12 col-sm-3">
+                        <label className="col-3 col-sm-5">Hora:</label><input className="" value={horaEd} ref={refCapHora} onChange={cambioHoraEd} type="time"/>
+                      </div>
+                    </div>
+                    <div className="col-11">
+                      <label className="col-12">Descripcion:</label><textarea className="col-12 txTareaFormEditMDB" value={descripcionEd} ref={refCapDescripcion} onChange={cambioDescripcionEd}  rows="3" placeholder={capDescripcion}></textarea>
+                    </div>
+                    <div className="col-12 d-flex flex-wrap justify-content-center">
+                      <label className="col-12">Archivo:</label>
+                      <div className="col-12 d-flex justify-content-evenly align-items-center flex-wrap">
+                        <img className="imgTamaño" src={capArchivo} alt=""/>
+                        <div className="col-12 d-flex flex-column justify-content-center align-items-center">
+                          <input className="col-12" ref={refCapArchivo} key={reiniciarArchivo} type="file" onChange={cambiosArchEdit} accept=".png, .jpeg, .jpg, .gif, .svg, .webp, .ico"/>
+                          <label>{pesoArchivoEd}</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </form>
+                <div className="col-12 d-flex justify-content-center">
+                  <button className="col-8 col-sm-6 col-md-4 col-lg-3 col-xl-2" type="submit" onClick={enviarEditar}>Guardar</button>
+                </div>
+              </EditarInfoMongoDB>
             </div>
         </div>
         <div

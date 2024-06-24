@@ -3,7 +3,7 @@ const cors = require('cors');
 const app = express();
 
 //  settings
-app.set('port',process.env.PORT || 4000);
+app.set('port',process.env.PORT|| 4000);
 
 //  middlewares (funciones antes de llegar a las rutas)
 app.use(cors());    // PERMITIR EL INTERCAMBIO DE DATOS

@@ -8,6 +8,7 @@
   height: 94%;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-image: linear-gradient( 0deg, rgba(0, 18, 26, 0.712) 20%, rgba(0, 113, 145, 0.568) 70%);
@@ -62,7 +63,6 @@
 
 .contFormBD {
   margin: 50px 0px 50px 0px;
-  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,6 +93,14 @@
   align-content: space-around;
   justify-content: center;
 }
+.contInputsForm {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0px 30px 0px;
+}
+.espaciadoEntreInputs {
+  gap: 15px;
+}
 .miniContFormBD {
   display: flex;
   flex-wrap: wrap;
@@ -101,8 +109,9 @@
   text-align: center;
 }
 .contInputYTooltipFrom {
-  display: inline-block;
+  display: flex;
   position: relative;
+  flex-wrap: wrap;
 }
 .inputTooltip {
   position: relative;
@@ -116,7 +125,6 @@
   border-radius: 14px;
   position: absolute;
   z-index: 1;
-  left: 100%;
   transition: opacity 0.3s;
   -webkit-transition: opacity 0.3s;
   -moz-transition: opacity 0.3s;
@@ -126,6 +134,12 @@
   -moz-border-radius: 14px;
   -ms-border-radius: 14px;
   -o-border-radius: 14px;
+}
+.tooltipIzq {
+  left: 100%;
+}
+.tooltipAbajo {
+  bottom: -110%;
 }
 .textoTooltipOc {
   position: absolute;
@@ -230,7 +244,6 @@
   justify-content: flex-end;
 }
 .miniContUser2 {
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -254,6 +267,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+.contPrimCuaInp {
+  margin: 40px 0px 40px 0px;
 }
 
 .txTareaFormEditMDB {

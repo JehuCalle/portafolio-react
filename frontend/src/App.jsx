@@ -32,8 +32,8 @@ function App() {
           </Routes>
         </div>
       </div>
-      <div className='d-flex justify-content-center align-items-center flex-wrap flex-column text-center position-absolute opacity-50 col-12'>
-      <div className='col-sm-2 bg-danger'>sm</div>
+      <div className='d-flex justify-content-center align-items-center flex-wrap flex-column text-center position-absolute opacity-50 col-12 d-none'>
+        <div className='col-sm-2 bg-danger'>sm</div>
         <div className='col-md-4 bg-danger'>md</div>
         <div className='col-lg-6 bg-danger'>lg</div>
         <div className='col-xl-8 bg-danger'>xl</div>
