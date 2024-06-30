@@ -4,6 +4,7 @@ import LogoHTML from '../Img/html5Logo.png';
 import LogoJS from '../Img/javaScriptLogo.png';
 import LogoCSS from '../Img/cssLogo.png';
 import LogoReact from '../Img/reactLogo2.png';
+import LogoMongoDB from '../Img/mongoDBLogo.png'
 
 
 import { Link } from "react-router-dom";
@@ -192,7 +193,31 @@ function Inicio(){
                 <div className="proyectoN5">
                   <label className="h3">Proyecto N°5</label>
                   <label>Apartado en donde se envian y reciben datos de dos bases de datos, en la primera base de datos se utiliza MongoDB que es NoSQL y en la segunda base de datos se utiliza MySQL que es SQL.</label>
-                  <label> XXXXXXX, XXXX </label>
+                  <div className="miniContP col-12">
+                    <div className="miniContPImg">
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoHTML}/>
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoCSS}/>
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoJS}/>
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoReact}/>
+                      <img
+                        className="imgLogoProy bg-light" 
+                        alt="A"
+                        src={LogoMongoDB}/>
+                    </div>
+                    <label className="col-3 col-sm-4">XX XXXX 2024 </label>
+                  </div>
                 </div>
             </Link>
             <Link
