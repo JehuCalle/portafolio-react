@@ -1,0 +1,138 @@
+.compAll {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.contTerminado {
+  height: 75vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: rgb(0, 121, 121);
+}
+.rndReintentarBtn {
+  height: 70px;
+  width: 135px;
+}
+
+.puntos {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: rgb(2, 66, 66);
+}
+.contTxtPuntos {
+  height: 100%;
+  width: 300px;
+  padding: 0px 10px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.txtPuntos {
+  font-size: 40px;
+  color: rgb(0, 255, 179);
+}
+.btnReiniciarJR {
+  height: 50px;
+  width: 125px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 0px;
+}
+
+.contContadorPartida {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(0, 37, 37);
+  background-color: rgb(0, 247, 177);
+  border: 15px double red;
+  border-radius: 20px;
+}
+
+.guia {
+  width: 100%;
+  padding-top: 4%;
+  padding-bottom: 10%;
+  padding-left: 2%;
+  padding-right: 2%;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+.guiaHijo {
+  max-width: 1500px;
+}
+.guiaAnim {
+  animation-name: guiaDes;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes guiaDes {
+  0% {opacity: 100%;}
+  100% {opacity: 0%;}
+}
+
+.guiaBtnCerrar {
+  display: flex;
+  justify-content: end;
+}
+.guiaBtnCerrar button {
+  height: 35px;
+  margin: 0px 0px 0px 0px;  
+}
+
+.guiaInt {
+  max-height: 973px;
+  min-height: 670px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 58, 58);
+  box-shadow: 0 0 20px rgb(0, 77, 77);
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+.guiaIntF1 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.guiaNotitas {
+  max-height: 260px;
+  margin: 0px 0px 10px 0px;
+  padding: 0px 10px 10px 10px;
+  text-align: center;
+  background-color: rgb(0, 208, 145);
+  border: 5px solid rgb(0, 128, 89);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.guiaIntF1 h1 {
+  margin: 10px 0px 10px 0px;
+  color: rgb(0, 28, 19);
+  font-weight: bold;
+}
+.guiaIntF1 label {
+  color: rgb(1, 94, 66);
+}

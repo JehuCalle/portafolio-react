@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-
+import * as THREE from 'three';
 import '../Css/ExperimentoConBD.css';
 
 import axios from 'axios';
@@ -843,13 +843,13 @@ function ExperimentoConBD (){
       console.log('Error al guardar el producto en la base de datos.');
     }
   };
-  
+
   return(
     <div className="col-12 cuerpoBD">
       <div className={`estadoBD ${estadosBD ? 'd-none' : ''}`}>
         <label className="lblEstadoBD">{textoLbl}</label>
         <label className="lblEstadoBD">{textoLbl2}</label>
-        <label>Este apartado lamentablemente no funciona en dispositivos mobiles, por favor ingrese desde una computadora para conectarse a la base de datos. 🙇‍♂️</label>
+        <label className=" text-center">Este apartado lamentablemente no funciona en dispositivos mobiles, por favor ingrese desde una computadora para conectarse a la base de datos. 🙇‍♂️</label>
       </div>
       <div className={`contAlertaBD ${estadoTxtAlerta} ${estadoAnimAlerta}`} ref={refAlerta}>
         <label>{txtAlerta}</label>
@@ -1085,8 +1085,6 @@ function ExperimentoConBD (){
                 </div>
               ))
             }
-
-
           </div>
         </div>
       </div>

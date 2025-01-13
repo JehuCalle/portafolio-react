@@ -9,7 +9,7 @@ import ListaChat from "../Componentes/ListaChat.jsx";
 import '../Css/ProyectosRND.css';
 
 
-function ProyectosRND(){
+function ProyectosRND({oculto}){
 
   /* COLOR RND COLOR RND COLOR RND */
   const [colorRND, setColorRND] = useState({});

@@ -4,7 +4,8 @@ import LogoHTML from '../Img/html5Logo.png';
 import LogoJS from '../Img/javaScriptLogo.png';
 import LogoCSS from '../Img/cssLogo.png';
 import LogoReact from '../Img/reactLogo2.png';
-import LogoMongoDB from '../Img/mongoDBLogo.png'
+import LogoMongoDB from '../Img/mongoDBLogo.png';
+import LogoMySQL from '../Img/mySQLLogo.png';
 
 
 import { Link } from "react-router-dom";
@@ -215,13 +216,18 @@ function Inicio(){
                         className="imgLogoProy bg-light" 
                         alt="A"
                         src={LogoMongoDB}/>
+                      <img
+                        className="imgLogoProy bg-light" 
+                        alt="A"
+                        src={LogoMySQL}/>
                     </div>
-                    <label className="col-3 col-sm-4">XX XXXX 2024 </label>
+                    <label className="col-3 col-sm-4">17 Septiembre 2024 </label>
                   </div>
                 </div>
             </Link>
             <Link
-              className="proyectoDesactivado dividirPartesIguales col-12 col-lg-6 col-xl-4 col-xxl-4">
+              className="proyectoActivado didvidirPartesIguales col-12 col-lg-6 col-xl-4 col-xxl-4"
+              to= "Pages/JuegosRND">
                 <div className="proyectoN6">
                   <label className="h3">Proyecto N°6</label>
                   <label>Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente</label>

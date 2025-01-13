@@ -1,0 +1,22 @@
+.contBtnGlob {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.contBtnRnd {
+  height: 95%;
+  width: 100%;
+  margin: 0px 150px 0px 0px;
+}
+
+.botonRnd {
+  height: 100px !important;
+  width: 150px !important;
+  position: relative;
+}
+.botonRnd:hover{
+  background-color: rgb(0, 23, 39);
+  border: 5px solid rgb(0, 255, 191);
+  box-shadow: 0px 0px 10px red;
+}

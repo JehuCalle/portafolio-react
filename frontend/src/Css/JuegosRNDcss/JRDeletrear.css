@@ -1,0 +1,74 @@
+.t1 {
+  display: flex;
+  padding: 10px 5px 10px 5px;
+  flex-wrap: wrap;
+}
+
+.t2 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.deleContCentro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.delTextP {
+  width: 300px;
+  padding: 10px 0px 10px 0px;
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: center;
+  font-size: 30px;
+  color: rgb(0, 255, 179);
+}
+.deleContListPalabras {
+  margin: 10px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.t3 {
+  height: 200px;
+  max-width: 570px;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: red;
+  border: 5px dotted rgb(65, 0, 0);
+  border-top-left-radius: 90px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 90px;
+}
+.t3hijo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.t4 {
+  margin: 0px 0px 10px 0px;
+  text-align: center;
+  font-size: 30px;
+  color: rgb(36, 0, 0);
+}
+
+.t5 {
+  min-height: 230px;
+  width: 400px;
+  padding: 6px;
+  font-size: 20px;
+  color: rgb(0, 255, 179);
+  display: flex;
+  background-color: rgb(1, 48, 48);
+  border: 10px ridge red;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}

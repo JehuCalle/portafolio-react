@@ -1,0 +1,61 @@
+.patronGlobal {
+  padding: 20px 0px 20px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.turnoAct{
+  background-color: rgb(0, 71, 32);
+}
+.turnoDesAct{
+  background-color: rgb(71, 0, 0);
+}
+
+.contText {
+  font-size: 30px;
+}
+
+.contBtnPatron {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btnPatron {
+  height: 70px;
+  width: 100px;
+}
+
+.btnPatron:hover {
+  background-color: rgb(0, 57, 82);
+}
+
+.rojoAct {
+  border: 5px solid red ;
+  box-shadow: 0px 0px 10px red;
+}
+.azulAct {
+  border: 5px solid blue;
+  box-shadow: 0px 0px 10px blue;
+}
+.verdeAct {
+  border: 5px solid green;
+  box-shadow: 0px 0px 10px green;
+}
+.moradoAct {
+  border: 5px solid purple;
+  box-shadow: 0px 0px 10px purple;
+}
+.amarilloAct {
+  border: 5px solid yellow;
+  box-shadow: 0px 0px 10px yellow;
+}
+.cafeAct {
+  border: 5px solid rgb(73, 44, 24);
+  box-shadow: 0px 0px 10px rgb(129, 78, 44);
+}
+.naranjaAct {
+  border: 5px solid orange;
+  box-shadow: 0px 0px 10px orange;
+}
+
