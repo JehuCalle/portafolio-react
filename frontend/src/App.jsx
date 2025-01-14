@@ -34,8 +34,8 @@ function App() {
           </Routes>
         </div>
       </div>
-      <div className='d-flex justify-content-center align-items-center flex-wrap flex-column text-center position-absolute opacity-50 col-12'>
-      <div className='col-sm-2 bg-danger'>{'- <-576'}</div>
+      <div className='d-flex justify-content-center align-items-center flex-wrap flex-column text-center position-absolute opacity-50 d-none col-12'>
+        <div className='col-sm-2 bg-danger'>{'- <-576'}</div>
         <div className='col-sm-2 bg-danger'>{'sm <-768'}</div>
         <div className='col-md-4 bg-danger'>{'md <-992'}</div>
         <div className='col-lg-6 bg-danger'>{'lg <-1200'}</div>

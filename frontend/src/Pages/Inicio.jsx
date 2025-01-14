@@ -91,6 +91,10 @@ function Inicio(){
                       <img
                         className="imgLogoProy" 
                         alt="A"
+                        src={LogoBootstrap}/>
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
                         src={LogoJS}/>
                       <img
                         className="imgLogoProy" 
@@ -117,6 +121,10 @@ function Inicio(){
                         className="imgLogoProy" 
                         alt="A"
                         src={LogoCSS}/>
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoBootstrap}/>
                       <img
                         className="imgLogoProy" 
                         alt="A"
@@ -149,6 +157,10 @@ function Inicio(){
                       <img
                         className="imgLogoProy" 
                         alt="A"
+                        src={LogoBootstrap}/>
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
                         src={LogoJS}/>
                       <img
                         className="imgLogoProy" 
@@ -175,6 +187,10 @@ function Inicio(){
                         className="imgLogoProy" 
                         alt="A"
                         src={LogoCSS}/>
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoBootstrap}/>
                       <img
                         className="imgLogoProy" 
                         alt="A"
@@ -207,6 +223,10 @@ function Inicio(){
                       <img
                         className="imgLogoProy" 
                         alt="A"
+                        src={LogoBootstrap}/>
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
                         src={LogoJS}/>
                       <img
                         className="imgLogoProy" 
@@ -230,8 +250,32 @@ function Inicio(){
               to= "Pages/JuegosRND">
                 <div className="proyectoN6">
                   <label className="h3">Proyecto N°6</label>
-                  <label>Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente Proximamente</label>
-                  <label> XXXXXXX, XXXX </label>
+                  <label>Apartado donde en 120 segundos se tiene que superar varios minijuegos y lograr la mayor cantidad de puntos posibles.</label>
+                  <div className="miniContP col-12">
+                    <div className="miniContPImg">
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoHTML}/>
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoCSS}/>
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoBootstrap}/>
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoJS}/>
+                      <img
+                        className="imgLogoProy" 
+                        alt="A"
+                        src={LogoReact}/>
+                    </div>
+                    <label>14 Enero 2025 </label>
+                  </div>
                 </div>
             </Link>
           </div>

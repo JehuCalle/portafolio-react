@@ -235,7 +235,7 @@ function JuegosRND(){
           REINTENTAR
         </button>
       </div>
-      {
+      {/*
       <div className="d-flex position-absolute">
         <button
           onClick={BtnJRDelOcultar}>
@@ -261,7 +261,7 @@ function JuegosRND(){
           TEST
         </button>
       </div>
-      }
+      */}
       <div className="col-12 puntos">
         <div className="contTxtPuntos">
           <label className="txtPuntos">Puntos: {puntos}</label>

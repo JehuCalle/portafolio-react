@@ -15,6 +15,9 @@ function JRDeletrear({pasarSumarPuntos, deletrearOcultar, deletrarFin, activar, 
   const [ contadorDel, setContadorDel ] = useState(15.00);
   const [ estadoContDel, setEstadoContDel ] = useState(false);
 
+  const [ estadoBtnInicio, setEstadoBtnInicio ] = useState(false);
+  const [ mostrarBtnIni, setMostrarBotonIni ] = useState(true); 
+
   const manejarCambioPalabra = (e) => {
     setPalabraDeletreo(e.target.value);
   };
@@ -48,9 +51,17 @@ function JRDeletrear({pasarSumarPuntos, deletrearOcultar, deletrarFin, activar, 
     return () => clearInterval(intervalo);
   },[estadoContDel, contadorDel]);
 
+  const btnIniciarDel = () => {
+    setEstadoBtnInicio(true);
+  };
+
+  useEffect(()=>{
+
+  },[]);
+
   useEffect(()=>{
     const detectarTecla = (e) => {
-      if ((e.key === '.') && activar === false){
+      if ( (e.key === '.') && activar === false ){
         setEstadoContDel(true);
         activarContGlob(true);
         setEsInputDeletreo(false);
@@ -59,12 +70,24 @@ function JRDeletrear({pasarSumarPuntos, deletrearOcultar, deletrarFin, activar, 
         }, 0);
       }
     };
+
+    if( estadoBtnInicio === true && activar === false){
+      setEstadoContDel(true);
+      activarContGlob(true);
+      setEsInputDeletreo(false);
+      setEstadoBtnInicio(false);
+      setMostrarBotonIni(false);
+      setTimeout(()=>{
+        deletreoRef.current?.focus();
+      }, 0);
+    };
     
     if( activar === true ){
       setEstadoContDel(false);
       setPalabrasCompl([]);
       setEsInputDeletreo(true);
       deletreoRef.current.value = '';
+      setMostrarBotonIni(true);
       setTimeout(() => {
         setContadorDel(15.00);
       }, 50);
@@ -75,7 +98,7 @@ function JRDeletrear({pasarSumarPuntos, deletrearOcultar, deletrarFin, activar, 
     return () => {
       window.removeEventListener('keydown',detectarTecla);
     };
-  },[activar]);
+  },[activar, estadoBtnInicio]);
 
   useEffect(()=>{
     if( palabra === '' ){
@@ -105,7 +128,7 @@ function JRDeletrear({pasarSumarPuntos, deletrearOcultar, deletrarFin, activar, 
       <div className="col-12 t1">
         <div className="col-12 col-sm-12 col-md-12 deleContCentro">
           <div className="col-12 col-sm-7 col-lg-5 col-xxl-4 d-flex flex-column align-items-center">
-            <label className="delTextP">Presiona 「·」 para comenzar</label>
+            <label className="delTextP">Presiona la tecla o botón「·」para comenzar</label>
             <div className="col-12 t3">
               <div className="col-12 t3hijo">
                 <label className="t4">{palabra}</label>
@@ -123,6 +146,13 @@ function JRDeletrear({pasarSumarPuntos, deletrearOcultar, deletrarFin, activar, 
               </div>
             </div>
           </div>
+        </div>
+        <div className="col-12 contBtnIniciar">
+          <button
+            className={`btnIniciar ${mostrarBtnIni ? '' : 'd-none'}`}
+            onClick={btnIniciarDel}>
+              「·」
+          </button>
         </div>
         <div className="col-12 col-sm-12 col-md-12 deleContListPalabras">
           <div className="t5">
