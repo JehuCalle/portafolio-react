@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portafolio-react/static/css/main.eb9731e9.css",
-    "main.js": "/portafolio-react/static/js/main.fd248b0c.js",
+    "main.css": "/portafolio-react/static/css/main.8b19d6f6.css",
+    "main.js": "/portafolio-react/static/js/main.40f8bcb2.js",
     "static/media/PaB.png": "/portafolio-react/static/media/PaB.138c5a54032180074923.png",
     "static/media/PaP.png": "/portafolio-react/static/media/PaP.3fd160775e41701b966e.png",
     "static/media/NoHaceNadaHD.png": "/portafolio-react/static/media/NoHaceNadaHD.84dfc03e00cdc5839181.png",
@@ -90,11 +90,11 @@
     "static/media/roboto-greek-ext-400-normal.woff": "/portafolio-react/static/media/roboto-greek-ext-400-normal.f708607d2a7290fb8bfa.woff",
     "static/media/roboto-greek-ext-700-normal.woff": "/portafolio-react/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
     "static/media/bootstrap-5Logo.svg": "/portafolio-react/static/media/bootstrap-5Logo.98585727bcfe0b1555649ec9bbab236c.svg",
-    "main.eb9731e9.css.map": "/portafolio-react/static/css/main.eb9731e9.css.map",
-    "main.fd248b0c.js.map": "/portafolio-react/static/js/main.fd248b0c.js.map"
+    "main.8b19d6f6.css.map": "/portafolio-react/static/css/main.8b19d6f6.css.map",
+    "main.40f8bcb2.js.map": "/portafolio-react/static/js/main.40f8bcb2.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb9731e9.css",
-    "static/js/main.fd248b0c.js"
+    "static/css/main.8b19d6f6.css",
+    "static/js/main.40f8bcb2.js"
   ]
 }
