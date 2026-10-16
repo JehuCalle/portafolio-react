@@ -1,0 +1,24 @@
+.contRNP{
+  min-height: 800px;
+  max-height: 1300px;
+}
+
+.txtDesc{
+  line-height: 40px;
+  text-align: center;
+}
+
+.RNPimg{
+  width: 280px;
+  height: 600px;
+}
+
+
+.btnSigAnt{
+  height: 40px;
+  width: 100px;
+}
+.btnDescargar{
+  height: 50px;
+  width: 150px
+}

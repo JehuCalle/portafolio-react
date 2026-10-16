@@ -11,6 +11,7 @@ import PiedraPapelTijera from './Pages/PiedraPapelTijera.jsx';
 import DiferentesAnim from './Pages/DiferentesAnim.jsx';
 import ExperimentoConBD from './Pages/ExperimentoConBD.jsx';
 import JuegosRND from './Pages/JuegosRND.jsx';
+import RNPlantas from './Pages/RNPlantas.jsx';
 
 import { Routes, Route} from 'react-router-dom';
 
@@ -30,6 +31,7 @@ function App() {
               <Route path="Pages/DiferentesAnim" element={<DiferentesAnim/>} />
               <Route path="Pages/ExperimentoConBD" element={<ExperimentoConBD/>} />
               <Route path="Pages/JuegosRND" element={<JuegosRND/>} />
+              <Route path="Pages/RNPlantas" element={<RNPlantas/>} />
             </Route>
           </Routes>
         </div>

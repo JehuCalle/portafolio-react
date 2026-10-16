@@ -1,15 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 
-import Logo from '../Img/NoHaceNadaChiquito.png';
-/*
-import PrimeraIMG from '../Img/1.png';
-import SegundaIMG from '../Img/2.png';
-import TerceraIMG from '../Img/3.png';
-import CuartaIMG from '../Img/4.png';
-import QuintaIMG from '../Img/5.png';
-*/
+import Logo from '../Img/TarjetaRND/triangulo-de-penrose.png';
 
-import NoHaceNadaHD from '../Img/PiedraPapelTijera/NoHaceNadaHD.png'
+import Figura1 from '../Img/TarjetaRND/forma-abstracta.png'
+import Figura2 from '../Img/TarjetaRND/forma-geometrica.png'
+import Figura3 from '../Img/TarjetaRND/geometrico.png'
+import Figura4 from '../Img/TarjetaRND/semilla-de-vida.png'
+import Figura5 from '../Img/TarjetaRND/triangulora.png'
 
 import '../Css/TarjetaRND.css';
 
@@ -95,21 +92,21 @@ function TarjetaRND(){
             alt="LogoNoHaceNada">
           </img>
         </div>
-        <label className="titulo col-9 col-sm-10 col-md-10 col-lg-11 col-xl-11 col-xxl-11">TRIPTICO EL GATO * NO HACE NADA *</label>
+        <label className="titulo col-9 col-sm-10 col-md-10 col-lg-11 col-xl-11 col-xxl-11">Ejemplo basico de triptico</label>
       </div>
       <div className={`contenedorCuerpo d-flex flex-column ${claseCuerpo}`}>
         <div className={ `contenedorTarjeta ${claseTarjeta}   col-12 col-sm-10 col-md-12 col-lg-11 col-xl-9 col-xxl-9` }>
           <div className="imagenes col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
             <img
               className="tamañoTarjetaIMG primerDiv"
-              src={NoHaceNadaHD}
+              src={Figura1}
               alt="CuartaIMG">
             </img>
           </div>
           <div className="imagenes col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
             <img
               className="tamañoTarjetaIMG tercerDiv pagina1"
-              src={NoHaceNadaHD}
+              src={Figura2}
               alt="QuintaIMG"
               ref={pagina1}>
             </img>
@@ -118,7 +115,7 @@ function TarjetaRND(){
           <div className="imagenes col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
             <img
               className="tamañoTarjetaIMG segundoDiv pagina2"
-              src={NoHaceNadaHD}
+              src={Figura3}
               alt="SegundaIMG"
               ref={pagina2}>
             </img>
@@ -126,7 +123,7 @@ function TarjetaRND(){
           <div className="imagenes col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
             <img
               className="tamañoTarjetaIMG segundoDiv pagina3"
-              src={NoHaceNadaHD }
+              src={Figura4 }
               alt="TerceraIMG"
               ref={pagina3}>
             </img>
@@ -135,7 +132,7 @@ function TarjetaRND(){
           <div className="imagenes col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
             <img
               className="tamañoTarjetaIMG tercerDiv pagina4"
-              src={NoHaceNadaHD}
+              src={Figura5}
               alt="PrimeraIMG"
               ref={pagina4}>
             </img>

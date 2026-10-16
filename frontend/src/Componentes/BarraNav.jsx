@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import logoBarra from '../Img/gato-normal.jpg';
+import logoBarra from '../Img/logoApp.png';
 import { Outlet, Link } from "react-router-dom";
 
 import LogoGitHub from '../Img/githubLogo.png';
@@ -50,7 +50,7 @@ function BarraNav(){
         <div
           className='col-12 contBarraMovil'
           ref={barraNavMobil}>
-          <div className="col-ImgBarDesplegable col-3 col-sm-2">
+          <div className="ImgBarDesplegable col-3 col-sm-2">
             <img
               className = 'imagenBarra'
               src = {logoBarra}
@@ -106,7 +106,7 @@ function BarraNav(){
             to="Pages/Contacto">Contacto
           </Link>
         </div>
-        <div className="col-1">
+        <div className="">
           <img
             className='gitHubNav btnGitHubNav'
             src={LogoGitHub}

@@ -11,6 +11,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 
+    -4px 4px 12px 2px rgba(0, 5, 7),
+    4px -4px 12px 2px rgb(0, 29, 37);
 }
 
 .textoSeparado {
@@ -23,11 +26,15 @@
 /* HABILIDADES HABILIDADES HABILIDADES HABILIDADES HABILIDADES HABILIDADES HABILIDADES HABILIDADES HABILIDADES HABILIDADES */
 
 .contenedorHabilidades{
-  margin: 0px 0px 40px 0px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 30px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow:
+    -4px 4px 12px 2px rgba(0, 5, 7),
+    4px -4px 12px 2px rgb(0, 29, 37);
 }
 
 .contenedorImagenesHab {
@@ -36,7 +43,6 @@
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(90deg, #5cd7ab 44%, #1f7fff 90%);
-  border: 5px double red;
   border-top-left-radius: 40px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
@@ -59,55 +65,60 @@
   width: 20%;
   border-bottom-right-radius: 34px;
 }
+.logoFirebase {
+  width: 20%;
+}
+.logoNotifee {
+  width: 20%;
+}
+.logoTailwindCSS {
+  width: 20%;
+}
 /* PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS PROYECTOS */
 
 .campoProyectos {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: end;
+  align-items: start;
 }
-.contenedorProtectos {
+.contenedorProyectos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
+  padding: 0px 0px 
 }
 
 .contenedorImagenesProy {
-  padding: 10px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(3, 26, 26);
-  border: 10px double red;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 40px;
+  justify-content: space-evenly;
+  align-items: space-between;
+  padding: 0px 10px 20px 10px;
 }
 .dividirPartesIguales {
   display: flex;
   justify-content: center;
   align-items: center;
   color: rgb(0, 19, 27);
+  margin: 20px 0px;
+  padding: 10px 10px;
+  box-shadow:
+    -4px 4px 12px 2px rgba(0, 5, 7),
+    4px -4px 12px 2px rgb(0, 29, 37);
 }
 .proyectoActivado {
   color: rgb(141, 255, 255);
-  background-color: rgb(1, 9, 20);
-  border: 5px solid rgb(1, 255, 255);
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  background-color: rgb(0, 20, 26);
 }
 .proyectoActivado label {
   cursor: pointer;
 }
 .proyectoActivado:hover {
-  opacity: 50%;
+  box-shadow:
+    -4px 4px 12px 4px rgb(0, 51, 65);
 }
 .proyectoDesactivado {
   color: rgb(141, 255, 255);
@@ -188,30 +199,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.contenedorImagenesHerr {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(90deg, #5cd7ab 44%, #1f7fff 90%);
-  border: 5px double red;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 40px;
-}
-.logoVisualCode {
-  width: 30%;
-  padding: 8px;
-}
-.logoGitHub {
-  width: 33%;
-  padding: 6px;
-}
-.logoGitHubDesk {
-  width: 33%;
 }
 
 .contNota {

@@ -36,7 +36,7 @@ function JRPiPaTi({pasarSumarPuntos, piPaTiOcultar, piPaTiFin, activar}) {
   });  
 
   const [ vidasUs, setVidasUs ] = useState(3);
-  const [ VidasEne, setVidasEne ] = useState(3);
+  const [ VidasEne, setVidasEne ] = useState(1);
 
 
   const [ tipoGifEn, setTipoGifEn ] = useState(Default);
@@ -116,7 +116,7 @@ function JRPiPaTi({pasarSumarPuntos, piPaTiOcultar, piPaTiFin, activar}) {
       setContadorVicEne(0);
       setContadorUsDerr(0);
       setVidasUs(3);
-      setVidasEne(3);
+      setVidasEne(1);
 
       setAtaqueUsSty({
         width: '0%'
@@ -221,12 +221,12 @@ function JRPiPaTi({pasarSumarPuntos, piPaTiOcultar, piPaTiFin, activar}) {
 
 
   useEffect(()=>{
-    if(contadorJefeDerr === 3){
+    if(contadorJefeDerr === 1){
       console.log("DERROTASTE AL JEFE");
       setContadorJefeDerr(0);
       setContadorUsDerr(0);
       setTimeout(() => {
-        setVidasEne(3);
+        setVidasEne(1);
         setVidasUs(3);
       }, 2000);
       pasarSumarPuntos();
@@ -237,7 +237,7 @@ function JRPiPaTi({pasarSumarPuntos, piPaTiOcultar, piPaTiFin, activar}) {
       setContadorUsDerr(0);
       setContadorJefeDerr(0);
       setTimeout(() => {
-        setVidasEne(3);
+        setVidasEne(1);
         setVidasUs(3);
       }, 2000);
     }

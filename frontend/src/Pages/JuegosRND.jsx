@@ -298,7 +298,7 @@ function JuegosRND(){
               </div>
               <div className="col-12 col-sm-4 col-md-3 col-lg-3 col-xxl-2 guiaNotitas">
                 <h1>Piedra Papel Tijera</h1>
-                <label>Derrota al enemigo acertando 3 veces para quitarle 1 de las 3 vidas al enemigos para ganar.</label>
+                <label>Derrota al enemigo acertando 3 veces seguidas para ganar.</label>
               </div>
               <div className="col-12 col-sm-4 col-md-3 col-lg-3 col-xxl-2 guiaNotitas">
                 <h1>Botón</h1>
