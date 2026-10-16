@@ -40,7 +40,7 @@ function Inicio(){
         <div className="quienSoyCont col-10 col-sm-10 col-md-10 col-lg-5 col-xl-5 col-xxl-6">
           <h1 className="testTitulo">Quien soy</h1>
           <label className="textoSeparado">
-            Mi nombre es Jehú Calle, vivo en Chile, en la región de Ñuble, actualmente mi objetivo es especializarme en el desarrollo front-end para luego aprender a desarrollar en back-end y ser un desarrollador full-stack y luego de ser un desarrollador full-stack, me gustaría aprender otros lenguajes de programación para incrementar mis conocimientos en programación.
+            Mi nombre es Jehú Calle, vivo en Chile, titulado como Ingeniero en Informática y me especializo en el desarrollo front-end de aplicaciones web con React JS + Bootstrap y en aplicaciones móviles con React Native + Tailwind CSS. Ya que me gusta ser autodidacta y aprender cada vez más cosas nuevas, he logrado estar más cerca de ser un desarrollador mobile full-stack, gracias a eso he logrado implementar varias funciones de Firebase a mi aplicación mobile, la cual me gustaría perfeccionar e implementar varias ideas más.
           </label>
         </div>
         <div className="contenedorHabilidades col-10 col-sm-10 col-md-10 col-lg-4">

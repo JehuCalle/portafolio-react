@@ -56,7 +56,7 @@ function App() {
           </div>
           <div
             className="miniContFoot col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
-            <label>jehucallecontacto@gmail.com</label>
+            <label>josiasandres56@gmail.com</label>
           </div>
         </div>
       </footer>
