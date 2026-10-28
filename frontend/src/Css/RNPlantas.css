@@ -1,6 +1,12 @@
 .contRNP{
   min-height: 800px;
-  max-height: 1300px;
+  max-height: 1600px;
+}
+
+.imgLogos{
+  height: 70px;
+  width: 70px;
+  background-color: rgb(0, 33, 43);
 }
 
 .txtDesc{

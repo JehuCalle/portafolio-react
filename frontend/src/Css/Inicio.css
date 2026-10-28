@@ -82,13 +82,15 @@
   flex-direction: row;
   justify-content: end;
   align-items: start;
+  z-index: 1;
 }
 .contenedorProyectos {
   display: flex;
   flex-wrap: wrap;
   justify-content: end;
   align-items: center;
-  padding: 0px 0px 
+  padding: 0px 0px;
+  z-index: 5;
 }
 
 .contenedorImagenesProy {
@@ -111,7 +113,7 @@
 }
 .proyectoActivado {
   color: rgb(141, 255, 255);
-  background-color: rgb(0, 20, 26);
+  background-color: rgb(0, 20, 26,0.6);
 }
 .proyectoActivado label {
   cursor: pointer;
@@ -210,6 +212,7 @@
   bottom: 60px;
   right: 10px;
   pointer-events: none; /*PARA QUE EL CURSON IGNORE ESTE CAMPO Y PERMITA PRESIONAR A TRAVES DE ESTE */
+  z-index: 10000;
 }
 .btnNota {
   margin-right: 0px;
@@ -236,4 +239,155 @@
   100% {
     opacity: 0%;
   }
+}
+
+
+/* CONSTELACION CONSTELACION CONSTELACION CONSTELACION CONSTELACION CONSTELACION CONSTELACION */
+
+@keyframes parpadeoLinea {
+  0%{
+    opacity: 1%;
+  }
+  50%{
+    opacity: 20%;  
+  }
+  100%{
+    opacity: 1%;
+  }
+}
+.parpadeoLinea1{
+  animation: parpadeoLinea 2s ease-in-out infinite;
+  animation-delay: 1s;
+}
+.parpadeoLinea2{
+  animation: parpadeoLinea 2s ease-in-out infinite;
+  animation-delay: -2s;
+}
+.parpadeoLinea3{
+  animation: parpadeoLinea 2s ease-in-out infinite;
+  animation-delay: -3.5s;
+}
+.parpadeoLinea4{
+  animation: parpadeoLinea 2s ease-in-out infinite;
+  animation-delay: -4s;
+}
+.parpadeoLinea5{
+  animation: parpadeoLinea 2s ease-in-out infinite;
+  animation-delay: -5s;
+}
+
+
+.contConst{
+  height: 69%;
+  position: absolute;
+  z-index: 0;
+}
+.contConstCap{
+  position: absolute;
+  height: 400px;
+  margin: 80px 0px 0px 0px;
+}
+.constCapri:hover{
+  animation: none !important;
+
+  opacity: 1;
+  transform: scale(1.5);
+  box-shadow: 0px 0px 10px rgba(252, 252, 252, 0.966);
+}
+.constCapri{
+  position: absolute;
+  height: 5px;
+  width: 5px;
+}
+@keyframes parpadeoEstrella {
+  0%{
+    opacity: 70%;
+    transform: scale(0.6);
+  }
+  50%{
+    opacity: 100%;
+    transform: scale(1.5);
+    box-shadow: 0px 0px 10px rgba(252, 252, 252, 0.966);
+  }
+  100%{
+    opacity: 70%;
+    transform: scale(0.6);
+  }
+}
+.constCap1{
+  top: 9%;
+  left: 8.5%;
+  rotate: 45deg;
+  animation: parpadeoEstrella 4s ease-in-out infinite;
+  animation-delay: -1s;
+}
+.constCap2{
+  top: 22.8%;
+  left: 12.1%;
+  rotate: 20deg;
+  animation: parpadeoEstrella 4s ease-in-out infinite;
+  animation-delay: -2.5s;
+}
+.constCap3{
+  bottom: 50%;
+  left: 14.7%;
+  rotate: 50deg;
+  animation: parpadeoEstrella 4s ease-in-out infinite;
+  animation-delay: -4s;
+}
+.constCap4{
+  bottom: 27.6%;
+  left: 22.1%;
+  rotate: 70deg;
+    animation: parpadeoEstrella 4s ease-in-out infinite;
+  animation-delay: -2.5s;
+}
+.constCap5{
+  bottom: 10%;
+  left: 29.4%;
+  rotate: 20deg;
+  animation: parpadeoEstrella 4s ease-in-out infinite;
+  animation-delay: -3s;
+}
+.constCap6{
+  bottom: 14%;
+  left: 34.6%;
+  rotate: 45deg;
+  animation: parpadeoEstrella 4s ease-in-out infinite;
+  animation-delay: -5s;
+}
+.constCap7{
+  top: 11%;
+  left: 13.7%;
+  rotate: 60deg;
+  animation: parpadeoEstrella 4s ease-in-out infinite;
+  animation-delay: -1.5s;
+}
+.constCap8{
+  top: 20%;
+  left: 20%;
+  rotate: 45deg;
+  animation: parpadeoEstrella 4s ease-in-out infinite;
+  animation-delay: -3s;
+}
+.constCap9{
+  top: 30.1%;
+  left: 31.9%;
+  rotate: 10deg;
+  animation: parpadeoEstrella 4s ease-in-out infinite;
+  animation-delay: -6.0s;
+}
+.constCap10{
+  top: 51.1%;
+  left: 84%;
+  rotate: 45deg;
+  animation: parpadeoEstrella 4s ease-in-out infinite;
+  animation-delay: -1.5s;
+}
+.constCap11{
+  top: 48.8%;
+  left: 89.1%;
+  rotate: 55deg;
+  animation: parpadeoEstrella 4s ease-in-out infinite;
+  animation-delay: -1s;
 }
