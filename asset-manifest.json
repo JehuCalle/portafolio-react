@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portafolio-react/static/css/main.02ec8bbf.css",
+    "main.css": "/portafolio-react/static/css/main.fd539f79.css",
     "main.js": "/portafolio-react/static/js/main.59f47a85.js",
     "static/media/PaB.png": "/portafolio-react/static/media/PaB.138c5a54032180074923.png",
     "static/media/PaP.png": "/portafolio-react/static/media/PaP.3fd160775e41701b966e.png",
@@ -100,11 +100,11 @@
     "static/media/roboto-greek-ext-400-normal.woff": "/portafolio-react/static/media/roboto-greek-ext-400-normal.f708607d2a7290fb8bfa.woff",
     "static/media/roboto-greek-ext-700-normal.woff": "/portafolio-react/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
     "static/media/bootstrap-5Logo.svg": "/portafolio-react/static/media/bootstrap-5Logo.98585727bcfe0b1555649ec9bbab236c.svg",
-    "main.02ec8bbf.css.map": "/portafolio-react/static/css/main.02ec8bbf.css.map",
+    "main.fd539f79.css.map": "/portafolio-react/static/css/main.fd539f79.css.map",
     "main.59f47a85.js.map": "/portafolio-react/static/js/main.59f47a85.js.map"
   },
   "entrypoints": [
-    "static/css/main.02ec8bbf.css",
+    "static/css/main.fd539f79.css",
     "static/js/main.59f47a85.js"
   ]
 }
