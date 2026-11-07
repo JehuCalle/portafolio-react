@@ -39,13 +39,13 @@ function Inicio(){
   return(
     <div className="contenedorDivs">
       <div className="col-12 py-5 row justify-content-evenly align-items-center">
-        <div className="quienSoyCont col-10 col-sm-10 col-md-10 col-lg-5 col-xl-5 col-xxl-6">
+        <div className="quienSoyCont rounded-3 col-10 col-sm-10 col-md-10 col-lg-5 col-xl-5 col-xxl-6">
           <h1 className="testTitulo">Quien soy</h1>
           <label className="textoSeparado">
             Mi nombre es Jehú Calle, vivo en Chile, titulado como Ingeniero en Informática y me especializo en el desarrollo front-end de aplicaciones web con React JS + Bootstrap y en aplicaciones móviles con React Native + Tailwind CSS. Ya que me gusta ser autodidacta y aprender cada vez más cosas nuevas, he logrado estar más cerca de ser un desarrollador mobile full-stack, gracias a eso he logrado implementar varias funciones de Firebase a mi aplicación mobile, la cual me gustaría perfeccionar e implementar varias ideas más.
           </label>
         </div>
-        <div className="contenedorHabilidades col-10 col-sm-10 col-md-10 col-lg-4">
+        <div className="contenedorHabilidades rounded-3 col-10 col-sm-10 col-md-10 col-lg-4">
           <h1>Habilidades en</h1>
           <div className="contenedorImagenesHab col-11 col-sm-8 col-md-8 col-lg-10 col-xl-10 col-xxl-10">
             <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -235,7 +235,7 @@ function Inicio(){
           <h3 className="col-12 m-0">React Native</h3>
           <div className="contenedorImagenesProy col-12">
             <Link
-              className="proyectoActivado dividirPartesIguales col-12 col-sm-10 col-md-10 col-lg-5 col-xl-5 col-xxl-6"
+              className="proyectoActivado dividirPartesIguales rounded-3 col-12 col-sm-10 col-md-10 col-lg-5 col-xl-5 col-xxl-6"
               to= "Pages/RNPlantas">
                 <div className="proyectoN6">
                   <label className="h3">Guallaby</label>
@@ -269,7 +269,7 @@ function Inicio(){
           <h3 className="col-12 m-0">React JS</h3>
           <div className="contenedorImagenesProy col-12">
             <Link
-              className="proyectoActivado dividirPartesIguales col-12 col-sm-10 col-md-10 col-lg-5 col-xl-5 col-xxl-5"
+              className="proyectoActivado dividirPartesIguales rounded-3 col-12 col-sm-10 col-md-10 col-lg-5 col-xl-5 col-xxl-5"
               to= "Pages/JuegosRND">
                 <div className="proyectoN6">
                   <label className="h3">Mini juegos</label>
@@ -302,7 +302,7 @@ function Inicio(){
                 </div>
             </Link>
             <Link
-              className="proyectoActivado dividirPartesIguales col-12 col-sm-10 col-md-10 col-lg-5 col-xl-5 col-xxl-5"
+              className="proyectoActivado dividirPartesIguales rounded-3 col-12 col-sm-10 col-md-10 col-lg-5 col-xl-5 col-xxl-5"
               to= "Pages/ExperimentoConBD">
                 <div className="proyectoN5">
                   <label className="h3">Formulario con base de datos</label>
@@ -343,7 +343,7 @@ function Inicio(){
                 </div>
             </Link>
             <Link 
-              className="proyectoActivado dividirPartesIguales col-12 col-sm-10 col-md-10 col-lg-5 col-xl-5 col-xxl-5"
+              className="proyectoActivado dividirPartesIguales rounded-3 col-12 col-sm-10 col-md-10 col-lg-5 col-xl-5 col-xxl-5"
               to= "Pages/DiferentesAnim">
                 <div className="proyectoN4">
                   <label className="h3">Botones Vanilla y Mui Core</label>
@@ -376,7 +376,7 @@ function Inicio(){
                 </div>
             </Link>
             <Link 
-              className="proyectoActivado dividirPartesIguales col-12 col-sm-10 col-md-10 col-lg-5 col-xl-5 col-xxl-5"
+              className="proyectoActivado dividirPartesIguales rounded-3 col-12 col-sm-10 col-md-10 col-lg-5 col-xl-5 col-xxl-5"
               to= "Pages/PiedraPapelTijera">
                 <div className="proyectoN3">
                   <label className="h3">Piedra, papel o tijera</label>
@@ -409,7 +409,7 @@ function Inicio(){
                 </div>
             </Link>
             <Link 
-              className="proyectoActivado dividirPartesIguales col-12 col-sm-10 col-md-10 col-lg-5 col-xl-5 col-xxl-5"
+              className="proyectoActivado dividirPartesIguales rounded-3 col-12 col-sm-10 col-md-10 col-lg-5 col-xl-5 col-xxl-5"
               to= "Pages/TarjetaRND">
                 <div className="proyectoN2">
                   <label className="h3">Triptico</label>
@@ -442,7 +442,7 @@ function Inicio(){
                 </div>
             </Link>
             <Link
-              className="proyectoActivado dividirPartesIguales col-12 col-sm-10 col-md-10 col-lg-5 col-xl-5 col-xxl-5"
+              className="proyectoActivado dividirPartesIguales rounded-3 col-12 col-sm-10 col-md-10 col-lg-5 col-xl-5 col-xxl-5"
               to= "Pages/ProyectosRND">
                 <div className="proyectoN1">
                   <label className="h3">Varias cosas random</label>
